@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=4 format=3 uid="uid://dc2ynpiltxm1o"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="2_wefn2"]
-[ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://Scenes/platform.tscn" id="19_w2bk0"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
 [node name="Main" type="Node3D"]
@@ -26,10 +25,6 @@ script = ExtResource("2_wefn2")
 [node name="Elevation" type="Node3D" parent="RTSController"]
 
 [node name="MainCamera" type="Camera3D" parent="RTSController/Elevation"]
-
-[node name="platform" parent="." instance=ExtResource("19_w2bk0")]
-transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 90, 59, 0, 0)
-visible = false
 
 [node name="GrassMesh" parent="." instance=ExtResource("19_xf02x")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 9, 0, 0)
