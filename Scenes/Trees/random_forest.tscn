@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://w0v4tsmjllg6"]
+
+[ext_resource type="Script" path="res://Scripts/random_forest.gd" id="1_u5ih5"]
+
+[node name="RandomForest" type="Node3D"]
+script = ExtResource("1_u5ih5")

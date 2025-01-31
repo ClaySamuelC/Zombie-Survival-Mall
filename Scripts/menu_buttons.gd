@@ -1,0 +1,19 @@
+extends Control
+
+@export var friendly_regiment : String
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_button_pressed() -> void:
+	var regiments = get_tree().get_nodes_in_group(friendly_regiment)
+	print(regiments)
+	for regiment in regiments:
+		regiment.reconsolidate()

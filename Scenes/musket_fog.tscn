@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://vcmkvgoogt2c"]
+
+[ext_resource type="Script" path="res://Scripts/musket_fog.gd" id="1_rwjqh"]
+
+[sub_resource type="FogMaterial" id="FogMaterial_pc2r4"]
+density = 1.9469
+albedo = Color(0, 0, 0, 1)
+emission = Color(0.0846899, 0.0846899, 0.0846899, 1)
+
+[node name="FogVolume" type="FogVolume"]
+transform = Transform3D(0.981356, 0, 0.192197, 0, 1, 0, -0.192197, 0, 0.981356, 14.8279, 9.81069, 0)
+size = Vector3(1, 1, 1)
+shape = 0
+material = SubResource("FogMaterial_pc2r4")
+script = ExtResource("1_rwjqh")

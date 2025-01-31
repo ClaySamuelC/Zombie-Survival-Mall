@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqgv52sy5p8gl"
+path="res://.godot/imported/Horse.obj-95ebc2f3082c99993c2e269691f36df3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Horse.obj-95ebc2f3082c99993c2e269691f36df3.mesh"]
+
+source_file="res://Farm Animals Animated/OBJ/Horse.obj"
+dest_files=["res://.godot/imported/Horse.obj-95ebc2f3082c99993c2e269691f36df3.mesh", "res://.godot/imported/Horse.obj-95ebc2f3082c99993c2e269691f36df3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

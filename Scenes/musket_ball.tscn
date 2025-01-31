@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2yhpjtpl656x"]
+
+[ext_resource type="Script" path="res://Scripts/musket_ball.gd" id="1_sfxdf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mblvc"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_cilcl"]
+radius = 0.2
+height = 0.4
+
+[node name="musketBall" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+script = ExtResource("1_sfxdf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_mblvc")
+mesh = SubResource("SphereMesh_cilcl")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(1, 0, 0)

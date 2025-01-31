@@ -1,0 +1,249 @@
+[gd_scene load_steps=12 format=3 uid="uid://0t7uqxvsqma3"]
+
+[ext_resource type="Script" path="res://Scripts/cav_rider.gd" id="1_a0nyd"]
+[ext_resource type="PackedScene" uid="uid://dusdfrreqax3t" path="res://Scenes/lance2.tscn" id="3_mxb4a"]
+[ext_resource type="PackedScene" uid="uid://cbveg6gemvta4" path="res://Scenes/horse.tscn" id="4_oip6g"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ogpt5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bt8pd"]
+
+[sub_resource type="Animation" id="Animation_8gngo"]
+resource_name = "Idle"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lance:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.212, 11.027, 0.548), Vector3(-1.212, 10.7, 0.548)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lance:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.52207, 1.37776, -1.78253), Vector3(1.52207, 1.37776, -1.78253)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rig:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.46667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 6.749, 0), Vector3(0, 6.5, 0), Vector3(0, 6.749, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_awqe7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lance:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.21223, 5.22699, 0.548085)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lance:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.52207, 1.37776, -1.78253)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rig:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.948572, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xaqyi"]
+resource_name = "run"
+length = 3.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lance:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.766663, 1.03333, 1.43333, 1.96667, 2.13333, 2.3, 2.56667, 3.3, 3.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.52207, 1.37776, -1.78253), Vector3(1.08385, 2.88328, -2.08043), Vector3(0.0588803, 3.09355, -2.77593), Vector3(0.0525508, 2.9849, -2.69605), Vector3(0.0333986, 2.92635, -2.57828), Vector3(-0.422746, 2.97543, -2.39389), Vector3(-0.160944, 2.98374, -2.31159), Vector3(-0.422746, 2.97543, -2.39389), Vector3(0.0525508, 2.9849, -2.69605), Vector3(1.08385, 2.88328, -2.08043), Vector3(1.52207, 1.37776, -1.78253)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.766663, 1.03333, 1.43333, 1.96667, 2.13333, 2.33333, 2.56667, 3.3, 3.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.212, 11.027, 0.548), Vector3(-1.212, 10.125, 1.671), Vector3(-1.212, 7.729, 4.292), Vector3(-1.415, 7.941, 4.26), Vector3(-1.65, 8.017, 4.077), Vector3(-1.236, 5.807, 3.857), Vector3(-1.232, 5.996, 4.751), Vector3(-1.236, 5.807, 3.857), Vector3(-1.415, 7.941, 4.26), Vector3(-1.212, 10.125, 1.671), Vector3(-1.212, 11.027, 0.548)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rig:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 0.233333, 0.5, 0.733333, 0.933333, 1.13333, 1.4, 1.63333, 1.86524, 2.06524),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 6.749, 0), Vector3(0, 6.816, 0), Vector3(0, 6.749, 0), Vector3(0, 6.816, 0), Vector3(0, 6.749, 0), Vector3(0, 6.816, 0), Vector3(0, 6.749, 0), Vector3(0, 6.816, 0), Vector3(0, 6.749, 0), Vector3(0, 6.816, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l72lp"]
+resource_name = "walk"
+length = 0.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lance:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.52207, 1.37776, -1.78253), Vector3(1.52207, 1.37776, -1.78253)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.212, 11.027, 0.548), Vector3(-1.212, 11.14, 0.548)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rig:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 6.749, 0), Vector3(0, 6.816, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6ciyb"]
+resource_name = "walkSlow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lance:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.52207, 1.37776, -1.78253), Vector3(1.52207, 1.37776, -1.78253)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.212, 11.027, 0.548), Vector3(-1.212, 11.14, 0.548)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rig:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 6.749, 0), Vector3(0, 6.816, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3jc82"]
+_data = {
+"Idle": SubResource("Animation_8gngo"),
+"RESET": SubResource("Animation_awqe7"),
+"run": SubResource("Animation_xaqyi"),
+"walk": SubResource("Animation_l72lp"),
+"walkSlow": SubResource("Animation_6ciyb")
+}
+
+[node name="CavRider" type="CharacterBody3D" groups=["rider"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_a0nyd")
+
+[node name="Rig" type="MeshInstance3D" parent="." groups=["rider"]]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.948572, 0)
+layers = 16
+mesh = SubResource("CapsuleMesh_ogpt5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.44342, 0)
+shape = SubResource("CapsuleShape3D_bt8pd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3jc82")
+}
+
+[node name="Lance" parent="." instance=ExtResource("3_mxb4a")]
+transform = Transform3D(-0.998686, -0.0184515, 0.0478024, -0.0476193, -0.010236, -0.998814, 0.0189189, -0.999777, 0.00934394, -1.21223, 5.22699, 0.548085)
+
+[node name="Lance_Tip" type="RayCast3D" parent="Lance"]
+transform = Transform3D(0.999999, 0, 5.79894e-08, -7.45058e-09, 1, 6.51926e-09, -4.32774e-08, 0, 1, 0.00234735, 0.63043, -4.09623)
+target_position = Vector3(0, 0, -1)
+
+[node name="Horse" parent="." instance=ExtResource("4_oip6g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0869775, 0)

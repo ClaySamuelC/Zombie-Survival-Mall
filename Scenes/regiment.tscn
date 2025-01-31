@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvkdynlxxh7m4"]
+
+[ext_resource type="Script" path="res://Scripts/regiment.gd" id="1_apdgx"]
+[ext_resource type="PackedScene" uid="uid://drsntw3f8aas4" path="res://Scenes/line_of_men.tscn" id="1_ldxo4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8g5n8"]
+size = Vector3(3.97809, 3.46661, 20.0344)
+
+[node name="Regiment" type="StaticBody3D"]
+script = ExtResource("1_apdgx")
+
+[node name="LineOfMen2" parent="." instance=ExtResource("1_ldxo4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65163, 0, 6.36108)
+
+[node name="LineOfMen3" parent="." instance=ExtResource("1_ldxo4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79388, 0, 5.90211)
+
+[node name="LineOfMen4" parent="." instance=ExtResource("1_ldxo4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65163, 0, -13.3199)
+
+[node name="LineOfMen5" parent="." instance=ExtResource("1_ldxo4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79388, 0, -13.7789)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16667, 1.6961, 4.59881)
+shape = SubResource("BoxShape3D_8g5n8")

@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqqgyqafm7xwp"]
+
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Scenes/main-environment.tres" id="1_ahusb"]
+[ext_resource type="Script" path="res://Scripts/view.gd" id="5_bg0fr"]
+[ext_resource type="PackedScene" uid="uid://cvkdynlxxh7m4" path="res://Scenes/regiment.tscn" id="7_qbate"]
+[ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="11_m80wf"]
+[ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://objects/platform.tscn" id="19_w2bk0"]
+[ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_ahusb")
+
+[node name="View" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, 0)
+script = ExtResource("5_bg0fr")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 28.592, 82.7403, -0.243876)
+light_energy = 0.391
+shadow_enabled = true
+shadow_opacity = 0.75
+sky_mode = 1
+
+[node name="RTSController" type="Node3D" parent="."]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 33, 14.14, 8)
+script = ExtResource("11_m80wf")
+rotation_speed = 10.0
+zoom_speed = 10.0
+min_zoom = 1.0
+max_zoom = 500.0
+edge_margin = 15.0
+
+[node name="Elevation" type="Node3D" parent="RTSController"]
+
+[node name="MainCamera" type="Camera3D" parent="RTSController/Elevation"]
+
+[node name="platform" parent="." instance=ExtResource("19_w2bk0")]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 90, 59, 6.467, 0)
+visible = false
+
+[node name="GrassMesh" parent="." instance=ExtResource("19_xf02x")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 9, 6.767, 0)
+collision_layer = 15
+
+[node name="Regiment" parent="." instance=ExtResource("7_qbate")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 58.7299, 6.967, -24.7179)
+enemy_team = "Red"
+friendly_team = "Blue"
+color = Color(0.584314, 0, 0, 1)
+
+[node name="Regiment2" parent="." instance=ExtResource("7_qbate")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54196, 6.967, -6.88281)
+enemy_team = "Blue"
+friendly_team = "Red"
+color = Color(0, 0.409008, 5.77569e-07, 1)

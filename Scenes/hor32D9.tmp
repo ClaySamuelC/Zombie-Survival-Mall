@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://dk4y8lyx8o46a"]
+
+[ext_resource type="Script" path="res://Scripts/horse_line.gd" id="1_4krep"]
+[ext_resource type="PackedScene" uid="uid://0t7uqxvsqma3" path="res://Scenes/cav_rider.tscn" id="2_pklmk"]
+[ext_resource type="Script" path="res://Scenes/State_Machine_horse.gd" id="3_sll8n"]
+[ext_resource type="Script" path="res://cavGetInFormation_State.gd" id="4_8am3y"]
+[ext_resource type="Script" path="res://cavIdle_State.gd" id="5_hbhhw"]
+[ext_resource type="Script" path="res://cavTargeting_State.gd" id="6_ty60d"]
+[ext_resource type="Script" path="res://cavCharge_State.gd" id="7_7qbi8"]
+[ext_resource type="Script" path="res://cavCircleBack_State.gd" id="8_oq5rp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8g5n8"]
+size = Vector3(3.97809, 3.46661, 20.0344)
+
+[node name="HorseLine" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.64541)
+script = ExtResource("1_4krep")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.20691, 1.71499, 3.13089)
+shape = SubResource("BoxShape3D_8g5n8")
+
+[node name="CavRider" parent="." instance=ExtResource("2_pklmk")]
+transform = Transform3D(0.0220538, 0, 0.499513, 0, 0.5, 0, -0.499513, 0, 0.0220538, -2.65706, 2.79111, 0)
+
+[node name="CavRider2" parent="." instance=ExtResource("2_pklmk")]
+transform = Transform3D(0.0220538, 0, 0.499513, 0, 0.5, 0, -0.499513, 0, 0.0220538, -2.65706, 2.79111, 2.82045)
+
+[node name="CavRider3" parent="." instance=ExtResource("2_pklmk")]
+transform = Transform3D(0.0220538, 0, 0.499513, 0, 0.5, 0, -0.499513, 0, 0.0220538, -2.65706, 2.79111, -2.95694)
+
+[node name="CavRider4" parent="." instance=ExtResource("2_pklmk")]
+transform = Transform3D(0.0220538, 0, 0.499513, 0, 0.5, 0, -0.499513, 0, 0.0220538, -2.65706, 2.79111, -5.54534)
+
+[node name="CavRider5" parent="." instance=ExtResource("2_pklmk")]
+transform = Transform3D(0.0220538, 0, 0.499513, 0, 0.5, 0, -0.499513, 0, 0.0220538, -2.68082, 2.76247, 6.23019)
+
+[node name="CavRider6" parent="." instance=ExtResource("2_pklmk")]
+transform = Transform3D(0.0220538, 0, 0.499513, 0, 0.5, 0, -0.499513, 0, 0.0220538, -2.65706, 2.79111, 9.13138)
+
+[node name="CavRider7" parent="." instance=ExtResource("2_pklmk")]
+transform = Transform3D(0.0220538, 0, 0.499513, 0, 0.5, 0, -0.499513, 0, 0.0220538, -2.65706, 2.79111, 11.8146)
+
+[node name="State_Machine_horse" type="Node" parent="." node_paths=PackedStringArray("initial_state", "script_user")]
+script = ExtResource("3_sll8n")
+initial_state = NodePath("CavIdle")
+script_user = NodePath("..")
+
+[node name="CavGetInFormation" type="Node" parent="State_Machine_horse"]
+script = ExtResource("4_8am3y")
+
+[node name="CavIdle" type="Node" parent="State_Machine_horse"]
+script = ExtResource("5_hbhhw")
+
+[node name="CavTargeting" type="Node" parent="State_Machine_horse"]
+script = ExtResource("6_ty60d")
+
+[node name="CavCharge" type="Node" parent="State_Machine_horse"]
+script = ExtResource("7_7qbi8")
+
+[node name="CavCircleBack" type="Node" parent="State_Machine_horse"]
+script = ExtResource("8_oq5rp")

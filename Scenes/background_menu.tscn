@@ -1,0 +1,164 @@
+[gd_scene load_steps=14 format=3 uid="uid://dntci4dgenmbb"]
+
+[ext_resource type="PackedScene" uid="uid://cjyet7bscd184" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/gltf/tiles/roads/hex_road_A.gltf" id="1_mau7b"]
+[ext_resource type="PackedScene" uid="uid://cdipnyb4f7yii" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/gltf/tiles/roads/hex_road_B.gltf" id="2_3qsus"]
+[ext_resource type="PackedScene" uid="uid://6i8r2wqmqrtf" path="res://KayKit Medieval Builder Pack 1.0/Models/objects/gltf/forest.gltf.glb" id="3_ru5o5"]
+[ext_resource type="PackedScene" uid="uid://ciwnvtdxcgpcs" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/gltf/tiles/base/hex_grass_bottom.gltf" id="4_5lhfm"]
+[ext_resource type="ArrayMesh" uid="uid://cfs3f1k1w7vqi" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/obj/buildings/green/building_barracks_green.obj" id="5_ndpbp"]
+[ext_resource type="ArrayMesh" uid="uid://dai5itt65hvfg" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/obj/buildings/neutral/wall_straight_gate.obj" id="6_ijlhs"]
+[ext_resource type="ArrayMesh" uid="uid://dqfb3sbf7egr6" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/obj/buildings/neutral/wall_straight.obj" id="7_qea6w"]
+[ext_resource type="ArrayMesh" uid="uid://ca6m2eac43xhc" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/obj/buildings/neutral/wall_corner_B_outside.obj" id="8_pqaps"]
+[ext_resource type="ArrayMesh" uid="uid://dgja3foymkxs0" path="res://KayKit_Medieval_Hexagon_Pack_1.0_FREE/KayKit_Medieval_Hexagon_Pack_1.0_FREE/Assets/obj/buildings/blue/building_blacksmith_blue.obj" id="9_icksj"]
+[ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://objects/platform.tscn" id="10_vd6bu"]
+[ext_resource type="PackedScene" uid="uid://c5b0dbhxbsq76" path="res://Scenes/menu_knight_spawner.tscn" id="12_a6qvh"]
+[ext_resource type="PackedScene" uid="uid://bhov8new4u60u" path="res://Scenes/menu_skeleton_spawner.tscn" id="12_i8tnv"]
+[ext_resource type="PackedScene" uid="uid://dfx7a3l6ko48u" path="res://Scenes/main_menu.tscn" id="13_4fo7x"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="hex_road_A2" parent="." instance=ExtResource("1_mau7b")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 1.62049, 0, 0.0785313)
+
+[node name="hex_road_B2" parent="hex_road_A2" instance=ExtResource("2_3qsus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89458, 0, 0.000918508)
+
+[node name="hex_road_B3" parent="hex_road_A2" instance=ExtResource("2_3qsus")]
+transform = Transform3D(0.494078, 0, -0.869417, 0, 1, 0, 0.869417, 0, 0.494078, -2.00046, 0, 0.000918508)
+
+[node name="forest_gltf" parent="hex_road_A2" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.720004, 0, -1.32945)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33133, 0, -0.471644)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.936427, 0, -1.06033)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf/forest_gltf/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00032, 0, -0.353086)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf/forest_gltf/forest_gltf/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20324, 0, 1.74914)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf/forest_gltf/forest_gltf/forest_gltf/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.700331, 0, 1.16673)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf/forest_gltf/forest_gltf/forest_gltf/forest_gltf/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.675356, 0, 0.862849)
+
+[node name="hex_grass_bottom2" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.940497, 0, -1.70354)
+
+[node name="hex_grass_bottom3" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05594, 0, -1.70354)
+
+[node name="hex_grass_bottom2" parent="hex_road_A2/hex_grass_bottom3" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96925, -0.0135506, 0.00682187)
+
+[node name="BuildingBarracksGreen" type="MeshInstance3D" parent="hex_road_A2/hex_grass_bottom3"]
+transform = Transform3D(0.866052, 0, 0.499955, 0, 1, 0, -0.499955, 0, 0.866052, -2.10304, 0, -0.178076)
+mesh = ExtResource("5_ndpbp")
+
+[node name="WallStraightGate" type="MeshInstance3D" parent="hex_road_A2"]
+transform = Transform3D(0.523579, 0, 0.293027, 0, 0.6, 0, -0.293027, 0, 0.523579, -2.46715, 0, -0.553832)
+mesh = ExtResource("6_ijlhs")
+skeleton = NodePath("../..")
+
+[node name="WallStraight" type="MeshInstance3D" parent="hex_road_A2"]
+transform = Transform3D(0.424264, 0, -0.424264, 0, 0.6, 0, 0.424264, 0, 0.424264, -3.90065, 1.19209e-07, -1.01346)
+mesh = ExtResource("7_qea6w")
+skeleton = NodePath("../..")
+
+[node name="WallCornerBOutside" type="MeshInstance3D" parent="hex_road_A2"]
+transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, -3.50833, 0, 0.041578)
+mesh = ExtResource("8_pqaps")
+skeleton = NodePath("../..")
+
+[node name="WallStraight2" type="MeshInstance3D" parent="hex_road_A2"]
+transform = Transform3D(0.424264, 0, -0.424264, 0, 0.6, 0, 0.424264, 0, 0.424264, -3.90065, 1.19209e-07, -1.01346)
+mesh = ExtResource("7_qea6w")
+skeleton = NodePath("../..")
+
+[node name="WallCornerBOutside2" type="MeshInstance3D" parent="hex_road_A2"]
+transform = Transform3D(0.533007, 0, 0.275506, 0, 0.6, 0, -0.275506, 0, 0.533007, -1.43198, 0, -1.11003)
+mesh = ExtResource("8_pqaps")
+skeleton = NodePath("../..")
+
+[node name="hex_grass_bottom4" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.940497, 0, 1.78925)
+
+[node name="hex_grass_bottom5" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993598, 0, 1.76203)
+
+[node name="hex_grass_bottom6" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95812, 0, 1.76203)
+
+[node name="hex_grass_bottom7" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8453, 0, 1.76203)
+
+[node name="hex_grass_bottom8" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.76372, 0, 0.0889287)
+
+[node name="hex_grass_bottom9" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99481, 0, 0.0815688)
+
+[node name="hex_grass_bottom5" parent="hex_road_A2/hex_grass_bottom9" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.943006, 0, 1.65038)
+
+[node name="hex_grass_bottom10" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88345, 0, -1.69212)
+
+[node name="hex_grass_bottom11" parent="hex_road_A2" instance=ExtResource("4_5lhfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71571, 0, -1.67511)
+
+[node name="BuildingBlacksmithBlue" type="MeshInstance3D" parent="hex_road_A2"]
+transform = Transform3D(0.884736, 0, -0.466093, 0, 1, 0, 0.466093, 0, 0.884736, 3.0057, 0, -1.48446)
+mesh = ExtResource("9_icksj")
+skeleton = NodePath("../..")
+
+[node name="forest_gltf2" parent="hex_road_A2" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59638, 0, -3.10475)
+
+[node name="forest_gltf3" parent="hex_road_A2" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.94776, 0, -3.25439)
+
+[node name="forest_gltf4" parent="hex_road_A2" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82809, 0, -2.21979)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf4" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0528717, 0, 1.27683)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf4/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.913566, 0, 1.44915)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf4/forest_gltf/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.39526, 0, 0.604072)
+
+[node name="forest_gltf" parent="hex_road_A2/forest_gltf4/forest_gltf/forest_gltf/forest_gltf" instance=ExtResource("3_ru5o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.675356, 0, -4.84036)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.818732, 0.574176, 0, -0.574176, 0.818732, 1.36645, 9.21742, 18.1466)
+fov = 85.7003
+
+[node name="invisible_platform" parent="." instance=ExtResource("10_vd6bu")]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 2.16703, -0.690589, 0.258218)
+visible = false
+
+[node name="MenuKnightSpawner" parent="." instance=ExtResource("12_a6qvh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2513, -0.0389947, 0.740676)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.615, 31.2932)
+light_color = Color(0.637843, 0.637843, 0.637843, 1)
+light_energy = 0.825
+
+[node name="MenuSkeletonSpawner" parent="." instance=ExtResource("12_i8tnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6433, 1.00406, -0.21536)
+visible = false
+
+[node name="MainMenu" parent="." instance=ExtResource("13_4fo7x")]
+offset_left = 1.0
+offset_top = 116.0
+offset_right = 1.0
+offset_bottom = 116.0

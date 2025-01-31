@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqqgyqafm7xwp"]
+
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ahusb"]
+[ext_resource type="PackedScene" uid="uid://cvjvuqkqpyqmg" path="res://scenes/healer.tscn" id="4_qcbas"]
+[ext_resource type="Script" path="res://scripts/view.gd" id="5_bg0fr"]
+[ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://objects/platform_grass_large_round.tscn" id="8_4oh1e"]
+[ext_resource type="PackedScene" uid="uid://dhunm6tkbxlem" path="res://scenes/knight.tscn" id="9_l1qqx"]
+[ext_resource type="PackedScene" uid="uid://doa6ojn1ii6hb" path="res://scenes/skeleton_minion_with_health_bar.tscn" id="10_s3ntm"]
+[ext_resource type="PackedScene" uid="uid://bfwpj53l1geii" path="res://KayKit Medieval Builder Pack 1.0/Models/objects/gltf/bridge.gltf.glb" id="11_8ntig"]
+[ext_resource type="Script" path="res://scripts/rts_controller.gd" id="11_m80wf"]
+[ext_resource type="PackedScene" uid="uid://dihtr17meuvho" path="res://scenes/spawner_skeleton.tscn" id="12_uepfi"]
+[ext_resource type="PackedScene" uid="uid://deaqmm1ouggcd" path="res://scenes/menu.tscn" id="13_mumjm"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_ahusb")
+
+[node name="View" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, 0)
+script = ExtResource("5_bg0fr")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="platform-grass-large-round" parent="World" instance=ExtResource("8_4oh1e")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 10.5916, 12.7403, -0.243876)
+shadow_enabled = true
+shadow_opacity = 0.75
+
+[node name="Knight" parent="." groups=["good_team"] instance=ExtResource("9_l1qqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, 13)
+collision_mask = 3
+
+[node name="Skeleton_Minion2" parent="." node_paths=PackedStringArray("attack_target") groups=["enemy_team"] instance=ExtResource("10_s3ntm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 8, 8)
+collision_mask = 1
+attack_target = NodePath("../Knight")
+
+[node name="Healer" parent="." instance=ExtResource("4_qcbas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6003, 7.5, 21.7359)
+
+[node name="platform-grass-large-round" parent="." instance=ExtResource("8_4oh1e")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 170, 0, 0)
+
+[node name="platform-grass-large-round2" parent="." instance=ExtResource("8_4oh1e")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 388, 0, 0)
+
+[node name="bridge_gltf" parent="." instance=ExtResource("11_8ntig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 383, -36)
+
+[node name="spawner_skeleton" parent="." instance=ExtResource("12_uepfi")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 7.6, 0)
+
+[node name="Menu" parent="." instance=ExtResource("13_mumjm")]
+
+[node name="RTSController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 11.14, 5)
+script = ExtResource("11_m80wf")
+min_zoom = 1.0
+max_zoom = 500.0
+edge_margin = 10.0
+
+[node name="Elevation" type="Node3D" parent="RTSController"]
+
+[node name="MainCamera" type="Camera3D" parent="RTSController/Elevation"]
+
+[node name="platform-grass-large-round3" parent="." instance=ExtResource("8_4oh1e")]
+transform = Transform3D(500, 0, 0, 0, 15, 0, 0, 0, 500, -90, -0.5, 0)

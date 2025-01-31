@@ -1,0 +1,250 @@
+[gd_scene load_steps=16 format=3 uid="uid://cbxvpg2mqc5c"]
+
+[ext_resource type="PackedScene" uid="uid://cswdwp7ee0xdp" path="res://Scenes/Rifle.tscn" id="1_t83gw"]
+[ext_resource type="Script" path="res://Scenes/soldier.gd" id="1_vw2fk"]
+[ext_resource type="PackedScene" uid="uid://cd07p6pxufjh" path="res://M1903 A3/Springfield M1903 A3.fbx" id="3_kfp8b"]
+[ext_resource type="Script" path="res://Scenes/State_Machine.gd" id="4_a3on2"]
+[ext_resource type="Script" path="res://StateMachine/Reload.gd" id="6_8j8kj"]
+[ext_resource type="Script" path="res://Aim.gd" id="7_q57v2"]
+[ext_resource type="Script" path="res://Fire.gd" id="8_db1jc"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ogpt5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bt8pd"]
+
+[sub_resource type="Animation" id="Animation_mqmba"]
+resource_name = "Aim"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Springfield M1903 A3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 5.09824),
+"update": 0,
+"values": [Vector3(0.123448, 1.30884, 0.49249), Vector3(0.535351, 1.30884, 0.49249)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Springfield M1903 A3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 1.5708), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.785398, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s8u4p"]
+resource_name = "Fire"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Springfield M1903 A3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.56667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.535351, 1.30884, 0.49249), Vector3(0.225816, 1.3656, 0.49249), Vector3(0.535351, 1.30884, 0.49249)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Springfield M1903 A3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333, 1.53333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.528137), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ke54k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Springfield M1903 A3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.123448, 1.32985, 0.49249)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rig:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.948572, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Springfield M1903 A3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 1.40832)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gyj8o"]
+resource_name = "Relode"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Springfield M1903 A3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.2, 1.53333, 1.83333, 2.5, 2.8, 3.93333, 4.68, 4.98, 6, 6.3, 8, 8.3, 10, 10.3, 12, 12.3, 14, 14.3, 14.8667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.535351, 1.30884, 0.49249), Vector3(0.535351, 0.692558, 0.49249), Vector3(0.535351, 0.717352, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.123448, 1.30884, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.535351, 0.704928, 0.49249), Vector3(0.535351, 0.675023, 0.49249), Vector3(0.123448, 1.30884, 0.49249)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Springfield M1903 A3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.866667, 1.16667, 1.53333, 1.83333, 2.5, 2.8, 3.93333, 4.68, 4.98, 6, 6.3, 8, 8.3, 10, 10.3, 12, 12.3, 14, 14.3, 14.8667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.837025), Vector3(0, 0, 0.837025), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 1.5708), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 0.909997), Vector3(0, 0, 0.853815), Vector3(0, 0, 1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_d6xyc"]
+resource_name = "Walking"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Springfield M1903 A3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.123448, 1.30811, 0.49249), Vector3(0.123448, 1.3486, 0.49249)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rig:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.948572, 0), Vector3(0, 0.961875, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Springfield M1903 A3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 1.5708)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vsa2b"]
+_data = {
+"Aim": SubResource("Animation_mqmba"),
+"Fire": SubResource("Animation_s8u4p"),
+"RESET": SubResource("Animation_ke54k"),
+"Reload": SubResource("Animation_gyj8o"),
+"Walking": SubResource("Animation_d6xyc")
+}
+
+[node name="Soldier" type="CharacterBody3D" groups=["soldier"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_vw2fk")
+
+[node name="Rig" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.948572, 0)
+mesh = SubResource("CapsuleMesh_ogpt5")
+
+[node name="Springfield M1903 A3" parent="." instance=ExtResource("1_t83gw")]
+transform = Transform3D(0.242643, -1.48024, 0, 1.48024, 0.242643, 0, 0, 0, 1.5, 0.123448, 1.32985, 0.49249)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.944395, 0)
+shape = SubResource("CapsuleShape3D_bt8pd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vsa2b")
+}
+
+[node name="Springfield M1903 A4" parent="." instance=ExtResource("3_kfp8b")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.80443, 0)
+visible = false
+
+[node name="State_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "animation_player", "rifle")]
+script = ExtResource("4_a3on2")
+initial_state = NodePath("Reload")
+animation_player = NodePath("../AnimationPlayer")
+rifle = NodePath("../Springfield M1903 A3")
+
+[node name="Reload" type="Node" parent="State_Machine"]
+script = ExtResource("6_8j8kj")
+
+[node name="Aim" type="Node" parent="State_Machine"]
+script = ExtResource("7_q57v2")
+
+[node name="Fire" type="Node" parent="State_Machine"]
+script = ExtResource("8_db1jc")

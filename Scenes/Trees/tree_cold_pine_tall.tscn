@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxwl4p20bc62i"]
+
+[ext_resource type="PackedScene" uid="uid://b7xoe4d04jhdr" path="res://textures/Trees/Models/Tree Type1 05.dae" id="1_swcui"]
+[ext_resource type="Texture2D" uid="uid://cx5c4qptp338a" path="res://textures/Trees/Textures/Colorsheet Tree Cold.png" id="2_cvadf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_in72r"]
+albedo_texture = ExtResource("2_cvadf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f1cc"]
+albedo_texture = ExtResource("2_cvadf")
+
+[node name="TreeColdPineTall" instance=ExtResource("1_swcui")]
+
+[node name="Tree_Type1_05_mesh" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_in72r")
+material_overlay = SubResource("StandardMaterial3D_0f1cc")

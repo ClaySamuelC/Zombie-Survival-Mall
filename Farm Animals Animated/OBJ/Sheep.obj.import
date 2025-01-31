@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw3fodse5y6hx"
+path="res://.godot/imported/Sheep.obj-8c83bfe633cdc5814a4bf9dc30dfbe26.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sheep.obj-8c83bfe633cdc5814a4bf9dc30dfbe26.mesh"]
+
+source_file="res://Farm Animals Animated/OBJ/Sheep.obj"
+dest_files=["res://.godot/imported/Sheep.obj-8c83bfe633cdc5814a4bf9dc30dfbe26.mesh", "res://.godot/imported/Sheep.obj-8c83bfe633cdc5814a4bf9dc30dfbe26.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

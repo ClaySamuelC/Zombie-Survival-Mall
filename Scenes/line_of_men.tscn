@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://drsntw3f8aas4"]
+
+[ext_resource type="Script" path="res://Scripts/line_of_men.gd" id="1_0573i"]
+[ext_resource type="PackedScene" uid="uid://cbxvpg2mqc5c" path="res://Scenes/soldier.tscn" id="1_ygsw7"]
+
+[node name="LineOfMen" type="Node3D" groups=["line"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+script = ExtResource("1_0573i")
+
+[node name="Soldier10" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Soldier" parent="." instance=ExtResource("1_ygsw7")]
+
+[node name="Soldier2" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Soldier3" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Soldier4" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="Soldier5" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Soldier6" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Soldier7" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Soldier8" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Soldier9" parent="." instance=ExtResource("1_ygsw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
