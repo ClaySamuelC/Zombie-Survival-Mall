@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://cgy55kt1iudgb"]
+
+[ext_resource type="Script" path="res://Scripts/survivor.gd" id="1_mi1p3"]
+[ext_resource type="Script" path="res://Scripts/State_Machine/State_Machine.gd" id="2_b12g2"]
+[ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Attack_State.gd" id="3_v6isq"]
+[ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Move_State.gd" id="4_fqhp6"]
+[ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Idle_State.gd" id="5_7hdcf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ou24l"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngv3g"]
+
+[node name="Survivor" type="CharacterBody3D"]
+script = ExtResource("1_mi1p3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00077, 0)
+mesh = SubResource("CapsuleMesh_ou24l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00609, 0)
+shape = SubResource("CapsuleShape3D_ngv3g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Survivor_Machine" type="Node" parent="." node_paths=PackedStringArray("script_user")]
+script = ExtResource("2_b12g2")
+script_user = NodePath("..")
+
+[node name="Survivor_Attack_State" type="Node" parent="Survivor_Machine"]
+script = ExtResource("3_v6isq")
+
+[node name="Survivor_Move_State" type="Node" parent="Survivor_Machine"]
+script = ExtResource("4_fqhp6")
+
+[node name="Survivor_Idle_State" type="Node" parent="Survivor_Machine"]
+script = ExtResource("5_7hdcf")
