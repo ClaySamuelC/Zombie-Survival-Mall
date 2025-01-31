@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctmyrcx03ccsn"]
+
+[ext_resource type="Script" path="res://Scripts/StateMachine/soldier_state_machine.gd" id="1_7iroi"]
+
+[node name="SoldierStateMachine" type="Node3D"]
+script = ExtResource("1_7iroi")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc2ynpiltxm1o"]
+
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
+[ext_resource type="PackedScene" path="res://Scenes/menu_buttons.tscn" id="7_4doyh"]
+[ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="11_m80wf"]
+[ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://Scenes/platform.tscn" id="19_w2bk0"]
+[ext_resource type="PackedScene" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_ahusb")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 28.592, 82.7403, -0.243876)
+light_energy = 0.391
+shadow_enabled = true
+shadow_opacity = 0.75
+sky_mode = 1
+
+[node name="RTSController" type="Node3D" parent="."]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 33, 14.14, 8)
+script = ExtResource("11_m80wf")
+rotation_speed = 10.0
+zoom_speed = 10.0
+min_zoom = 1.0
+max_zoom = 500.0
+edge_margin = 15.0
+
+[node name="Elevation" type="Node3D" parent="RTSController"]
+
+[node name="MainCamera" type="Camera3D" parent="RTSController/Elevation"]
+
+[node name="platform" parent="." instance=ExtResource("19_w2bk0")]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 90, 59, 0, 0)
+visible = false
+
+[node name="GrassMesh" parent="." instance=ExtResource("19_xf02x")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 9, 0, 0)
+collision_layer = 15
+
+[node name="Menu_Buttons" parent="." instance=ExtResource("7_4doyh")]
+mouse_filter = 2
+friendly_regiment = "Blue_Regiment"

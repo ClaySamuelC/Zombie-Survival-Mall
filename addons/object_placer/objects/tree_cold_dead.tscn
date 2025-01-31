@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4ff1dgrlmuyd"]
+
+[ext_resource type="PackedScene" uid="uid://bvrkfwsjtrkvf" path="res://Assets/textures/Trees/Models/Tree Type0 02.dae" id="1_wenox"]
+[ext_resource type="Texture2D" uid="uid://cx5c4qptp338a" path="res://Assets/textures/Trees/Textures/Colorsheet Tree Cold.png" id="2_olxwr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xb171"]
+albedo_texture = ExtResource("2_olxwr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lkex"]
+albedo_texture = ExtResource("2_olxwr")
+
+[node name="TreeColdDead" instance=ExtResource("1_wenox")]
+
+[node name="Tree_Type0_02_mesh" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_xb171")
+material_overlay = SubResource("StandardMaterial3D_2lkex")
