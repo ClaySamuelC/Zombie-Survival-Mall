@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=5 format=3 uid="uid://dc2ynpiltxm1o"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
+[ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="2_wefn2"]
 [ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://Scenes/platform.tscn" id="19_w2bk0"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
@@ -20,6 +21,7 @@ sky_mode = 1
 
 [node name="RTSController" type="Node3D" parent="."]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 33, 14.14, 8)
+script = ExtResource("2_wefn2")
 
 [node name="Elevation" type="Node3D" parent="RTSController"]
 
