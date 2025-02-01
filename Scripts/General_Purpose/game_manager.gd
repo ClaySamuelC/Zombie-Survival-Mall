@@ -106,15 +106,19 @@ func handle_right_click() -> void:
 			unit.move_unit_to_destination()
 
 func place_debris():
-	var mouse_pos = get_viewport().get_mouse_position()
-	var from = camera.project_ray_origin(mouse_pos)
-	var to = from + camera.project_ray_normal(mouse_pos) * 1000
-	var query = PhysicsRayQueryParameters3D.create(from, to)
-	var result = get_parent().get_world_3d().direct_space_state.intersect_ray(query)
-	
-	if result:
-		var location = result.position
-		var pre_load = load("res://Scenes/debris.tscn")
-		var debris = pre_load.instantiate()
-		add_child(debris)
-		debris.set_global_position(location + Vector3(0,1,0))
+	if GameState.debris >= 1:
+		var mouse_pos = get_viewport().get_mouse_position()
+		var from = camera.project_ray_origin(mouse_pos)
+		var to = from + camera.project_ray_normal(mouse_pos) * 1000
+		var query = PhysicsRayQueryParameters3D.create(from, to)
+		var result = get_parent().get_world_3d().direct_space_state.intersect_ray(query)
+		
+		if result:
+			var location = result.position
+			var pre_load = load("res://Scenes/debris.tscn")
+			var debris = pre_load.instantiate()
+			add_child(debris)
+			debris.set_global_position(location + Vector3(0,1,0))
+			GameState.debris -= 1
+	else:
+		print("out of debris")

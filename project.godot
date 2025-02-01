@@ -19,7 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 Audio="*res://Scripts/General_Purpose/audio.gd"
 GameManager="*res://Scripts/General_Purpose/game_manager.gd"
-GameState="*res://Scripts/General_Purpose/State.gd"
+GameState="*res://Scripts/General_Purpose/Game_Data.gd"
 
 [display]
 
