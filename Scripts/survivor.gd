@@ -6,11 +6,6 @@ extends CharacterBody3D
 @export var ROTATION_SPEED = 10.0
 @export var OBSTACLE_DETECTION_RANGE = 1.8
 @export var AVOIDANCE_FORCE = 2.0
-
-var zombie_list
-
-var current_target
-var current_damage
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -18,7 +13,16 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var ray_angles = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360]  # Angles for raycasts (in degrees)
 var rays = []
 
+var zombie_list
+
+var current_target
+
+var attack_range = 30
+var current_damage = 10
+var health = 100
+
 var destination = Vector3(0, 0, 0)
+var is_selected = false
 
 @onready var animation_player = $AnimationPlayer
 
@@ -32,7 +36,7 @@ func _process(delta):
 func move_unit(target):
 	current_target = target
 	var delta = get_physics_process_delta_time()
-	print(current_target)
+
 	
 	# Apply gravity
 	if not is_on_floor():
@@ -109,10 +113,9 @@ func create_ray_casts():
 		ray.target_position = Vector3(0, 0, 1) * OBSTACLE_DETECTION_RANGE
 		ray.position = Vector3(0, 1, 0)
 		ray.rotate_y(deg_to_rad(angle))
-		var ray2 = RayCast3D.new()
 
 func get_closest_target():
-	zombie_list = get_tree().get_nodes_in_group("zombie").filter(func(e): return e.alive)
+	zombie_list = get_tree().get_nodes_in_group("zombie")
 	var closest_enemy
 	var closest_distance = 10000
 	
@@ -123,7 +126,6 @@ func get_closest_target():
 			closest_distance = distance
 			closest_enemy = enemy
 	return closest_enemy
-
 
 func move_unit_to_vector(vector : Vector3):
 	destination = vector
@@ -181,4 +183,9 @@ func move_unit_to_vector(vector : Vector3):
 	
 	# Optional: Jump if needed and on floor
 	# if Input.is_action_just_pressed("jump") and is_on_floor():
-	
+
+func take_damage(damage):
+	health =  health - damage
+
+	if health<= 0:
+		queue_free()

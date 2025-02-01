@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=7 format=3 uid="uid://dc2ynpiltxm1o"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
+[ext_resource type="Script" path="res://Scripts/General_Purpose/game_manager.gd" id="1_k4af8"]
 [ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="2_wefn2"]
-[ext_resource type="PackedScene" uid="uid://duso1m1x8hi4q" path="res://Scenes/zombie.tscn" id="4_bm32k"]
 [ext_resource type="PackedScene" uid="uid://buc4ku41nngmb" path="res://Scenes/zombie_spawner.tscn" id="5_4e8ho"]
+[ext_resource type="PackedScene" uid="uid://cgy55kt1iudgb" path="res://Scenes/survivor.tscn" id="5_tq0x0"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_k4af8")
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_ahusb")
@@ -25,18 +27,22 @@ transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819
 script = ExtResource("2_wefn2")
 
 [node name="Elevation" type="Node3D" parent="RTSController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="MainCamera" type="Camera3D" parent="RTSController/Elevation"]
+fov = 89.4
 
 [node name="GrassMesh" parent="." instance=ExtResource("19_xf02x")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 9, 0, 0)
-collision_layer = 15
-
-[node name="Zombie" parent="." instance=ExtResource("4_bm32k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0423212, 0, 0.148258)
-
-[node name="Zombie2" parent="." instance=ExtResource("4_bm32k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63777, 0, -5.34429)
 
 [node name="Zombie_spawner" parent="." instance=ExtResource("5_4e8ho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1763, 0, 0.10063)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1763, 4.46964, 0.10063)
+
+[node name="Survivor" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6724, 0, -23.0024)
+
+[node name="Survivor2" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1728, -1.90735e-06, -16.7411)
+
+[node name="Survivor3" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.594, 1.90735e-06, -28.2951)

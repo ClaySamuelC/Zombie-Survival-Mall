@@ -1,15 +1,19 @@
 extends Node
 
-@onready var camera = $"../RTSController/Elevation/MainCamera"
+@onready var camera = $RTSController/Elevation/MainCamera
 var selected_unit: Node3D = null
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("mouse_click"):
-		handle_left_click(event)
+		handle_left_click()
 	elif event.is_action_pressed("right_click"):
-		handle_right_click(event)
+		handle_right_click()
 
-func handle_left_click(event: InputEventMouseButton) -> void:
+func handle_left_click() -> void:
+	if not camera:
+		push_error("Camera is null!")
+		return
+	
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_length = 1000
 	
@@ -20,17 +24,17 @@ func handle_left_click(event: InputEventMouseButton) -> void:
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	
 	var result = space_state.intersect_ray(query)
-	
+	print(result)
+
 	if result:
 		if result.collider and result.collider.has_method("selected"):
 			select_unit(result.collider)
 		else:
-			# If we click anywhere that's not a regiment, deselect current regiment
 			deselect_unit()
 	else:
 		deselect_unit()
 
-func handle_right_click(event: InputEventMouseButton) -> void:
+func handle_right_click() -> void:
 	if not selected_unit:
 		return
 		
@@ -44,33 +48,27 @@ func handle_right_click(event: InputEventMouseButton) -> void:
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	
 	var result = space_state.intersect_ray(query)
-	
+	print("what is result?")
 	if result:
-		move_selected_regiment(result.position)
+		print(result)
+		move_selected_unit(result.position)
 
 func select_unit(unit: Node3D) -> void:
 	if selected_unit == unit:
-		return  # Don't reselect if it's already selected
-		
-	if select_unit:
+		return  # Avoid reselection
+	
+	# Corrected condition to check selected_unit
+	if selected_unit:
 		selected_unit.is_selected = false
 	
 	selected_unit = unit
 	selected_unit.is_selected = true
-	print("Selected Unit: ", selected_unit)
 
-func move_selected_regiment(target_position: Vector3) -> void:
+func move_selected_unit(target_position: Vector3) -> void:
+	print(target_position)
 	if not selected_unit:
 		return
-		
-	# Calculate direction to target (ignoring Y axis for rotation)
-	var direction = target_position - selected_unit.global_position
-	direction.y = 0  # Ignore height difference for rotation
-	
-	# Store both target position and rotation
-	selected_unit.target_position = target_position
-	selected_unit.target_rotation = direction.normalized()
-	selected_unit.start_movement()  # New method to handle movement phases
+	selected_unit.move_unit_to_vector(target_position)
 
 func deselect_unit() -> void:
 	if selected_unit:

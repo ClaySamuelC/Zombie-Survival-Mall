@@ -29,7 +29,6 @@ func spawn_skelly():
 		object.set_global_position(self.global_position)
 		
 		await get_tree().create_timer(zombie_spawn_time_in_seconds).timeout
-		spawning = false
 			
 func handle_spawn_timer():
 	if !speed_up_spawns && zombie_spawn_time_in_seconds >= zombie_spawn_time_floor:

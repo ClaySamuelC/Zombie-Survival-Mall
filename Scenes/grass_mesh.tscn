@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://m2u6ydppmv7y"]
 
-[ext_resource type="Texture2D" uid="uid://cpl80oq000ico" path="res://textures/Grass_textures/Grass8Textures/T_Grass8_Color.png" id="1_t31kn"]
-[ext_resource type="Texture2D" uid="uid://b7lph81oqs0dl" path="res://textures/Grass_textures/Grass8Textures/T_Grass8_Height.png" id="2_88k07"]
-[ext_resource type="Texture2D" uid="uid://b5iiwoq0v6c53" path="res://textures/Grass_textures/Grass8Textures/T_Grass8_Normal.png" id="3_4i4cp"]
+[ext_resource type="Texture2D" uid="uid://cpl80oq000ico" path="res://Assets/textures/Grass_textures/Grass8Textures/T_Grass8_Color.png" id="1_t31kn"]
+[ext_resource type="Texture2D" uid="uid://b7lph81oqs0dl" path="res://Assets/textures/Grass_textures/Grass8Textures/T_Grass8_Height.png" id="2_88k07"]
+[ext_resource type="Texture2D" uid="uid://b5iiwoq0v6c53" path="res://Assets/textures/Grass_textures/Grass8Textures/T_Grass8_Normal.png" id="3_4i4cp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdahv"]
 albedo_texture = ExtResource("1_t31kn")
@@ -16,14 +16,14 @@ uv1_scale = Vector3(360, 360, 360)
 size = Vector2(300, 300)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8tgl8"]
-size = Vector3(30, 0.01, 30)
+size = Vector3(30, 0.0319061, 30)
 
-[node name="GrassMesh" type="Area3D"]
+[node name="GrassMesh" type="StaticBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_overlay = SubResource("StandardMaterial3D_xdahv")
 mesh = SubResource("PlaneMesh_802qf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -0.12738, 0)
 shape = SubResource("BoxShape3D_8tgl8")

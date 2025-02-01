@@ -8,7 +8,8 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ou24l"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngv3g"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2flss"]
+resource_local_to_scene = true
 
 [node name="Zombie" type="CharacterBody3D"]
 script = ExtResource("1_i8bpg")
@@ -19,7 +20,7 @@ mesh = SubResource("CapsuleMesh_ou24l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00609, 0)
-shape = SubResource("CapsuleShape3D_ngv3g")
+shape = SubResource("CapsuleShape3D_2flss")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
