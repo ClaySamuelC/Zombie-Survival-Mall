@@ -5,4 +5,4 @@
 [resource]
 resource_local_to_scene = true
 albedo_texture = ExtResource("1_wdr77")
-uv1_scale = Vector3(30, 5, 30)
+uv1_scale = Vector3(10, 5, 30)
