@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce3p252asps8v"]
+[gd_scene load_steps=6 format=3 uid="uid://ce3p252asps8v"]
 
 [ext_resource type="PackedScene" uid="uid://dt12mawo4ypxs" path="res://Scenes/mall_walls.tscn" id="1_utxie"]
 [ext_resource type="PackedScene" uid="uid://ye3xb2kgytd5" path="res://Scenes/mall_door.tscn" id="2_vgsga"]
+[ext_resource type="Texture2D" uid="uid://dmye58y8rebrd" path="res://Assets/textures/SBS - Tiny Texture Pack 2 - 512x512/512x512/Tile/Tile_13-512x512.png" id="3_j42cg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntghc"]
+albedo_texture = ExtResource("3_j42cg")
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="QuadMesh" id="QuadMesh_667rs"]
+size = Vector2(72, 72)
 
 [node name="MallFull" type="Node3D"]
 
@@ -9,10 +17,15 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -24, 3)
 
 [node name="Mall Walls2" parent="." instance=ExtResource("1_utxie")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -76.4, -24, -49.9)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -76.3, -24, -49.9)
 
 [node name="Mall Walls3" parent="." instance=ExtResource("1_utxie")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -73.7, -24, 5.8)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -73.7, -24, 5.7)
 
 [node name="Mall Door" parent="." instance=ExtResource("2_vgsga")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, -24, -52.6)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.2, -24, -52.6)
+
+[node name="Center Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -47, -0.7, -24)
+material_override = SubResource("StandardMaterial3D_ntghc")
+mesh = SubResource("QuadMesh_667rs")

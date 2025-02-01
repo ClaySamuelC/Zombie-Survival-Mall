@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cfb7qxalgxdgw"]
+
+[ext_resource type="Texture2D" uid="uid://8t2qqfh7gy32" path="res://Assets/textures/SBS - Tiny Texture Pack 2 - 512x512/512x512/Wood/Wood_07-512x512.png" id="1_wdr77"]
+
+[resource]
+resource_local_to_scene = true
+albedo_texture = ExtResource("1_wdr77")
+uv1_scale = Vector3(30, 5, 30)

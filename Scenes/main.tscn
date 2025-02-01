@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=9 format=3 uid="uid://dc2ynpiltxm1o"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" path="res://Scripts/General_Purpose/game_manager.gd" id="1_k4af8"]
 [ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="2_wefn2"]
 [ext_resource type="PackedScene" uid="uid://buc4ku41nngmb" path="res://Scenes/zombie_spawner.tscn" id="5_4e8ho"]
 [ext_resource type="PackedScene" uid="uid://cgy55kt1iudgb" path="res://Scenes/survivor.tscn" id="5_tq0x0"]
+[ext_resource type="PackedScene" uid="uid://cs4n42634dlqe" path="res://Scenes/GUI.tscn" id="7_byi5l"]
 [ext_resource type="PackedScene" uid="uid://ce3p252asps8v" path="res://Scenes/mall_full.tscn" id="7_pyiyt"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
@@ -49,9 +50,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1728, -1.90735e-06, -16.7
 [node name="Survivor3" parent="." instance=ExtResource("5_tq0x0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.594, 1.90735e-06, -28.2951)
 
-[node name="MallFull" parent="." instance=ExtResource("7_pyiyt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -2)
-
 [node name="Zombie_spawner2" parent="." instance=ExtResource("5_4e8ho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1763, 2.46964, -7.89937)
 
@@ -60,3 +58,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1763, 2.46964, 0.10063)
 
 [node name="Zombie_spawner4" parent="." instance=ExtResource("5_4e8ho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1763, 2.46964, -23.8994)
+
+[node name="GUI" parent="." instance=ExtResource("7_byi5l")]
+
+[node name="MallFull" parent="." instance=ExtResource("7_pyiyt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, 12)
