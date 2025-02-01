@@ -24,10 +24,9 @@ func handle_left_click() -> void:
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	
 	var result = space_state.intersect_ray(query)
-	print(result)
 
 	if result:
-		if result.collider and result.collider.has_method("selected"):
+		if result.collider and result.collider.is_in_group("survivor"):
 			select_unit(result.collider)
 		else:
 			deselect_unit()
@@ -48,9 +47,7 @@ func handle_right_click() -> void:
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	
 	var result = space_state.intersect_ray(query)
-	print("what is result?")
 	if result:
-		print(result)
 		move_selected_unit(result.position)
 
 func select_unit(unit: Node3D) -> void:
@@ -68,7 +65,9 @@ func move_selected_unit(target_position: Vector3) -> void:
 	print(target_position)
 	if not selected_unit:
 		return
-	selected_unit.move_unit_to_vector(target_position)
+		
+	selected_unit.destination = target_position
+	selected_unit.move_unit_to_destination()
 
 func deselect_unit() -> void:
 	if selected_unit:

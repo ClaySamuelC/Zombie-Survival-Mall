@@ -24,6 +24,8 @@ var health = 100
 var destination = Vector3(0, 0, 0)
 var is_selected = false
 
+var moving = false
+
 @onready var animation_player = $AnimationPlayer
 
 func _ready():
@@ -31,12 +33,13 @@ func _ready():
 	create_ray_casts()
 
 func _process(delta):
+	if moving == true:
+		move_unit_to_destination()
 	pass
 
 func move_unit(target):
 	current_target = target
 	var delta = get_physics_process_delta_time()
-
 	
 	# Apply gravity
 	if not is_on_floor():
@@ -102,6 +105,10 @@ func distance_to_target() -> float:
 		return global_position.distance_to(current_target.global_position)
 	return 0.0
 
+
+func distance_to_target_vector(vector: Vector3) -> float:
+	return global_position.distance_to(vector)
+
 # Optional: Function to check if character has roughly reached its target
 func has_reached_target(threshold: float = 1.0) -> bool:
 	return distance_to_target() < threshold
@@ -127,8 +134,11 @@ func get_closest_target():
 			closest_enemy = enemy
 	return closest_enemy
 
-func move_unit_to_vector(vector : Vector3):
-	destination = vector
+func move_unit_to_destination():
+	if distance_to_target_vector(destination) > 1:
+		moving = true
+	else:
+		moving = false
 	var delta = get_physics_process_delta_time()
 	
 	# Apply gravity
@@ -136,7 +146,7 @@ func move_unit_to_vector(vector : Vector3):
 		velocity.y -= gravity * delta
 	
 	# Calculate base direction to target
-	var target_direction = (vector - global_position)
+	var target_direction = (destination - global_position)
 	target_direction.y = 0  # Keep movement on the horizontal plane
 	target_direction = target_direction.normalized()
 	
@@ -167,11 +177,11 @@ func move_unit_to_vector(vector : Vector3):
 	var target_velocity = final_direction * SPEED
 	velocity.x = move_toward(velocity.x, target_velocity.x, ACCELERATION * delta)
 	velocity.z = move_toward(velocity.z, target_velocity.z, ACCELERATION * delta)
-	
+	print(target_velocity)
 	# Rotate character to face movement direction
-	if velocity.length_squared() > 0.1:
-		var target_rotation = atan2(-velocity.x, -velocity.z)
-		rotation.y = lerp_angle(rotation.y, target_rotation, ROTATION_SPEED * delta)
+	#if velocity.length_squared() > 0.1:
+		#var target_rotation = atan2(-velocity.x, -velocity.z)
+		#rotation.y = lerp_angle(rotation.y, target_rotation, ROTATION_SPEED * delta)
 	
 	# Apply movement
 	move_and_slide()

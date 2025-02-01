@@ -27,5 +27,7 @@ func Update(_delta: float):
 	pass
 
 func Physics_Update(_delta: float):
+	if script_user.current_target:
+		script_user.look_at(script_user.current_target.global_position)
 	tick += 1
 	pass

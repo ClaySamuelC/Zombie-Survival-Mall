@@ -38,28 +38,19 @@ fov = 89.4
 [node name="GrassMesh" parent="." instance=ExtResource("19_xf02x")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 9, 0, 0)
 
-[node name="Zombie_spawner" parent="." instance=ExtResource("5_4e8ho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1763, 3.46964, -43.8994)
-
 [node name="Survivor" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6724, 0, -23.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6724, 0, -31.0024)
 
 [node name="Survivor2" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1728, -1.90735e-06, -16.7411)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1728, -1.90735e-06, -24.7411)
 
 [node name="Survivor3" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.594, 1.90735e-06, -28.2951)
-
-[node name="Zombie_spawner2" parent="." instance=ExtResource("5_4e8ho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1763, 2.46964, -7.89937)
-
-[node name="Zombie_spawner3" parent="." instance=ExtResource("5_4e8ho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1763, 2.46964, 0.10063)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.594, 1.90735e-06, -36.2951)
 
 [node name="Zombie_spawner4" parent="." instance=ExtResource("5_4e8ho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1763, 2.46964, -23.8994)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1763, 0.46964, -23.8994)
 
 [node name="GUI" parent="." instance=ExtResource("7_byi5l")]
 
 [node name="MallFull" parent="." instance=ExtResource("7_pyiyt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.002, 1, 12.0175)

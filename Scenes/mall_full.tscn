@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://ce3p252asps8v"]
+[gd_scene load_steps=27 format=3 uid="uid://ce3p252asps8v"]
 
 [ext_resource type="PackedScene" uid="uid://dt12mawo4ypxs" path="res://Scenes/mall_walls.tscn" id="1_utxie"]
 [ext_resource type="PackedScene" uid="uid://ye3xb2kgytd5" path="res://Scenes/mall_door.tscn" id="2_vgsga"]
 [ext_resource type="Texture2D" uid="uid://dl8fud538yobf" path="res://Assets/textures/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_03-512x512.png" id="3_r8adh"]
 [ext_resource type="Texture2D" uid="uid://cfq4l0jsb47wt" path="res://Assets/textures/SBS - Tiny Texture Pack 2 - 512x512/512x512/Tile/Tile_14-512x512.png" id="4_opfiu"]
+[ext_resource type="PackedScene" uid="uid://de6di08vl0wpi" path="res://Assets/models/fountain.tscn" id="5_oqr1y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_disd1"]
 albedo_texture = ExtResource("3_r8adh")
@@ -308,3 +309,6 @@ mesh = SubResource("BoxMesh_tooxs")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -72.5, -0.2, -81.5)
 material_override = SubResource("StandardMaterial3D_8fikn")
 mesh = SubResource("BoxMesh_tooxs")
+
+[node name="Fountain" parent="." instance=ExtResource("5_oqr1y")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -47, -1.6, -24)

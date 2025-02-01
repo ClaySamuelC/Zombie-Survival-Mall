@@ -4,8 +4,8 @@ extends CharacterBody3D
 @export var ACCELERATION = 15.0
 @export var JUMP_VELOCITY = 4.5
 @export var ROTATION_SPEED = 10.0
-@export var OBSTACLE_DETECTION_RANGE = 1.8
-@export var AVOIDANCE_FORCE = 2.0
+@export var OBSTACLE_DETECTION_RANGE = 3
+@export var AVOIDANCE_FORCE = 3.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -76,16 +76,13 @@ func move_unit(target):
 		rotation.y = lerp_angle(rotation.y, target_rotation, ROTATION_SPEED * delta)
 	
 	# Apply movement
+	#TODO Do something about when they are surrounded they flip around in every direction
 	move_and_slide()
 	
 	# Handle floor detection and snapping
 	if is_on_floor():
 		# Reset vertical velocity when on floor
 		velocity.y = 0
-	
-	# Optional: Jump if needed and on floor
-	# if Input.is_action_just_pressed("jump") and is_on_floor():
-	#     velocity.y = JUMP_VELOCITY
 
 # Function to set new target
 func set_target(target: Node3D):
@@ -121,6 +118,8 @@ func create_ray_casts():
 		ray.target_position = Vector3(0, 0, 1) * OBSTACLE_DETECTION_RANGE
 		ray.position = Vector3(0, 1, 0)
 		ray.rotate_y(deg_to_rad(angle))
+		rays.append(ray)
+
 
 func take_damage(damage):
 	health = health - damage

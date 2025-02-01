@@ -34,6 +34,6 @@ func handle_spawn_timer():
 	if !speed_up_spawns && zombie_spawn_time_in_seconds >= zombie_spawn_time_floor:
 		speed_up_spawns = true
 		zombie_spawn_time_in_seconds = zombie_spawn_time_in_seconds - spawn_reduction_rate
-		print("zombie_spawn_time_in_seconds="+str(zombie_spawn_time_in_seconds))
+		#print("zombie_spawn_time_in_seconds="+str(zombie_spawn_time_in_seconds))
 		await get_tree().create_timer(spawn_check_rate).timeout
 		speed_up_spawns = false
