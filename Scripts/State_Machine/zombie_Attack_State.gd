@@ -23,7 +23,7 @@ func Update(_delta: float):
 					script_user.current_target.take_damage(script_user.current_damage)
 					tick = 0
 		else:
-			transitioned.emit(self,"Survivor_Idle_state")
+			transitioned.emit(self,"Survivor_Move_state")
 		tick += 1
 	pass
 
