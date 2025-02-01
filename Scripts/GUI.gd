@@ -2,9 +2,9 @@ extends CanvasLayer
 
 # Author: ClaySamuelC
 
-@onready var bullets_label: RichTextLabel = $GUI_Control/MarginContainer/HBoxContainer/VBoxContainer/Bullets
-@onready var debris_label: RichTextLabel = $GUI_Control/MarginContainer/HBoxContainer/VBoxContainer/Debris
-@onready var healing_kits_label: RichTextLabel = $GUI_Control/MarginContainer/HBoxContainer/VBoxContainer/Healing_Kits
+@onready var bullets_label: RichTextLabel = $GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/Bullets/Text
+@onready var debris_label: RichTextLabel = $GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/Debris/Text
+@onready var healing_kits_label: RichTextLabel = $GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/HealingKits/Text
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
