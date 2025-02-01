@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 	pass
 
 func take_damage(damage):
-	print("debris_taking_damage")
 	health = health - damage
 	if health <= 0:
 		get_parent().queue_free()
