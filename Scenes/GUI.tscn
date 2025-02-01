@@ -1,47 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://cs4n42634dlqe"]
+[gd_scene load_steps=5 format=3 uid="uid://cs4n42634dlqe"]
 
 [ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_1tx4h"]
+[ext_resource type="Texture2D" uid="uid://c3q3suwv8wv8r" path="res://Assets/Inhouse/Thumbnails/bullet.png" id="2_nhvwv"]
+[ext_resource type="Texture2D" uid="uid://ow6xjyffd3no" path="res://Assets/Inhouse/Thumbnails/healing_kit.png" id="3_asma1"]
+[ext_resource type="Texture2D" uid="uid://c308iknbqb4xj" path="res://Assets/Inhouse/Thumbnails/debris.png" id="4_mvw2u"]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_1tx4h")
 
 [node name="GUI_Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="GUI_Control"]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GUI_Control/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI_Control/MarginContainer"]
 layout_mode = 2
-alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GUI_Control/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI_Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme_override_constants/separation = 20
 
-[node name="Bullets" type="RichTextLabel" parent="GUI_Control/MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 30)
+[node name="Bullets" type="HSplitContainer" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
-text = "Bullets: "
 
-[node name="Debris" type="RichTextLabel" parent="GUI_Control/MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 30)
+[node name="Picture" type="TextureRect" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/Bullets"]
 layout_mode = 2
-text = "Debris:
+texture = ExtResource("2_nhvwv")
+expand_mode = 3
+
+[node name="Text" type="RichTextLabel" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/Bullets"]
+layout_mode = 2
+text = "100
 "
 
-[node name="Healing_Kits" type="RichTextLabel" parent="GUI_Control/MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 30)
+[node name="HealingKits" type="HSplitContainer" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
-text = "Healing Kits: "
+
+[node name="Picture" type="TextureRect" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/HealingKits"]
+layout_mode = 2
+texture = ExtResource("3_asma1")
+expand_mode = 3
+
+[node name="Text" type="RichTextLabel" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/HealingKits"]
+layout_mode = 2
+text = "50
+"
+
+[node name="Debris" type="HSplitContainer" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Picture" type="TextureRect" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/Debris"]
+layout_mode = 2
+texture = ExtResource("4_mvw2u")
+expand_mode = 3
+
+[node name="Text" type="RichTextLabel" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/Debris"]
+layout_mode = 2
+text = "25"
