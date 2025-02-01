@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgy55kt1iudgb"]
+[gd_scene load_steps=11 format=3 uid="uid://cgy55kt1iudgb"]
 
 [ext_resource type="Script" path="res://Scripts/survivor.gd" id="1_mi1p3"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/State_Machine.gd" id="2_b12g2"]
@@ -12,6 +12,13 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_lgr72"]
 size = Vector3(1, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_07tca"]
+albedo_color = Color(0.631373, 0.376471, 0.360784, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_bfudi"]
+radius = 0.095
+height = 0.18
 
 [node name="Survivor" type="CharacterBody3D"]
 script = ExtResource("1_mi1p3")
@@ -41,3 +48,8 @@ script = ExtResource("5_7hdcf")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0215008, 0, 0.999769, 0, 1, 0, -0.999769, 0, 0.0215008, 0.535459, 1.22933, 0.141594)
 mesh = SubResource("BoxMesh_lgr72")
+
+[node name="GunShot" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.546788, 1.22505, -0.330974)
+material_override = SubResource("StandardMaterial3D_07tca")
+mesh = SubResource("SphereMesh_bfudi")

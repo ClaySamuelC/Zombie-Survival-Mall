@@ -2,10 +2,12 @@ extends CharacterBody3D
 
 @export var SPEED = 5.0
 @export var ACCELERATION = 15.0
-@export var JUMP_VELOCITY = 4.5
 @export var ROTATION_SPEED = 10.0
 @export var OBSTACLE_DETECTION_RANGE = 1.8
 @export var AVOIDANCE_FORCE = 2.0
+
+@onready var animation_player = $AnimationPlayer
+
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -14,19 +16,16 @@ var ray_angles = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360]  #
 var rays = []
 
 var zombie_list
-
 var current_target
 
 var attack_range = 30
-var current_damage = 10
+var current_damage = 40
 var health = 100
 
 var destination = Vector3(0, 0, 0)
 var is_selected = false
-
 var moving = false
 
-@onready var animation_player = $AnimationPlayer
 
 func _ready():
 	add_to_group("survivor")
@@ -105,7 +104,6 @@ func distance_to_target() -> float:
 		return global_position.distance_to(current_target.global_position)
 	return 0.0
 
-
 func distance_to_target_vector(vector: Vector3) -> float:
 	return global_position.distance_to(vector)
 
@@ -135,7 +133,7 @@ func get_closest_target():
 	return closest_enemy
 
 func move_unit_to_destination():
-	if distance_to_target_vector(destination) > 1:
+	if distance_to_target_vector(destination) > 1.4:
 		moving = true
 	else:
 		moving = false

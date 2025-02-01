@@ -1,6 +1,7 @@
 extends State
 
 var script_user
+var target
 
 func _ready():
 	script_user = get_parent().get_script_user()
@@ -13,7 +14,8 @@ func Exit():
 	pass
 
 func Update(_delta: float):
-	var target = script_user.get_closest_target()
+	if null == script_user.current_target:
+		target = script_user.get_closest_target()
 	if null == target:
 		transitioned.emit(self,"Zombie_Idle_state")
 	else:
@@ -21,6 +23,7 @@ func Update(_delta: float):
 		if script_user.global_position.distance_to(target.global_position) < script_user.attack_range:
 			transitioned.emit(self,"Zombie_Attack_state")
 		else:
+			script_user.look_at(target.global_position)
 			script_user.move_unit(target)
 
 

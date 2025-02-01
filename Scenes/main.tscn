@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=14 format=3 uid="uid://dc2ynpiltxm1o"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" path="res://Scripts/General_Purpose/game_manager.gd" id="1_k4af8"]
@@ -15,6 +15,21 @@ resource_local_to_scene = true
 lightmap_size_hint = Vector2i(24, 31)
 size = Vector3(0.75, 0.2, 3)
 
+[sub_resource type="BoxMesh" id="BoxMesh_a6jim"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(24, 31)
+size = Vector3(0.75, 0.2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rjgbg"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(24, 31)
+size = Vector3(0.75, 0.2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jeqs3"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(24, 31)
+size = Vector3(0.75, 0.2, 3)
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_k4af8")
 
@@ -25,7 +40,7 @@ environment = ExtResource("1_ahusb")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 28.592, 82.7403, -0.243876)
-light_energy = 0.391
+light_energy = 0.1
 shadow_enabled = true
 shadow_opacity = 0.75
 sky_mode = 1
@@ -33,6 +48,7 @@ sky_mode = 1
 [node name="RTSController" type="Node3D" parent="."]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 33, 14.14, 8)
 script = ExtResource("2_wefn2")
+zoom_speed = 3.0
 min_zoom = 0.0
 max_zoom = 100.0
 
@@ -85,12 +101,18 @@ mesh = SubResource("BoxMesh_pqywk")
 
 [node name="Bench2" parent="." instance=ExtResource("9_v0mjm")]
 transform = Transform3D(-6.99382e-08, 0, 2, 0, 1.6, 0, -1.6, 0, -8.74228e-08, -25.0597, 1.1, -22)
-mesh = SubResource("BoxMesh_pqywk")
+mesh = SubResource("BoxMesh_a6jim")
 
 [node name="Bench3" parent="." instance=ExtResource("9_v0mjm")]
 transform = Transform3D(-6.99382e-08, 0, -2, 0, 1.6, 0, 1.6, 0, -8.74228e-08, -25.0597, 1.1, -2)
-mesh = SubResource("BoxMesh_pqywk")
+mesh = SubResource("BoxMesh_rjgbg")
 
 [node name="Bench4" parent="." instance=ExtResource("9_v0mjm")]
 transform = Transform3D(-1.6, 0, -3.01992e-07, 0, 1.6, 0, 2.41593e-07, 0, -2, -36.0597, 1.1, -12)
-mesh = SubResource("BoxMesh_pqywk")
+mesh = SubResource("BoxMesh_jeqs3")
+
+[node name="Zombie_spawner5" parent="." instance=ExtResource("5_4e8ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1763, 0.46964, -15.8994)
+
+[node name="Zombie_spawner6" parent="." instance=ExtResource("5_4e8ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1763, 0.46964, 0.100599)

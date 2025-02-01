@@ -8,16 +8,24 @@ var dragging = false
 var drag_start = Vector2()
 var drag_end = Vector2()
 
+var debris_mode = false
+
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("debris_mode"):
+		debris_mode = true
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.is_pressed():
-				selection_box.size = Vector2(0,0)
-				# Start dragging
-				dragging = true
-				drag_start = event.position
-				drag_end = event.position
-				selection_box.show()
+				if debris_mode:
+					place_debris()
+				else:
+					if event.is_pressed():
+						selection_box.size = Vector2(0,0)
+						# Start dragging
+						dragging = true
+						drag_start = event.position
+						drag_end = event.position
+						selection_box.show()
 			else:
 				# End dragging
 				dragging = false
@@ -76,10 +84,12 @@ func select_unit(unit: Node3D):
 
 func deselect_all():
 	for unit in selected_units:
-		unit.is_selected = false
+		if unit:
+			unit.is_selected = false
 	selected_units.clear()
 
 func handle_right_click() -> void:
+	debris_mode = false
 	if selected_units.is_empty():
 		return
 	
@@ -94,3 +104,17 @@ func handle_right_click() -> void:
 		for unit in selected_units:
 			unit.destination = target_pos
 			unit.move_unit_to_destination()
+
+func place_debris():
+	var mouse_pos = get_viewport().get_mouse_position()
+	var from = camera.project_ray_origin(mouse_pos)
+	var to = from + camera.project_ray_normal(mouse_pos) * 1000
+	var query = PhysicsRayQueryParameters3D.create(from, to)
+	var result = get_parent().get_world_3d().direct_space_state.intersect_ray(query)
+	
+	if result:
+		var location = result.position
+		var pre_load = load("res://Scenes/debris.tscn")
+		var debris = pre_load.instantiate()
+		add_child(debris)
+		debris.set_global_position(location + Vector3(0,1,0))
