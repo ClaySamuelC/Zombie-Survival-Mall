@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce3p252asps8v"]
+
+[ext_resource type="PackedScene" uid="uid://dt12mawo4ypxs" path="res://Scenes/mall_walls.tscn" id="1_utxie"]
+[ext_resource type="PackedScene" uid="uid://ye3xb2kgytd5" path="res://Scenes/mall_door.tscn" id="2_vgsga"]
+
+[node name="MallFull" type="Node3D"]
+
+[node name="Mall Walls" parent="." instance=ExtResource("1_utxie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -24, 3)
+
+[node name="Mall Walls2" parent="." instance=ExtResource("1_utxie")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -76.4, -24, -49.9)
+
+[node name="Mall Walls3" parent="." instance=ExtResource("1_utxie")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -73.7, -24, 5.8)
+
+[node name="Mall Door" parent="." instance=ExtResource("2_vgsga")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, -24, -52.6)
