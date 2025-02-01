@@ -25,9 +25,10 @@ sky_mode = 1
 [node name="RTSController" type="Node3D" parent="."]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 33, 14.14, 8)
 script = ExtResource("2_wefn2")
+min_zoom = 0.0
+max_zoom = 32.0
 
 [node name="Elevation" type="Node3D" parent="RTSController"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="MainCamera" type="Camera3D" parent="RTSController/Elevation"]
 fov = 89.4
