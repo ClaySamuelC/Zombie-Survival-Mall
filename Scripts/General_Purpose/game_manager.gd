@@ -1,5 +1,8 @@
 extends Node3D
 
+@onready var gather_cursor = load("res://Assets/cursors/pickaxe.png")
+@onready var default_cursor = load("res://Assets/cursors/default_cursor.png")
+
 @onready var camera =  get_node("/root/Main/RTSController/Elevation/MainCamera")
 @onready var selection_box = get_node("/root/Main/CanvasLayer/Control/SelectionBox")
 
@@ -13,21 +16,23 @@ var gather_mode = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("gather_mode"):
-		#This is cleared in handle_right_click
+		# This is cleared in handle_right_click
 		gather_mode = true
+		Input.set_custom_mouse_cursor(gather_cursor)
+		
 	if event.is_action_pressed("debris_mode"):
-		#This is cleared in handle_right_click
+		# This is cleared in handle_right_click
 		debris_mode = true
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.is_pressed():
-					selection_box.size = Vector2(0,0)
-					# Start dragging
-					dragging = true
-					drag_start = event.position
-					drag_end = event.position
-					selection_box.show()
+				selection_box.size = Vector2(0,0)
+				# Start dragging
+				dragging = true
+				drag_start = event.position
+				drag_end = event.position
+				selection_box.show()
 			else:
 				# End dragging
 				dragging = false
@@ -119,10 +124,11 @@ func handle_right_click() -> void:
 				if gather_mode == true:
 					unit.gather_mode = true
 					unit.go_to_gather_state()
-					#Get it's state and trasmit it'self to gather mode
+					# Get it's state and trasmit it'self to gather mode
 				else:
 					unit.gather_mode = false
 	gather_mode = false
+	Input.set_custom_mouse_cursor(default_cursor)
 
 func place_debris():
 	if GameState.debris >= 1:
