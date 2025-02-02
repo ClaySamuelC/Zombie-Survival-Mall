@@ -65,11 +65,11 @@ mesh = SubResource("SphereMesh_bfudi")
 
 [node name="Gestapo-1" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 0.75, 0, 8.74228e-08, 0, -1, -1.24095, 0.0832635, 0.0420097)
-visible = false
 mesh = ExtResource("7_dcwgw")
 
 [node name="Character_Hero" parent="." instance=ExtResource("8_yd8st")]
 transform = Transform3D(0.0151491, 0, 1.99994, 0, 2, 0, -1.99994, 0, 0.0151491, -0.106793, 0, 0.373857)
+visible = false
 
 [node name="Gather_Indicator" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.22791, 0, 1.27987, 0, 1.3, 0, -1.27987, 0, -0.22791, -0.0982248, 4.33847, 0.27894)
