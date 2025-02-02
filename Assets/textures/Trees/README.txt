@@ -1,15 +1,14 @@
-﻿Thank you for purchasing this pack!
-If you have any problems, please don't hesitate to mail us (support@brokenvector.com).
+Zombie Survival Mall - By PJ studios :)
 
+Defend the Mall as long as you can! Never ending zombie survival
 
-Please rate our product if you like it.
+Gather resources out of the stores and use them/spend them to upgrade your units
 
-
-Broken Vector on Twitter: https://twitter.com/Broken_vector
-
-Featured assets:
-- Free Low Poly Pack: https://goo.gl/SsLsIG
-- Low Poly Tree Pack: https://goo.gl/VKSJ0W
-- Persistent Components: https://goo.gl/cfXq01
-
-Also check out our other assets: https://goo.gl/UdEEHz
+Controls:
+	WASD -> Move Camera
+	RightClick and hold -> Rotate Camera
+	Left Mouse -> Drag to select Units
+	Right Click -> Move selected units / Clear selection
+	T and Click - > Place Debris
+	G and Click - > Selected Units move and gather
+	B and Click - > Use Molotov
