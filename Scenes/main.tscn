@@ -28,12 +28,12 @@ sky_mode = 1
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 49.4455, 20.4387, -1.88713)
 script = ExtResource("2_wefn2")
 zoom_speed = 3.0
-min_zoom = 0.0
-max_zoom = 100.0
-min_x = -65.0
-max_x = 65.0
-min_z = -65.0
-max_z = 65.0
+min_zoom = 15.0
+max_zoom = 15.0
+min_x = -60.0
+max_x = 60.0
+min_z = -60.0
+max_z = 60.0
 
 [node name="Elevation" type="Node3D" parent="RTSController"]
 
@@ -42,6 +42,7 @@ fov = 89.4
 
 [node name="GrassMesh" parent="." instance=ExtResource("19_xf02x")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 9, 0, 0)
+visible = false
 
 [node name="Zombie_spawner" parent="." instance=ExtResource("5_4e8ho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -18.8994)
