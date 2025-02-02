@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ce3p252asps8v"]
+[gd_scene load_steps=38 format=3 uid="uid://ce3p252asps8v"]
 
 [ext_resource type="PackedScene" uid="uid://dt12mawo4ypxs" path="res://Scenes/mall_walls.tscn" id="1_utxie"]
 [ext_resource type="PackedScene" uid="uid://ye3xb2kgytd5" path="res://Scenes/mall_door.tscn" id="2_vgsga"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/gathering_zone_heal.gd" id="6_dwj3m"]
 [ext_resource type="Script" path="res://Scripts/gathering_zone_bullets.gd" id="6_errkx"]
 [ext_resource type="Script" path="res://Scripts/gathering_zone_debris.gd" id="8_4qurk"]
+[ext_resource type="PackedScene" uid="uid://kfe6flstuw3k" path="res://Scenes/bench.tscn" id="9_d786b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_disd1"]
 albedo_texture = ExtResource("3_r8adh")
@@ -83,6 +84,26 @@ size = Vector3(2.2, 0.3, 0.9)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0kesu"]
 size = Vector3(2.2, 0.3, 0.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ses3y"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(24, 31)
+size = Vector3(0.75, 0.2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k1fgn"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(24, 31)
+size = Vector3(0.75, 0.2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3jpws"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(24, 31)
+size = Vector3(0.75, 0.2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_18mjh"]
+resource_local_to_scene = true
+lightmap_size_hint = Vector2i(24, 31)
+size = Vector3(0.75, 0.2, 3)
 
 [node name="MallFull" type="Node3D"]
 
@@ -348,6 +369,25 @@ transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, -49, 0, -74)
 transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, -5.96046e-06, 0.0500031, 0.099999)
 shape = SubResource("BoxShape3D_0kesu")
 script = ExtResource("8_4qurk")
+
+[node name="Bench" parent="." instance=ExtResource("9_d786b")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 2, -35.9797, 0.14, -24.4)
+mesh = SubResource("BoxMesh_ses3y")
+
+[node name="Bench2" parent="Bench" instance=ExtResource("9_d786b")]
+transform = Transform3D(-4.37114e-08, 0, 1.25, 0, 1, 0, -0.8, 0, -4.37114e-08, -6.875, 0, -5)
+mesh = SubResource("BoxMesh_k1fgn")
+skeleton = NodePath("../..")
+
+[node name="Bench3" parent="Bench" instance=ExtResource("9_d786b")]
+transform = Transform3D(-4.37114e-08, 0, -1.25, 0, 1, 0, 0.8, 0, -4.37114e-08, -6.875, 0, 5)
+mesh = SubResource("BoxMesh_3jpws")
+skeleton = NodePath("../..")
+
+[node name="Bench4" parent="Bench" instance=ExtResource("9_d786b")]
+transform = Transform3D(-1, 0, -1.88745e-07, 0, 1, 0, 1.20796e-07, 0, -1, -13.75, 0, 0)
+mesh = SubResource("BoxMesh_18mjh")
+skeleton = NodePath("../..")
 
 [connection signal="body_entered" from="GatheringZoneHeal" to="GatheringZoneHeal/CollisionShape3D" method="_on_body_entered"]
 [connection signal="body_exited" from="GatheringZoneHeal" to="GatheringZoneHeal/CollisionShape3D" method="_on_body_exited"]

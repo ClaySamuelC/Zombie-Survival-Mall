@@ -92,7 +92,7 @@ func select_unit(unit: Node3D):
 
 func deselect_all():
 	for unit in selected_units:
-		if unit:
+		if unit and is_instance_valid(unit):
 			unit.is_selected = false
 	selected_units.clear()
 
@@ -111,14 +111,15 @@ func handle_right_click() -> void:
 	if result:
 		var target_pos = result.position
 		for unit in selected_units:
-			unit.destination = target_pos
-			unit.move_unit_to_destination()
-			if gather_mode == true:
-				unit.gather_mode = true
-				unit.go_to_gather_state()
-				#Get it's state and trasmit it'self to gather mode
-			else:
-				unit.gather_mode = false
+			if unit and is_instance_valid(unit):
+				unit.destination = target_pos
+				unit.move_unit_to_destination()
+				if gather_mode == true:
+					unit.gather_mode = true
+					unit.go_to_gather_state()
+					#Get it's state and trasmit it'self to gather mode
+				else:
+					unit.gather_mode = false
 	gather_mode = false
 
 func place_debris():
