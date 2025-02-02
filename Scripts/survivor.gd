@@ -149,7 +149,7 @@ func move_unit_to_destination():
 	else:
 		moving = false
 	if moving:
-		var new_transform = transform.looking_at(destination, Vector3.UP)
+		var new_transform = transform.looking_at(destination)
 		transform = transform.interpolate_with(new_transform, SPEED * delta)
 		# Apply gravity
 		if not is_on_floor():

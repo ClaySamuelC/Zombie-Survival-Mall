@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy3pkqvkut236"
+path="res://.godot/imported/Eighties Action.mp3-e656c465aa7a73b54882d31b6fc82b33.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Eighties Action.mp3"
+dest_files=["res://.godot/imported/Eighties Action.mp3-e656c465aa7a73b54882d31b6fc82b33.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
