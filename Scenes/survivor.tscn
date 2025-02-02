@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgy55kt1iudgb"]
+[gd_scene load_steps=14 format=3 uid="uid://cgy55kt1iudgb"]
 
 [ext_resource type="Script" path="res://Scripts/survivor.gd" id="1_mi1p3"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/State_Machine.gd" id="2_b12g2"]
@@ -9,7 +9,11 @@
 [ext_resource type="ArrayMesh" uid="uid://ci5h362e78583" path="res://Assets/models/Gestapo/Package/Gestapo-1.obj" id="7_dcwgw"]
 [ext_resource type="PackedScene" uid="uid://cdr1y1mtmnxug" path="res://Assets/models/Gestapo/Character_Hero.fbx" id="8_yd8st"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ou24l"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bmv6"]
+albedo_color = Color(0.729412, 0.858824, 0.254902, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8dyn4"]
+size = Vector3(0.3, 0.4, 0.3)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngv3g"]
 
@@ -23,10 +27,11 @@ height = 0.18
 [node name="Survivor" type="CharacterBody3D"]
 script = ExtResource("1_mi1p3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.22791, 0, 1.27987, 0, 1.3, 0, -1.27987, 0, -0.22791, -0.0982248, 1.23745, 0.27894)
+[node name="Selected_Indicator" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.22791, 0, 1.27987, 0, 1.3, 0, -1.27987, 0, -0.22791, -0.0982248, 4.33847, 0.27894)
 visible = false
-mesh = SubResource("CapsuleMesh_ou24l")
+material_override = SubResource("StandardMaterial3D_1bmv6")
+mesh = SubResource("BoxMesh_8dyn4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-0.22791, 0, 1.27987, 0, 1.3, 0, -1.27987, 0, -0.22791, -0.0982248, 1.24277, 0.27894)

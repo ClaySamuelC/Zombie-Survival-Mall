@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var AVOIDANCE_FORCE = 2.0
 
 @onready var animation_player = $AnimationPlayer
+@onready var selected_indicator = $Selected_Indicator
 
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")

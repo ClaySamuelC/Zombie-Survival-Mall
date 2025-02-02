@@ -84,6 +84,7 @@ func handle_box_selection(start: Vector2, end: Vector2):
 				if rect.has_point(screen_pos):
 					selected_units.append(survivor)
 					survivor.is_selected = true
+					survivor.selected_indicator.visible = true
 
 func select_unit(unit: Node3D):
 	deselect_all()
@@ -94,6 +95,7 @@ func deselect_all():
 	for unit in selected_units:
 		if unit and is_instance_valid(unit):
 			unit.is_selected = false
+			unit.selected_indicator.visible = false
 	selected_units.clear()
 
 func handle_right_click() -> void:
