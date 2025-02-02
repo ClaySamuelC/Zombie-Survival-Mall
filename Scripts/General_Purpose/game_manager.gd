@@ -20,7 +20,6 @@ var all_modes = {
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("gather_mode"):
 		# This is cleared in handle_right_click
-		gather_mode = true
 		if len(selected_units) > 0:
 			Input.set_custom_mouse_cursor(gather_cursor)
 		
