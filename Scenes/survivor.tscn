@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgy55kt1iudgb"]
+[gd_scene load_steps=12 format=3 uid="uid://cgy55kt1iudgb"]
 
 [ext_resource type="Script" path="res://Scripts/survivor.gd" id="1_mi1p3"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/State_Machine.gd" id="2_b12g2"]
 [ext_resource type="Script" path="res://Scripts/survivor_coll.gd" id="2_ronuj"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Attack_State.gd" id="3_v6isq"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Idle_State.gd" id="5_7hdcf"]
+[ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Gather_State.gd" id="6_5kb7l"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ou24l"]
 
@@ -44,6 +45,9 @@ script = ExtResource("3_v6isq")
 
 [node name="Survivor_Idle_State" type="Node" parent="Survivor_Machine"]
 script = ExtResource("5_7hdcf")
+
+[node name="Survivor_Gather_State" type="Node" parent="Survivor_Machine"]
+script = ExtResource("6_5kb7l")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0215008, 0, 0.999769, 0, 1, 0, -0.999769, 0, 0.0215008, 0.535459, 1.22933, 0.141594)

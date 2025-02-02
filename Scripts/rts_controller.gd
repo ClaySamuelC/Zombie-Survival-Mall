@@ -29,7 +29,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if not is_panning:
-		handle_edge_movement(delta)
 		handle_keyboard_movement(delta)
 		if allow_rotation:
 			handle_rotation(delta)
@@ -69,32 +68,6 @@ func handle_keyboard_movement(delta: float) -> void:
 		direction.x -= 1
 	if Input.is_action_pressed("camera_right"):
 		direction.x += 1
-
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
-		translate_object_local(direction * movement_speed * delta)
-
-func handle_edge_movement(delta: float) -> void:
-	var viewport = get_viewport()
-	var mouse_pos = viewport.get_mouse_position()
-	var screen_rect = viewport.get_visible_rect()
-
-	# Check if the mouse is within the visible screen bounds
-	if not screen_rect.has_point(mouse_pos):
-		return  # Exit the function if the mouse is out of bounds
-
-	var direction = Vector3.ZERO
-
-	# Check for edge movement
-	if mouse_pos.x < edge_margin:
-		direction.x -= 1
-	elif mouse_pos.x > screen_rect.size.x - edge_margin:
-		direction.x += 1
-
-	if mouse_pos.y < edge_margin:
-		direction.z -= 1
-	elif mouse_pos.y > screen_rect.size.y - edge_margin:
-		direction.z += 1
 
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
