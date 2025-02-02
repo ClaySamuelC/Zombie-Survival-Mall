@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs4n42634dlqe"]
+[gd_scene load_steps=6 format=3 uid="uid://cs4n42634dlqe"]
 
 [ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_1tx4h"]
 [ext_resource type="Texture2D" uid="uid://c3q3suwv8wv8r" path="res://Assets/Inhouse/Thumbnails/bullet.png" id="2_nhvwv"]
 [ext_resource type="Texture2D" uid="uid://ow6xjyffd3no" path="res://Assets/Inhouse/Thumbnails/healing_kit.png" id="3_asma1"]
 [ext_resource type="Texture2D" uid="uid://c308iknbqb4xj" path="res://Assets/Inhouse/Thumbnails/debris.png" id="4_mvw2u"]
+[ext_resource type="Texture2D" uid="uid://bm3jkgfkelv6q" path="res://Assets/Inhouse/Thumbnails/clipart-head-zombie.png" id="5_ysnm8"]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_1tx4h")
@@ -79,3 +80,17 @@ expand_mode = 3
 [node name="Text" type="RichTextLabel" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/Debris"]
 layout_mode = 2
 text = "25"
+
+[node name="ZombieKills" type="HSplitContainer" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Picture" type="TextureRect" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/ZombieKills"]
+layout_mode = 2
+texture = ExtResource("5_ysnm8")
+expand_mode = 3
+
+[node name="Text" type="RichTextLabel" parent="GUI_Control/MarginContainer/VBoxContainer/HBoxContainer/ZombieKills"]
+layout_mode = 2
+text = "100
+"

@@ -133,6 +133,7 @@ func create_ray_casts():
 func take_damage(damage):
 	health = health - damage
 	if health <= 0:
+		GameState.zombie_kills += 1
 		queue_free()
 
 func check_for_debris():
