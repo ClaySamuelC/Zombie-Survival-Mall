@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c308iknbqb4xj"
-path="res://.godot/imported/debris.png-66dc00f302c6a2432ec971d50fd0b89f.ctex"
+uid="uid://d1mufpfblv8p1"
+path="res://.godot/imported/molotov.png-5b95f13510d95062ab26ff37df2be809.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inhouse/Thumbnails/debris.png"
-dest_files=["res://.godot/imported/debris.png-66dc00f302c6a2432ec971d50fd0b89f.ctex"]
+source_file="res://Assets/Thumbnails/molotov.png"
+dest_files=["res://.godot/imported/molotov.png-5b95f13510d95062ab26ff37df2be809.ctex"]
 
 [params]
 

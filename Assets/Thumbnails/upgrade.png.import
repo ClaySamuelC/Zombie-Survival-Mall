@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ow6xjyffd3no"
-path="res://.godot/imported/healing_kit.png-491c9f988d25ff090dcc7b36181ccfe4.ctex"
+uid="uid://c1qu8pob3cutq"
+path="res://.godot/imported/upgrade.png-94920ffafd1629064246333c0210864a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inhouse/Thumbnails/healing_kit.png"
-dest_files=["res://.godot/imported/healing_kit.png-491c9f988d25ff090dcc7b36181ccfe4.ctex"]
+source_file="res://Assets/Thumbnails/upgrade.png"
+dest_files=["res://.godot/imported/upgrade.png-94920ffafd1629064246333c0210864a.ctex"]
 
 [params]
 

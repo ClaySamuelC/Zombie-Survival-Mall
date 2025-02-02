@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var debris_label: RichTextLabel = $GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Debris/Text
 @onready var healing_kits_label: RichTextLabel = $GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/HealingKits/Text
 @onready var zombie_kills_label: RichTextLabel = $GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/ZombieKills/Text
+@onready var molotovs_label: RichTextLabel = $GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Molotovs/Text
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -13,3 +14,4 @@ func _process(delta):
 	debris_label.text = str(GameState.debris)
 	healing_kits_label.text = str(GameState.healing_kits)
 	zombie_kills_label.text = str(GameState.zombie_kills)
+	molotovs_label.text = str(GameState.molotov)

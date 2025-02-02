@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3q3suwv8wv8r"
-path="res://.godot/imported/bullet.png-015a6b1a3c8077147396f718b18fac27.ctex"
+uid="uid://c308iknbqb4xj"
+path="res://.godot/imported/debris.png-748b12012302a3870d518970debdb93d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inhouse/Thumbnails/bullet.png"
-dest_files=["res://.godot/imported/bullet.png-015a6b1a3c8077147396f718b18fac27.ctex"]
+source_file="res://Assets/Thumbnails/debris.png"
+dest_files=["res://.godot/imported/debris.png-748b12012302a3870d518970debdb93d.ctex"]
 
 [params]
 

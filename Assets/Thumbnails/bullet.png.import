@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm3jkgfkelv6q"
-path="res://.godot/imported/clipart-head-zombie.png-0e1cb524777384e6938ed78cd3974dc0.ctex"
+uid="uid://c3q3suwv8wv8r"
+path="res://.godot/imported/bullet.png-aa3040491a3f23f9497592beb9b5a1cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inhouse/Thumbnails/clipart-head-zombie.png"
-dest_files=["res://.godot/imported/clipart-head-zombie.png-0e1cb524777384e6938ed78cd3974dc0.ctex"]
+source_file="res://Assets/Thumbnails/bullet.png"
+dest_files=["res://.godot/imported/bullet.png-aa3040491a3f23f9497592beb9b5a1cc.ctex"]
 
 [params]
 
