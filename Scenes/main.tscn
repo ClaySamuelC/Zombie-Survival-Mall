@@ -12,6 +12,25 @@
 [node name="Main" type="Node3D"]
 script = ExtResource("1_k4af8")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="SelectionBox" type="ColorRect" parent="CanvasLayer/Control"]
+visible = false
+modulate = Color(1, 1, 1, 0.301961)
+self_modulate = Color(0.227451, 0.333333, 0.92549, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_ahusb")
 
@@ -52,25 +71,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -18.8994)
 
 [node name="MallFull" parent="." instance=ExtResource("7_pyiyt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 1, 24)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="SelectionBox" type="ColorRect" parent="CanvasLayer/Control"]
-visible = false
-modulate = Color(1, 1, 1, 0.301961)
-self_modulate = Color(0.227451, 0.333333, 0.92549, 1)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Zombie_spawner2" parent="." instance=ExtResource("5_4e8ho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -5.8994)
