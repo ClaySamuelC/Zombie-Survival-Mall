@@ -18,7 +18,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("gather_mode"):
 		# This is cleared in handle_right_click
 		gather_mode = true
-		Input.set_custom_mouse_cursor(gather_cursor)
+		if len(selected_units) > 0:
+			Input.set_custom_mouse_cursor(gather_cursor)
 		
 	if event.is_action_pressed("debris_mode"):
 		# This is cleared in handle_right_click
@@ -102,6 +103,7 @@ func deselect_all():
 			unit.is_selected = false
 			unit.selected_indicator.visible = false
 	selected_units.clear()
+	Input.set_custom_mouse_cursor(default_cursor)
 
 func handle_right_click() -> void:
 	debris_mode = false
