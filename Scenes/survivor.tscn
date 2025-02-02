@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cgy55kt1iudgb"]
+[gd_scene load_steps=13 format=3 uid="uid://cgy55kt1iudgb"]
 
 [ext_resource type="Script" path="res://Scripts/survivor.gd" id="1_mi1p3"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/State_Machine.gd" id="2_b12g2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Idle_State.gd" id="5_7hdcf"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Gather_State.gd" id="6_5kb7l"]
 [ext_resource type="ArrayMesh" uid="uid://ci5h362e78583" path="res://Assets/models/Gestapo/Package/Gestapo-1.obj" id="7_dcwgw"]
+[ext_resource type="PackedScene" uid="uid://cdr1y1mtmnxug" path="res://Assets/models/Gestapo/Character_Hero.fbx" id="8_yd8st"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ou24l"]
 
@@ -56,4 +57,8 @@ mesh = SubResource("SphereMesh_bfudi")
 
 [node name="Gestapo-1" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 0.75, 0, 8.74228e-08, 0, -1, -1.24095, 0.0832635, 0.0420097)
+visible = false
 mesh = ExtResource("7_dcwgw")
+
+[node name="Character_Hero" parent="." instance=ExtResource("8_yd8st")]
+transform = Transform3D(0.0151491, 0, 1.99994, 0, 2, 0, -1.99994, 0, 0.0151491, -0.106793, 0, 0.373857)
