@@ -8,6 +8,7 @@ extends CharacterBody3D
 
 @onready var animation_player = $AnimationPlayer
 @onready var selected_indicator = $Selected_Indicator
+@onready var gather_indicator = $Gather_Indicator
 
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -26,9 +27,13 @@ var health = 100
 var destination = Vector3(0, 0, 0)
 var is_selected = false
 var moving = false
+var gather_tick_timer = 90
+var gather_tick = 0 
 var gather_mode = false
 var in_gather_zone = false
 var current_zone : CollisionShape3D
+
+
 func _ready():
 	add_to_group("survivor")
 	create_ray_casts()

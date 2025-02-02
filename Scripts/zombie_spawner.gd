@@ -3,10 +3,10 @@ extends Node3D
 var spawning = false
 var zombie_spawn_time_in_seconds = 4
 
-var zombie_spawn_time_floor = .6
+var zombie_spawn_time_floor = .8
 
 var speed_up_spawns = false
-var spawn_reduction_rate = .3
+var spawn_reduction_rate = .2
 var spawn_check_rate = 4
 
 # Called when the node enters the scene tree for the first time.
