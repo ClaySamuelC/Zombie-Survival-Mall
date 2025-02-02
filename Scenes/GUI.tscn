@@ -178,3 +178,9 @@ title = "Speed"
 [node name="Scrounge" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Scrounge"
+
+[node name="Label" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "           [B] - Molotov
+           [G] - Gather
+           [T] - Debris"
