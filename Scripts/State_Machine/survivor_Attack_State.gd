@@ -29,7 +29,6 @@ func Update(_delta: float):
 					script_user.current_target.take_damage(script_user.current_damage)
 					$"../../GunShot".visible = true
 					GameState.bullets -= 1
-					print(GameState.bullets)
 					tick = 0
 
 	else:

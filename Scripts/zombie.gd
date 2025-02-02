@@ -19,8 +19,8 @@ var survivor_list
 
 var current_target
 var health = 100
-var attack_range = 3 
-var current_damage = 3
+var attack_range = 3
+var current_damage = 30
 
 var destination = Vector3(0, 0, 0)
 

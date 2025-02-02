@@ -193,7 +193,7 @@ func move_unit_to_destination():
 		# if Input.is_action_just_pressed("jump") and is_on_floor():
 
 func take_damage(damage):
-	health =  health - damage
-
+	health -= damage
+	print(health)
 	if health<= 0:
 		queue_free()

@@ -1,8 +1,9 @@
 extends State
 var script_user
 
-var tick = 0
-var tick_timer = 200
+#First hit is fast, slow for the rest of the hits
+var tick = 90
+var tick_timer = 100
 
 func _ready():
 	script_user = get_parent().get_script_user()
