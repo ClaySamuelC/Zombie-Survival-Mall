@@ -17,6 +17,12 @@ extends Node3D
 @onready var camera = $Elevation/MainCamera
 @onready var elevation_node = $Elevation
 
+# Play Area Boundaries
+@export var min_x: float = -1000.0
+@export var max_x: float = 1000.0
+@export var min_z: float = -1000.0
+@export var max_z: float = 1000.0
+
 # Runtime State
 var is_rotating: bool = false
 var is_panning: bool = false
@@ -72,6 +78,11 @@ func handle_keyboard_movement(delta: float) -> void:
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
 		translate_object_local(direction * movement_speed * delta)
+		# Clamp global position within boundaries
+		var global_pos = global_transform.origin
+		global_pos.x = clamp(global_pos.x, min_x, max_x)
+		global_pos.z = clamp(global_pos.z, min_z, max_z)
+		global_transform.origin = global_pos
 
 # Rotation
 func handle_rotation(delta: float) -> void:
@@ -104,3 +115,8 @@ func handle_panning(delta: float) -> void:
 		last_mouse_position = current_mouse_pos
 
 		translate_object_local(Vector3(-displacement.x, 0, -displacement.y) * 0.1)
+		# Clamp global position within boundaries
+		var global_pos = global_transform.origin
+		global_pos.x = clamp(global_pos.x, min_x, max_x)
+		global_pos.z = clamp(global_pos.z, min_z, max_z)
+		global_transform.origin = global_pos
