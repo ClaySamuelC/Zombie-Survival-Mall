@@ -22,8 +22,8 @@ func Update(_delta: float):
 	if !script_user.current_target:
 		script_user.current_target = script_user.get_closest_target()
 	if script_user.current_target:
-		if script_user.global_position.distance_to(script_user.current_target.global_position) < script_user.attack_range:
-			script_user.look_at(script_user.current_target.global_position)
+		script_user.look_at(script_user.current_target.global_position)
+		if script_user.global_position.distance_to(script_user.current_target.global_position) < script_user.attack_range and GameState.bullets > 0:
 			if tick >= tick_timer:
 					#script_user.animation_player.play("attack")
 					script_user.current_target.take_damage(script_user.current_damage)
