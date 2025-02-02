@@ -9,32 +9,40 @@ var drag_start = Vector2()
 var drag_end = Vector2()
 
 var debris_mode = false
+var gather_mode = false
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("gather_mode"):
+		#This is cleared in handle_right_click
+		gather_mode = true
 	if event.is_action_pressed("debris_mode"):
+		#This is cleared in handle_right_click
 		debris_mode = true
+	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.is_pressed():
-				if debris_mode:
-					place_debris()
-				else:
-					if event.is_pressed():
-						selection_box.size = Vector2(0,0)
-						# Start dragging
-						dragging = true
-						drag_start = event.position
-						drag_end = event.position
-						selection_box.show()
+					selection_box.size = Vector2(0,0)
+					# Start dragging
+					dragging = true
+					drag_start = event.position
+					drag_end = event.position
+					selection_box.show()
 			else:
 				# End dragging
 				dragging = false
 				selection_box.hide()
 				handle_box_selection(drag_start, drag_end)
+			
+			if event.is_released():
+				if debris_mode:
+					place_debris()
+				else:
+					pass
 	elif event is InputEventMouseMotion and dragging:
 		drag_end = event.position
 		update_selection_box()
-	
+
 	if event.is_action_pressed("right_click"):
 		handle_right_click()
 
@@ -90,6 +98,7 @@ func deselect_all():
 
 func handle_right_click() -> void:
 	debris_mode = false
+
 	if selected_units.is_empty():
 		return
 	
@@ -104,6 +113,13 @@ func handle_right_click() -> void:
 		for unit in selected_units:
 			unit.destination = target_pos
 			unit.move_unit_to_destination()
+			if gather_mode == true:
+				unit.gather_mode = true
+				unit.go_to_gather_state()
+				#Get it's state and trasmit it'self to gather mode
+			else:
+				unit.gather_mode = false
+	gather_mode = false
 
 func place_debris():
 	if GameState.debris >= 1:

@@ -25,8 +25,9 @@ var health = 100
 var destination = Vector3(0, 0, 0)
 var is_selected = false
 var moving = false
-
-
+var gather_mode = false
+var in_gather_zone = false
+var current_zone : CollisionShape3D
 func _ready():
 	add_to_group("survivor")
 	create_ray_casts()
@@ -194,6 +195,11 @@ func move_unit_to_destination():
 
 func take_damage(damage):
 	health -= damage
-	print(health)
 	if health<= 0:
 		queue_free()
+
+func go_to_gather_state():
+	var state = $Survivor_Machine.current_state
+	state.transitioned.emit(state,"Survivor_Gather_state")
+	state = $Survivor_Machine.current_state
+	pass
