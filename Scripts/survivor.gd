@@ -20,7 +20,7 @@ var rays = []
 var zombie_list
 var current_target
 
-var attack_range = 30
+var attack_range = 45
 var current_damage = 100
 var health = 100
 
