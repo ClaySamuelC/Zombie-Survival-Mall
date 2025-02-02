@@ -23,6 +23,7 @@ var current_target
 var attack_range = 45
 var current_damage = 100
 var health = 100
+var MAX_HEALTH = 100
 
 var destination = Vector3(0, 0, 0)
 var is_selected = false
@@ -39,6 +40,7 @@ func _ready():
 	create_ray_casts()
 
 func _process(delta):
+	heal()
 	if moving == true:
 		move_unit_to_destination()
 	pass
@@ -211,3 +213,9 @@ func go_to_gather_state():
 	state.transitioned.emit(state,"Survivor_Gather_state")
 	state = $Survivor_Machine.current_state
 	pass
+
+func heal():
+	if health < MAX_HEALTH:
+		if GameState.healing_kits > 0:
+			health = MAX_HEALTH
+			GameState.healing_kits -= 1
