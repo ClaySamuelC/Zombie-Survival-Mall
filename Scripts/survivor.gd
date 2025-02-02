@@ -21,7 +21,7 @@ var zombie_list
 var current_target
 
 var attack_range = 30
-var current_damage = 40
+var current_damage = 100
 var health = 100
 
 var destination = Vector3(0, 0, 0)
