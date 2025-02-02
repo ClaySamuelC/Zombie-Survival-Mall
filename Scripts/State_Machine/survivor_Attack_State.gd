@@ -29,6 +29,7 @@ func Update(_delta: float):
 					#script_user.animation_player.play("attack")
 					script_user.current_target.take_damage(script_user.current_damage)
 					$"../../GunShot".visible = true
+					Audio.play_sound(load("res://Sounds/Shotgun_gunshot.ogg"), script_user.global_position,-randi_range(-15,-25),250)
 					GameState.bullets -= 1
 					tick = 0
 
