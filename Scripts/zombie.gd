@@ -139,7 +139,7 @@ func take_damage(damage):
 func check_for_debris():
 	var debris_in_way = false
 	for ray in attack_rays:
-		if ray.is_colliding():
+		if ray.is_colliding() and is_instance_valid(ray.get_collider()):
 			if ray.get_collider().is_in_group("debris"):
 				debris_in_way = true
 				ray.get_collider().take_damage(current_damage)

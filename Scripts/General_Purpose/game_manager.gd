@@ -11,8 +11,11 @@ var dragging = false
 var drag_start = Vector2()
 var drag_end = Vector2()
 
-var debris_mode = false
-var gather_mode = false
+var all_modes = {
+"debris_mode" = false,
+"gather_mode" = false,
+"molotov_mode" = false
+}
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("gather_mode"):
@@ -21,9 +24,19 @@ func _input(event: InputEvent) -> void:
 		if len(selected_units) > 0:
 			Input.set_custom_mouse_cursor(gather_cursor)
 		
+		all_modes["gather_mode"] = true
+		Input.set_custom_mouse_cursor(gather_cursor)
+		turn_off_other_modes("gather_mode")
+
 	if event.is_action_pressed("debris_mode"):
 		# This is cleared in handle_right_click
-		debris_mode = true
+		all_modes["debris_mode"] = true
+		turn_off_other_modes("debris_mode")
+	
+	if event.is_action_pressed("molotov_mode"):
+	# This is cleared in handle_right_click
+		all_modes["molotov_mode"] = true
+		turn_off_other_modes("molotov_mode")
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -41,14 +54,16 @@ func _input(event: InputEvent) -> void:
 				handle_box_selection(drag_start, drag_end)
 			
 			if event.is_released():
-				if debris_mode:
+				if all_modes["debris_mode"] == true:
 					place_debris()
+				elif all_modes["molotov_mode"] == true:
+					place_molotov()
 				else:
 					pass
 	elif event is InputEventMouseMotion and dragging:
 		drag_end = event.position
 		update_selection_box()
-
+	
 	if event.is_action_pressed("right_click"):
 		handle_right_click()
 
@@ -106,8 +121,9 @@ func deselect_all():
 	Input.set_custom_mouse_cursor(default_cursor)
 
 func handle_right_click() -> void:
-	debris_mode = false
-
+	all_modes["debris_mode"] = false
+	all_modes["molotov_mode"] = false
+	
 	if selected_units.is_empty():
 		return
 	
@@ -123,13 +139,13 @@ func handle_right_click() -> void:
 			if unit and is_instance_valid(unit):
 				unit.destination = target_pos
 				unit.move_unit_to_destination()
-				if gather_mode == true:
+				if all_modes["gather_mode"] == true:
 					unit.gather_mode = true
 					unit.go_to_gather_state()
 					# Get it's state and trasmit it'self to gather mode
 				else:
 					unit.gather_mode = false
-	gather_mode = false
+	all_modes["gather_mode"] = false
 	Input.set_custom_mouse_cursor(default_cursor)
 
 func place_debris():
@@ -149,3 +165,27 @@ func place_debris():
 			GameState.debris -= 1
 	else:
 		print("out of debris")
+
+func place_molotov():
+	if GameState.molotov >= 1:
+		var mouse_pos = get_viewport().get_mouse_position()
+		var from = camera.project_ray_origin(mouse_pos)
+		var to = from + camera.project_ray_normal(mouse_pos) * 1000
+		var query = PhysicsRayQueryParameters3D.create(from, to)
+		var result = get_parent().get_world_3d().direct_space_state.intersect_ray(query)
+		
+		if result:
+			var location = result.position
+			var pre_load = load("res://Scenes/molotov_aoe.tscn")
+			var molotov = pre_load.instantiate()
+			add_child(molotov)
+			molotov.set_global_position(location + Vector3(0,1,0))
+			GameState.molotov -= 1
+	else:
+		print("out of molotov")
+
+func turn_off_other_modes(mode_to_keep_on : String):
+	for mode in all_modes:
+		if !mode_to_keep_on == mode:
+			all_modes[mode] = false
+	pass

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0l3n5e56g6gd"]
+
+[ext_resource type="Script" path="res://Scripts/molotov_aoe.gd" id="1_nmyfl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dr6bb"]
+radius = 2.90449
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5f4f"]
+albedo_color = Color(0.85098, 0.286275, 0.0862745, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w2o0b"]
+top_radius = 0.3
+bottom_radius = 3.0
+height = 0.4
+
+[node name="MolotovAoe" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217219, 0)
+script = ExtResource("1_nmyfl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0274061)
+shape = SubResource("CylinderShape3D_dr6bb")
+
+[node name="Node3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217219, 0)
+material_override = SubResource("StandardMaterial3D_h5f4f")
+mesh = SubResource("CylinderMesh_w2o0b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

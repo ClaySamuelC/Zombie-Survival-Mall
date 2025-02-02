@@ -21,7 +21,6 @@ script = ExtResource("1_i8bpg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00077, 0)
-visible = false
 material_override = SubResource("StandardMaterial3D_qsikj")
 mesh = SubResource("CapsuleMesh_ou24l")
 
@@ -47,3 +46,4 @@ script = ExtResource("5_7ex2e")
 
 [node name="Character_Zombie" parent="." instance=ExtResource("6_las04")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 0, 0, 0)
+visible = false
