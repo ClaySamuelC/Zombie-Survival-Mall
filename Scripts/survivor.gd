@@ -39,6 +39,7 @@ func _process(delta):
 
 func move_unit(target):
 	current_target = target
+	
 	var delta = get_physics_process_delta_time()
 	
 	# Apply gravity
@@ -134,13 +135,14 @@ func get_closest_target():
 	return closest_enemy
 
 func move_unit_to_destination():
+	var delta = get_physics_process_delta_time()
 	if distance_to_target_vector(destination) > 1.4:
 		moving = true
 	else:
 		moving = false
 	if moving:
-		var delta = get_physics_process_delta_time()
-		
+		var new_transform = transform.looking_at(destination, Vector3.UP)
+		transform = transform.interpolate_with(new_transform, SPEED * delta)
 		# Apply gravity
 		if not is_on_floor():
 			velocity.y -= gravity * delta

@@ -19,13 +19,13 @@ environment = ExtResource("1_ahusb")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 28.592, 82.7403, -0.243876)
-light_energy = 0.1
+light_energy = 0.05
 shadow_enabled = true
 shadow_opacity = 0.75
 sky_mode = 1
 
 [node name="RTSController" type="Node3D" parent="."]
-transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 33, 14.14, 8)
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 25, 14.14, -15)
 script = ExtResource("2_wefn2")
 zoom_speed = 3.0
 min_zoom = 0.0
@@ -73,28 +73,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1763, 0.46964, -16.8994)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1763, 0.46964, 5.1006)
 
 [node name="Survivor1" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -40.6724, 0, -3.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6724, 0, -3.0024)
 
 [node name="Survivor2" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -47.6724, 0, -3.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6724, 0, -3.0024)
 
 [node name="Survivor3" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -54.6724, 0, -3.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.6724, 0, -3.0024)
 
 [node name="Survivor4" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -40.6724, 0, -15.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6724, 0, -15.0024)
 
 [node name="Survivor5" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -47.6724, 0, -15.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6724, 0, -15.0024)
 
 [node name="Survivor6" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -54.6724, 0, -14.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.6724, 0, -14.0024)
 
 [node name="Survivor7" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -40.6724, 0, -26.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6724, 0, -26.0024)
 
 [node name="Survivor8" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -47.6724, 0, -26.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6724, 0, -26.0024)
 
 [node name="Survivor9" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -54.6724, 0, -27.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.6724, 0, -27.0024)
