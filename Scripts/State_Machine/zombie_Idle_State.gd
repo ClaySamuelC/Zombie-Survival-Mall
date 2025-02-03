@@ -7,7 +7,6 @@ func _ready():
 	script_user = get_parent().get_script_user()
 	pass
 
-
 func Enter():
 	pass
 
@@ -21,7 +20,6 @@ func Update(_delta: float):
 		pass
 	else:
 		transitioned.emit(self,"Zombie_Move_State")
-	pass
 
 func Physics_Update(_delta: float):
 	pass

@@ -16,7 +16,6 @@ func Exit():
 	pass
 
 func Update(_delta: float):
-
 	if !script_user.current_target:
 		script_user.current_target = script_user.get_closest_target()
 	if script_user.current_target:
@@ -26,7 +25,7 @@ func Update(_delta: float):
 					script_user.current_target.take_damage(script_user.current_damage)
 					tick = 0
 		else:
-			transitioned.emit(self,"Survivor_Move_state")
+			transitioned.emit(self,"Zombie_Move_state")
 		tick += 1
 	pass
 

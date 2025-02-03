@@ -106,7 +106,6 @@ func get_closest_target():
 	var closest_distance = 10000
 	
 	for enemy in survivor_list:
-		# Ensure the node is valid and not the current node itself
 		var distance = self.global_transform.origin.distance_to(enemy.global_transform.origin)
 		if distance < closest_distance:
 			closest_distance = distance

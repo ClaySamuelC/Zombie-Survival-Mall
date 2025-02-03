@@ -20,10 +20,10 @@ var rays = []
 var zombie_list
 var current_target
 
-var attack_range = 45
-var current_damage = 100
-var health = 100
-var MAX_HEALTH = 100
+@export var attack_range = 45
+@export var current_damage = 100
+@export var health = 100
+@export var MAX_HEALTH = 100
 
 var destination = Vector3(0, 0, 0)
 var is_selected = false
@@ -149,6 +149,7 @@ func move_unit_to_destination():
 	else:
 		moving = false
 	if moving:
+		$"Running Guy/HumanM_Walk01_Backward/AnimationPlayer".play("HumanM@Sprint01_ForwardRight/Untitled")
 		var new_transform = transform.looking_at(destination)
 		transform = transform.interpolate_with(new_transform, SPEED * delta)
 		# Apply gravity

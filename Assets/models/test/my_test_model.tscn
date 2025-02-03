@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://fm3020ledw33"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3jre6kfiqmmn" path="res://Assets/models/test/ImageToStl.com_male survivor 2 .obj" id="1_k88mu"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ImageToStl_comMaleSurvivor2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -23)
+mesh = ExtResource("1_k88mu")

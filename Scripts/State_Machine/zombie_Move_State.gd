@@ -23,9 +23,8 @@ func Update(_delta: float):
 		if script_user.global_position.distance_to(target.global_position) < script_user.attack_range:
 			transitioned.emit(self,"Zombie_Attack_state")
 		else:
-			script_user.look_at(target.global_position)
+			script_user.look_at(script_user.destination)
 			script_user.move_unit(target)
-
 
 func Physics_Update(_delta: float):
 	pass
