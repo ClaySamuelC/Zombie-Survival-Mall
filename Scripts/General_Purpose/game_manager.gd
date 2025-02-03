@@ -5,6 +5,9 @@ extends Node3D
 
 @onready var camera =  get_node("/root/Main/RTSController/Elevation/MainCamera")
 @onready var selection_box = get_node("/root/Main/CanvasLayer/Control/SelectionBox")
+@onready var soldier_control = get_node("/root/Main/GUI/GUI_Control/Soldier_Control")
+
+signal on_unit_selected(unit: Node3D)
 
 var selected_units: Array[Node3D] = []
 var dragging = false
@@ -12,9 +15,9 @@ var drag_start = Vector2()
 var drag_end = Vector2()
 
 var all_modes = {
-"debris_mode" = false,
-"gather_mode" = false,
-"molotov_mode" = false
+	"debris_mode" = false,
+	"gather_mode" = false,
+	"molotov_mode" = false
 }
 
 func _input(event: InputEvent) -> void:
@@ -33,13 +36,18 @@ func _input(event: InputEvent) -> void:
 		turn_off_other_modes("debris_mode")
 	
 	if event.is_action_pressed("molotov_mode"):
-	# This is cleared in handle_right_click
+		# This is cleared in handle_right_click
 		all_modes["molotov_mode"] = true
 		turn_off_other_modes("molotov_mode")
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.is_pressed():
+				var mouse_pos = get_viewport().get_mouse_position()
+				if soldier_control.get_global_rect().has_point(mouse_pos):
+					print("skipping click in control")
+					return
+				
 				selection_box.size = Vector2(0,0)
 				# Start dragging
 				dragging = true
@@ -105,6 +113,11 @@ func handle_box_selection(start: Vector2, end: Vector2):
 					selected_units.append(survivor)
 					survivor.is_selected = true
 					survivor.selected_indicator.visible = true
+	
+	if len(selected_units) < 1:
+		on_unit_selected.emit(null)
+	else:
+		on_unit_selected.emit(selected_units[0])
 
 func select_unit(unit: Node3D):
 	deselect_all()
@@ -117,6 +130,8 @@ func deselect_all():
 			unit.is_selected = false
 			unit.selected_indicator.visible = false
 	selected_units.clear()
+	on_unit_selected.emit(null)
+	
 	Input.set_custom_mouse_cursor(default_cursor)
 
 func handle_right_click() -> void:

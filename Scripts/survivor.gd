@@ -34,6 +34,13 @@ var gather_mode = false
 var in_gather_zone = false
 var current_zone : CollisionShape3D
 
+var scrounge_speed : int = 1
+
+var toughness_level : int = 0
+var damage_level : int = 0
+var speed_level : int = 0
+var scrounge_level : int = 0
+
 
 func _ready():
 	add_to_group("survivor")

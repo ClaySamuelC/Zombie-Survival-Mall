@@ -21,16 +21,4 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 icon = ExtResource("2_5speh")
 
-[node name="Cost" type="Control" parent="."]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="Cost"]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Poopenis"
-
-[connection signal="mouse_entered" from="Upgrade" to="." method="_on_upgrade_mouse_entered"]
-[connection signal="mouse_exited" from="Upgrade" to="." method="_on_upgrade_mouse_exited"]
+[connection signal="pressed" from="Upgrade" to="." method="_on_upgrade_pressed"]

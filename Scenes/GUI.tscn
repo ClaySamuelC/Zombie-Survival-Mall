@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs4n42634dlqe"]
+[gd_scene load_steps=14 format=3 uid="uid://cs4n42634dlqe"]
 
 [ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_1tx4h"]
 [ext_resource type="Texture2D" uid="uid://c3q3suwv8wv8r" path="res://Assets/Thumbnails/bullet.png" id="2_nhvwv"]
@@ -7,6 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://d1mufpfblv8p1" path="res://Assets/Thumbnails/molotov.png" id="5_epgru"]
 [ext_resource type="Texture2D" uid="uid://bm3jkgfkelv6q" path="res://Assets/Thumbnails/clipart-head-zombie.png" id="5_ysnm8"]
 [ext_resource type="PackedScene" uid="uid://cagldwaf5y4dw" path="res://Scenes/stat_box.tscn" id="6_pykan"]
+[ext_resource type="Script" path="res://Scenes/unit_info.gd" id="7_go67h"]
+[ext_resource type="Script" path="res://scripts/upgrade_toughness.gd" id="8_irts3"]
+[ext_resource type="Script" path="res://Scenes/upgrade_damage.gd" id="9_1qvo0"]
+[ext_resource type="Script" path="res://Scenes/upgrade_speed.gd" id="9_kjmea"]
+[ext_resource type="Script" path="res://Scenes/upgrade_scrounge.gd" id="11_lg2xn"]
+[ext_resource type="Script" path="res://Scenes/upgrade_cost_info.gd" id="13_l8bf6"]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_1tx4h")
@@ -155,32 +161,98 @@ theme_override_constants/margin_bottom = 25
 [node name="VBoxContainer" type="VBoxContainer" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Health" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="UnitInfo" type="HBoxContainer" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("7_go67h")
+
+[node name="Stats" type="VBoxContainer" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo"]
+layout_mode = 2
+
+[node name="Health" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats"]
 layout_mode = 2
 size_flags_vertical = 0
 mouse_filter = 1
-text = "4/4
+text = "Health: X/X
 "
 horizontal_alignment = 1
 
-[node name="Toughness" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
+[node name="Toughness" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Toughness"
 
-[node name="Damage" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats/Toughness"]
+script = ExtResource("8_irts3")
+
+[node name="Damage" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Damage"
 
-[node name="Speed" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats/Damage"]
+script = ExtResource("9_1qvo0")
+
+[node name="Speed" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Speed"
 
-[node name="Scrounge" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats/Speed"]
+script = ExtResource("9_kjmea")
+
+[node name="Scrounge" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Scrounge"
 
-[node name="Label" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/Stats/Scrounge"]
+script = ExtResource("11_lg2xn")
+
+[node name="UpgradeCostInfo" type="MarginContainer" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo"]
 layout_mode = 2
-text = "           [B] - Molotov
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+script = ExtResource("13_l8bf6")
+
+[node name="GridContainer" type="GridContainer" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/UpgradeCostInfo"]
+layout_mode = 2
+columns = 2
+
+[node name="BulletThumb" type="TextureRect" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/UpgradeCostInfo/GridContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_nhvwv")
+
+[node name="BulletCost" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/UpgradeCostInfo/GridContainer"]
+visible = false
+layout_mode = 2
+text = "X"
+
+[node name="HKThumb" type="TextureRect" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/UpgradeCostInfo/GridContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_asma1")
+
+[node name="HKCost" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/UpgradeCostInfo/GridContainer"]
+visible = false
+layout_mode = 2
+text = "X"
+
+[node name="DebrisThumb" type="TextureRect" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/UpgradeCostInfo/GridContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("5_epgru")
+
+[node name="DebrisCost" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/UnitInfo/UpgradeCostInfo/GridContainer"]
+visible = false
+layout_mode = 2
+text = "X"
+
+[node name="Hotkeys" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+           [B] - Molotov
            [G] - Gather
            [T] - Debris"
