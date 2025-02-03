@@ -48,7 +48,6 @@ albedo_color = Color(0.0745098, 0.137255, 0.592157, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_joap3"]
 resource_name = "Default-Material"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_emlvc"]
