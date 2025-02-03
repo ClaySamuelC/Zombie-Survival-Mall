@@ -1,9 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cktjeq2nlcide"]
-
-[ext_resource type="Texture2D" uid="uid://cx5c4qptp338a" path="res://Assets/textures/Trees/Textures/Colorsheet Tree Cold.png" id="1_fb3rq"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j13cm"]
-albedo_texture = ExtResource("1_fb3rq")
+[gd_scene load_steps=10 format=4 uid="uid://cktjeq2nlcide"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8y27l"]
 
@@ -2202,7 +2197,6 @@ bones/64/rotation = Quaternion(-9.12405e-09, 2.7895e-07, 4.64206e-09, 1)
 bones/64/scale = Vector3(1, 1, 1)
 
 [node name="Male_Character" type="MeshInstance3D" parent="Armature/Skeleton3D"]
-material_overlay = SubResource("StandardMaterial3D_j13cm")
 mesh = SubResource("ArrayMesh_box0r")
 skin = SubResource("Skin_oo14a")
 
