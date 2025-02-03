@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b3jre6kfiqmmn"
-path="res://.godot/imported/ImageToStl.com_male survivor 2 .obj-a65093e9273fb606f336365b1bdb56c2.scn"
+uid="uid://d1fb2nekq21nf"
+path="res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-c89cf2b5eedae5b92ae20ca918a2bc87.scn"
 
 [deps]
 
-source_file="res://Assets/models/test/ImageToStl.com_male survivor 2 .obj"
-dest_files=["res://.godot/imported/ImageToStl.com_male survivor 2 .obj-a65093e9273fb606f336365b1bdb56c2.scn"]
+source_file="res://Assets/models/test/Low_Poly_Survivor_Empyt_Hands_Rifle.glb"
+dest_files=["res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-c89cf2b5eedae5b92ae20ca918a2bc87.scn"]
 
 [params]
 
@@ -31,13 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:obj5": {
-"import/skip_import": true
-},
-"PATH:obj6": {
-"import/skip_import": true
-}
-}
-}
+_subresources={}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
