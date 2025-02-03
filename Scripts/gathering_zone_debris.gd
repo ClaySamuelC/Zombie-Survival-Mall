@@ -20,5 +20,5 @@ func _on_body_exited(body: Node3D) -> void:
 	if body.is_in_group("survivor"):
 		body.in_gather_zone = false
 
-func gather():
-		GameState.debris += 1
+func gather(rate: int):
+		GameState.debris += rate

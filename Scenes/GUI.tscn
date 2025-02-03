@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs4n42634dlqe"]
+[gd_scene load_steps=12 format=3 uid="uid://cs4n42634dlqe"]
 
 [ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_1tx4h"]
 [ext_resource type="Texture2D" uid="uid://c3q3suwv8wv8r" path="res://Assets/Thumbnails/bullet.png" id="2_nhvwv"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://d1mufpfblv8p1" path="res://Assets/Thumbnails/molotov.png" id="5_epgru"]
 [ext_resource type="Texture2D" uid="uid://bm3jkgfkelv6q" path="res://Assets/Thumbnails/clipart-head-zombie.png" id="5_ysnm8"]
 [ext_resource type="PackedScene" uid="uid://cagldwaf5y4dw" path="res://Scenes/stat_box.tscn" id="6_pykan"]
+[ext_resource type="Script" path="res://scripts/upgrade_toughness.gd" id="8_irts3"]
+[ext_resource type="Script" path="res://Scenes/upgrade_damage.gd" id="9_1qvo0"]
+[ext_resource type="Script" path="res://Scenes/upgrade_speed.gd" id="9_kjmea"]
+[ext_resource type="Script" path="res://Scenes/upgrade_scrounge.gd" id="11_lg2xn"]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_1tx4h")
@@ -167,20 +171,39 @@ horizontal_alignment = 1
 layout_mode = 2
 title = "Toughness"
 
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/Toughness"]
+script = ExtResource("8_irts3")
+
 [node name="Damage" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Damage"
+
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/Damage"]
+script = ExtResource("9_1qvo0")
 
 [node name="Speed" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Speed"
 
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/Speed"]
+script = ExtResource("9_kjmea")
+
 [node name="Scrounge" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_pykan")]
 layout_mode = 2
 title = "Scrounge"
 
+[node name="UpgradeHandler" type="Node" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer/Scrounge"]
+script = ExtResource("11_lg2xn")
+
 [node name="Label" type="Label" parent="GUI_Control/Soldier_Control/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "           [B] - Molotov
+text = "
+
+
+
+
+
+
+           [B] - Molotov
            [G] - Gather
            [T] - Debris"
