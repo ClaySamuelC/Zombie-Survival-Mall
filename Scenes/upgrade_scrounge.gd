@@ -9,16 +9,25 @@ extends Node
 
 @export var scrounge_upgrade : int = 1
 
+func get_bullet_cost(level: int) -> int:
+	return base_bullet_cost + bullet_cost_jump * level
+
+func get_hk_cost(level: int) -> int:
+	return base_hk_cost + hk_cost_jump * level
+
+func get_debris_cost(level: int) -> int:
+	return base_debris_cost + debris_cost_jump * level
+
 func upgrade():
 	if len(GameManager.selected_units) < 1:
-		print("No unit selected.")
+		print("No unit selected")
 		return
 	
 	var selected_unit = GameManager.selected_units[0]
 	
-	var hk_cost = base_hk_cost + hk_cost_jump * selected_unit.scrounge_level
-	var bullet_cost = base_bullet_cost + bullet_cost_jump * selected_unit.scrounge_level
-	var debris_cost = base_debris_cost + debris_cost_jump * selected_unit.scrounge_level
+	var bullet_cost = get_bullet_cost(selected_unit.scrounge_level)
+	var hk_cost = get_hk_cost(selected_unit.scrounge_level)
+	var debris_cost = get_debris_cost(selected_unit.scrounge_level)
 	
 	var success: bool = GameState.transact(bullet_cost, hk_cost, debris_cost, 0)
 	if !success:

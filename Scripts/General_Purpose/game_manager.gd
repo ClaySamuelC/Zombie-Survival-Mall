@@ -7,6 +7,8 @@ extends Node3D
 @onready var selection_box = get_node("/root/Main/CanvasLayer/Control/SelectionBox")
 @onready var soldier_control = get_node("/root/Main/GUI/GUI_Control/Soldier_Control")
 
+signal on_unit_selected(unit: Node3D)
+
 var selected_units: Array[Node3D] = []
 var dragging = false
 var drag_start = Vector2()
@@ -111,6 +113,11 @@ func handle_box_selection(start: Vector2, end: Vector2):
 					selected_units.append(survivor)
 					survivor.is_selected = true
 					survivor.selected_indicator.visible = true
+	
+	if len(selected_units) < 1:
+		on_unit_selected.emit(null)
+	else:
+		on_unit_selected.emit(selected_units[0])
 
 func select_unit(unit: Node3D):
 	deselect_all()
@@ -123,6 +130,8 @@ func deselect_all():
 			unit.is_selected = false
 			unit.selected_indicator.visible = false
 	selected_units.clear()
+	on_unit_selected.emit(null)
+	
 	Input.set_custom_mouse_cursor(default_cursor)
 
 func handle_right_click() -> void:

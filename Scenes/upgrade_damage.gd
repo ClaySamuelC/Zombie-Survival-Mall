@@ -4,6 +4,9 @@ extends Node
 @export var bullet_cost_jump: int = 50
 @export var damage_upgrade: int = 5
 
+func get_bullet_cost(level: int) -> int:
+	return base_bullet_cost + bullet_cost_jump * level
+
 func upgrade():
 	if len(GameManager.selected_units) < 1:
 		print("No unit selected.")
@@ -11,7 +14,7 @@ func upgrade():
 	
 	var selected_unit = GameManager.selected_units[0]
 	
-	var bullet_cost = base_bullet_cost + bullet_cost_jump * selected_unit.damage_level
+	var bullet_cost = get_bullet_cost(selected_unit.damage_level)
 	
 	var success: bool = GameState.transact(bullet_cost, 0, 0, 0)
 	if !success:

@@ -2,9 +2,9 @@ extends Node
 
 # Author: ClaySamuelC
 
-var bullets: int = 250
-var debris: int = 250
-var healing_kits: int = 250
+var bullets: int = 10000
+var debris: int = 10000
+var healing_kits: int = 10000
 var zombie_kills: int = 0
 var molotov: int = 7
 
