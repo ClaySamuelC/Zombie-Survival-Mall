@@ -1,39 +1,10 @@
-[gd_scene load_steps=27 format=4 uid="uid://cgy55kt1iudgb"]
+[gd_scene load_steps=12 format=4 uid="uid://cktjeq2nlcide"]
 
-[ext_resource type="Script" path="res://Scripts/survivor.gd" id="1_mi1p3"]
-[ext_resource type="Script" path="res://Scripts/State_Machine/State_Machine.gd" id="2_b12g2"]
-[ext_resource type="Script" path="res://Scripts/survivor_coll.gd" id="2_ronuj"]
-[ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Attack_State.gd" id="3_v6isq"]
-[ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Idle_State.gd" id="5_7hdcf"]
-[ext_resource type="Script" path="res://Scripts/State_Machine/survivor_Gather_State.gd" id="6_5kb7l"]
-[ext_resource type="ArrayMesh" uid="uid://ci5h362e78583" path="res://Assets/models/Gestapo/Package/Gestapo-1.obj" id="7_dcwgw"]
-[ext_resource type="PackedScene" uid="uid://cdr1y1mtmnxug" path="res://Assets/models/Gestapo/Character_Hero.fbx" id="8_yd8st"]
-[ext_resource type="Texture2D" uid="uid://clhutw5t44fl7" path="res://Assets/textures/Trees/Textures/Colorsheet Tree Dry.png" id="9_vibcs"]
-[ext_resource type="PackedScene" uid="uid://uodvweeh6lh2" path="res://Assets/models/Flat Shaded Weapons/Shotgun Soviet.fbx" id="10_iq7al"]
+[ext_resource type="Texture2D" uid="uid://clhutw5t44fl7" path="res://Assets/textures/Trees/Textures/Colorsheet Tree Dry.png" id="1_ibed0"]
+[ext_resource type="PackedScene" uid="uid://uodvweeh6lh2" path="res://Assets/models/Flat Shaded Weapons/Shotgun Soviet.fbx" id="2_6p4xr"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bmv6"]
-albedo_color = Color(0.729412, 0.858824, 0.254902, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_8dyn4"]
-size = Vector3(0.3, 0.4, 0.3)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngv3g"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_07tca"]
-albedo_color = Color(0.631373, 0.376471, 0.360784, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_bfudi"]
-radius = 0.095
-height = 0.18
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dxfp"]
-albedo_color = Color(0.0745098, 0.137255, 0.592157, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwdwk"]
-albedo_texture = ExtResource("9_vibcs")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvker"]
-albedo_texture = ExtResource("9_vibcs")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75g33"]
+albedo_texture = ExtResource("1_ibed0")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8y27l"]
 
@@ -1765,62 +1736,12 @@ _data = {
 "Walk_Forward": SubResource("Animation_gq0cw")
 }
 
-[node name="Survivor" type="CharacterBody3D"]
-script = ExtResource("1_mi1p3")
+[node name="Low_Poly_Survivor_Empyt_Hands_Rifle" type="Node3D"]
 
-[node name="Selected_Indicator" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.22791, 0, 1.27987, 0, 1.3, 0, -1.27987, 0, -0.22791, -0.0982248, 4.33847, 0.27894)
-visible = false
-material_override = SubResource("StandardMaterial3D_1bmv6")
-mesh = SubResource("BoxMesh_8dyn4")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.22791, 0, 1.27987, 0, 1.3, 0, -1.27987, 0, -0.22791, -0.0982248, 1.24277, 0.27894)
-shape = SubResource("CapsuleShape3D_ngv3g")
-script = ExtResource("2_ronuj")
-
-[node name="Survivor_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "script_user")]
-script = ExtResource("2_b12g2")
-initial_state = NodePath("Survivor_Idle_State")
-script_user = NodePath("..")
-
-[node name="Survivor_Attack_State" type="Node" parent="Survivor_Machine"]
-script = ExtResource("3_v6isq")
-
-[node name="Survivor_Idle_State" type="Node" parent="Survivor_Machine"]
-script = ExtResource("5_7hdcf")
-
-[node name="Survivor_Gather_State" type="Node" parent="Survivor_Machine"]
-script = ExtResource("6_5kb7l")
-
-[node name="GunShot" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.546788, 1.46173, -0.330974)
-visible = false
-material_override = SubResource("StandardMaterial3D_07tca")
-mesh = SubResource("SphereMesh_bfudi")
-
-[node name="Gestapo-1" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 0.75, 0, 8.74228e-08, 0, -1, -1.24095, 0.0832635, 0.0420097)
-visible = false
-mesh = ExtResource("7_dcwgw")
-
-[node name="Character_Hero" parent="." instance=ExtResource("8_yd8st")]
-transform = Transform3D(0.0151491, 0, 1.99994, 0, 2, 0, -1.99994, 0, 0.0151491, -0.106793, 0, 0.373857)
-visible = false
-
-[node name="Gather_Indicator" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.22791, 0, 1.27987, 0, 1.3, 0, -1.27987, 0, -0.22791, -0.0982248, 4.33847, 0.27894)
-visible = false
-material_override = SubResource("StandardMaterial3D_5dxfp")
-mesh = SubResource("BoxMesh_8dyn4")
-
-[node name="Low_Poly_Survivor_Empyt_Hands_Rifle" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
-[node name="Armature" type="Node3D" parent="Low_Poly_Survivor_Empyt_Hands_Rifle"]
+[node name="Armature" type="Node3D" parent="."]
 transform = Transform3D(1.75, 0, 0, 0, -7.64949e-08, -1.75, 0, 1.75, -7.64949e-08, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Low_Poly_Survivor_Empyt_Hands_Rifle/Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Armature"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.0354606, -1.05673)
@@ -2277,21 +2198,20 @@ bones/64/position = Vector3(8.26549e-09, 0.0802418, -1.57888e-09)
 bones/64/rotation = Quaternion(-9.12405e-09, 2.7895e-07, 4.64206e-09, 1)
 bones/64/scale = Vector3(1, 1, 1)
 
-[node name="Male_Character" type="MeshInstance3D" parent="Low_Poly_Survivor_Empyt_Hands_Rifle/Armature/Skeleton3D"]
-material_override = SubResource("StandardMaterial3D_wwdwk")
-material_overlay = SubResource("StandardMaterial3D_wvker")
+[node name="Male_Character" type="MeshInstance3D" parent="Armature/Skeleton3D"]
+material_overlay = SubResource("StandardMaterial3D_75g33")
 mesh = SubResource("ArrayMesh_box0r")
 skin = SubResource("Skin_oo14a")
 
-[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Low_Poly_Survivor_Empyt_Hands_Rifle/Armature/Skeleton3D"]
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
 transform = Transform3D(-0.679274, 0.233156, 0.695863, -0.726696, -0.346086, -0.593412, 0.102471, -0.90877, 0.404521, -0.165939, 0.554044, -1.45381)
 bone_name = "mixamorig_LeftHandMiddle2"
 bone_idx = 20
 
-[node name="Shotgun Soviet" parent="Low_Poly_Survivor_Empyt_Hands_Rifle/Armature/Skeleton3D/BoneAttachment3D" instance=ExtResource("10_iq7al")]
+[node name="Shotgun Soviet" parent="Armature/Skeleton3D/BoneAttachment3D" instance=ExtResource("2_6p4xr")]
 transform = Transform3D(-0.548289, -0.084107, -0.832049, 0.30639, 0.90555, -0.293437, 0.778142, -0.41582, -0.470734, 0.20002, 0.0949665, 0.178832)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Low_Poly_Survivor_Empyt_Hands_Rifle"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_xhbbs")
 }

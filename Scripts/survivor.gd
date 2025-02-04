@@ -6,7 +6,7 @@ extends CharacterBody3D
 @export var OBSTACLE_DETECTION_RANGE = 1.8
 @export var AVOIDANCE_FORCE = 2.0
 
-@onready var animation_player = $AnimationPlayer
+@onready var animation_player = $Low_Poly_Survivor_Empyt_Hands_Rifle/AnimationPlayer
 @onready var selected_indicator = $Selected_Indicator
 @onready var gather_indicator = $Gather_Indicator
 
@@ -20,7 +20,7 @@ var rays = []
 var zombie_list
 var current_target
 
-@export var attack_range = 45
+@export var attack_range = 20
 @export var current_damage = 100
 @export var health = 100
 @export var MAX_HEALTH = 100
@@ -49,67 +49,11 @@ func _ready():
 func _process(delta):
 	heal()
 	if moving == true:
+		animation_player.play("Walk_Forward")
 		move_unit_to_destination()
+	else:
+		animation_player.play("Idle")
 	pass
-
-func move_unit(target):
-	current_target = target
-	
-	var delta = get_physics_process_delta_time()
-	
-	# Apply gravity
-	if not is_on_floor():
-		velocity.y -= gravity * delta
-	
-	# Calculate base direction to target
-	var target_direction = (current_target.global_position - global_position)
-	target_direction.y = 0  # Keep movement on the horizontal plane
-	target_direction = target_direction.normalized()
-	
-	# Calculate avoidance direction
-	var avoidance = Vector3.ZERO
-	var num_collisions = 0
-	
-	# Check all raycasts for obstacles
-	for ray in rays:
-		if ray.is_colliding():
-			var collision_point = ray.get_collision_point()
-			var collision_normal = ray.get_collision_normal()
-			var distance = global_position.distance_to(collision_point)
-			
-			# Calculate avoidance vector (stronger when closer to obstacle)
-			var avoidance_vector = collision_normal * (1.0 - distance / OBSTACLE_DETECTION_RANGE)
-			avoidance += avoidance_vector
-			num_collisions += 1
-	
-	# Average the avoidance vector if there were collisions
-	if num_collisions > 0:
-		avoidance = (avoidance / num_collisions) * AVOIDANCE_FORCE
-	
-	# Combine target direction with avoidance
-	var final_direction = (target_direction + avoidance).normalized()
-	
-	# Apply horizontal movement with acceleration
-	var target_velocity = final_direction * SPEED
-	velocity.x = move_toward(velocity.x, target_velocity.x, ACCELERATION * delta)
-	velocity.z = move_toward(velocity.z, target_velocity.z, ACCELERATION * delta)
-	
-	# Rotate character to face movement direction
-	if velocity.length_squared() > 0.1:
-		var target_rotation = atan2(-velocity.x, -velocity.z)
-		rotation.y = lerp_angle(rotation.y, target_rotation, ROTATION_SPEED * delta)
-	
-	# Apply movement
-	move_and_slide()
-	
-	# Handle floor detection and snapping
-	if is_on_floor():
-		# Reset vertical velocity when on floor
-		velocity.y = 0
-	
-	# Optional: Jump if needed and on floor
-	# if Input.is_action_just_pressed("jump") and is_on_floor():
-	#     velocity.y = JUMP_VELOCITY
 
 # Function to set new target
 func set_target(target: Node3D):
@@ -156,7 +100,6 @@ func move_unit_to_destination():
 	else:
 		moving = false
 	if moving:
-		$"Running Guy/HumanM_Walk01_Backward/AnimationPlayer".play("HumanM@Sprint01_ForwardRight/Untitled")
 		var new_transform = transform.looking_at(destination)
 		transform = transform.interpolate_with(new_transform, SPEED * delta)
 		# Apply gravity

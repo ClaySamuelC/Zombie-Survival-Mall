@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dfkqwiygnvdrj"
-path="res://.godot/imported/maleSurv2NoGun.fbx-b89c3f34ebbec0d5d3f5459a45dfc4e5.scn"
+uid="uid://d1fb2nekq21nf"
+path="res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-c89cf2b5eedae5b92ae20ca918a2bc87.scn"
 
 [deps]
 
-source_file="res://Assets/models/test/maleSurv2NoGun.fbx"
-dest_files=["res://.godot/imported/maleSurv2NoGun.fbx-b89c3f34ebbec0d5d3f5459a45dfc4e5.scn"]
+source_file="res://Assets/models/test/Low_Poly_Survivor_Empyt_Hands_Rifle.glb"
+dest_files=["res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-c89cf2b5eedae5b92ae20ca918a2bc87.scn"]
 
 [params]
 
@@ -27,11 +27,10 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
+gltf/naming_version=1
+gltf/embedded_image_handling=1
