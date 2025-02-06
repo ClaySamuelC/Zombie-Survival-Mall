@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://duso1m1x8hi4q"]
+[gd_scene load_steps=11 format=3 uid="uid://duso1m1x8hi4q"]
 
 [ext_resource type="Script" path="res://Scripts/zombie.gd" id="1_i8bpg"]
 [ext_resource type="Script" path="res://Scripts/State_Machine/State_Machine.gd" id="2_7kd8t"]
@@ -13,19 +13,33 @@ albedo_color = Color(0.12549, 0.435294, 0.137255, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ou24l"]
 resource_local_to_scene = true
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1vs3t"]
+resource_local_to_scene = true
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2flss"]
 resource_local_to_scene = true
+radius = 0.545707
 
 [node name="Zombie" type="CharacterBody3D"]
 script = ExtResource("1_i8bpg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00077, 0)
+transform = Transform3D(1.03399, 0, 0, 0, 1.10393, 0, 0, 0, 1.03832, 0, 1.13957, 0)
 material_override = SubResource("StandardMaterial3D_qsikj")
 mesh = SubResource("CapsuleMesh_ou24l")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-0.00506398, 0.0389931, -0.402176, -0.209753, -0.000941399, 0.00970956, 0, 0.50312, 0.0311878, -0.325313, 0.186782, -0.369486)
+material_override = SubResource("StandardMaterial3D_qsikj")
+mesh = SubResource("CapsuleMesh_1vs3t")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.00506399, -0.0389931, 0.402176, 0.209753, 0.000941402, -0.00970959, 0, 0.50312, 0.0311878, 0.289551, 0.186782, -0.371445)
+material_override = SubResource("StandardMaterial3D_qsikj")
+mesh = SubResource("CapsuleMesh_1vs3t")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00609, 0)
+transform = Transform3D(1.03, 0, 0, 0, 1.03, 0, 0, 0, 1.03, 0, 1.05645, 0)
 shape = SubResource("CapsuleShape3D_2flss")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

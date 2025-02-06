@@ -26,7 +26,7 @@ func Update(_delta: float):
 		script_user.transform = script_user.transform.interpolate_with(new_transform, script_user.SPEED * _delta)
 		if script_user.global_position.distance_to(script_user.current_target.global_position) < script_user.attack_range and GameState.bullets > 0:
 			if tick >= tick_timer:
-					script_user.animation_player.play("Shoot")
+					#script_user.animation_player.play("Shoot")
 					script_user.current_target.take_damage(script_user.current_damage)
 					$"../../GunShot".visible = true
 					Audio.play_sound(load("res://Sounds/Shotgun_gunshot.ogg"), script_user.global_position,-randi_range(-15,-25),250)

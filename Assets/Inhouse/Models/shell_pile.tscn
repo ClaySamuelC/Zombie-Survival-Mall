@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://r3qowf18rslm"]
+
+[ext_resource type="PackedScene" uid="uid://cmqfdqa7yc17s" path="res://Assets/Inhouse/Models/shotgun_shell.tscn" id="1_u2xjt"]
+
+[node name="Shell Pile" type="Node3D"]
+transform = Transform3D(0.130777, -0.269995, 0, 0.269995, 0.130777, 0, 0, 0, 0.3, -0.0623965, -0.0757029, 0)
+
+[node name="ShotgunShell2" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, -0.482625, 1.63005, 3.92486)
+
+[node name="ShotgunShell3" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, 0.0764881, 0.954018, 6.05176)
+
+[node name="ShotgunShell4" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, -0.155861, 1.19962, 5.09818)
+
+[node name="ShotgunShell5" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, -0.904538, 1.63822, 2.78812)
+
+[node name="ShotgunShell6" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, 0.0764881, 0.954018, 6.05176)
+
+[node name="ShotgunShell7" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, -0.155861, 1.19962, 5.09818)
+
+[node name="ShotgunShell8" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, 0.10157, 2.04256, 2.8982)
+
+[node name="ShotgunShell9" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, 0.766342, 1.59244, 4.88036)
+
+[node name="ShotgunShell10" parent="." instance=ExtResource("1_u2xjt")]
+transform = Transform3D(-0.795997, -0.339626, 0.501042, -0.111693, 0.895956, 0.429869, -0.594906, 0.286211, -0.751112, 0.533993, 1.83805, 3.92678)
