@@ -18,7 +18,6 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 Audio="*res://Scripts/General_Purpose/audio.gd"
-GameManager="*res://Scripts/General_Purpose/game_manager.gd"
 GameState="*res://Scripts/General_Purpose/Game_Data.gd"
 
 [display]

@@ -4,7 +4,7 @@ var selected_unit: Node3D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GameManager.on_unit_selected.connect(on_new_unit_selected)
+	GameState.on_unit_selected.connect(on_new_unit_selected)
 	$Toughness.on_upgrade.connect(on_upgrade_clicked)
 	$Damage.on_upgrade.connect(on_upgrade_clicked)
 	$Speed.on_upgrade.connect(on_upgrade_clicked)

@@ -7,9 +7,6 @@ extends Node3D
 @onready var selection_box = get_node("/root/Main/CanvasLayer/Control/SelectionBox")
 @onready var soldier_control = get_node("/root/Main/GUI/GUI_Control/Soldier_Control")
 
-signal on_unit_selected(unit: Node3D)
-
-var selected_units: Array[Node3D] = []
 var dragging = false
 var drag_start = Vector2()
 var drag_end = Vector2()
@@ -23,7 +20,7 @@ var all_modes = {
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("gather_mode"):
 		# This is cleared in handle_right_click
-		if len(selected_units) > 0:
+		if len(GameState.selected_units) > 0:
 			Input.set_custom_mouse_cursor(gather_cursor)
 		
 		all_modes["gather_mode"] = true
@@ -110,27 +107,21 @@ func handle_box_selection(start: Vector2, end: Vector2):
 			if camera.is_position_in_frustum(survivor.global_position):
 				var screen_pos = camera.unproject_position(survivor.global_position)
 				if rect.has_point(screen_pos):
-					selected_units.append(survivor)
+					GameState.append_selected_units(survivor)
 					survivor.is_selected = true
 					survivor.selected_indicator.visible = true
-	
-	if len(selected_units) < 1:
-		on_unit_selected.emit(null)
-	else:
-		on_unit_selected.emit(selected_units[0])
 
 func select_unit(unit: Node3D):
 	deselect_all()
-	selected_units.append(unit)
+	GameState.append_selected_units(unit)
 	unit.is_selected = true
 
 func deselect_all():
-	for unit in selected_units:
+	for unit in GameState.selected_units:
 		if unit and is_instance_valid(unit):
 			unit.is_selected = false
 			unit.selected_indicator.visible = false
-	selected_units.clear()
-	on_unit_selected.emit(null)
+	GameState.set_selected_units([])
 	
 	Input.set_custom_mouse_cursor(default_cursor)
 
@@ -138,7 +129,7 @@ func handle_right_click() -> void:
 	all_modes["debris_mode"] = false
 	all_modes["molotov_mode"] = false
 	
-	if selected_units.is_empty():
+	if GameState.selected_units.is_empty():
 		return
 	
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -149,7 +140,7 @@ func handle_right_click() -> void:
 	
 	if result:
 		var target_pos = result.position
-		for unit in selected_units:
+		for unit in GameState.selected_units:
 			if unit and is_instance_valid(unit):
 				unit.destination = target_pos
 				unit.move_unit_to_destination()

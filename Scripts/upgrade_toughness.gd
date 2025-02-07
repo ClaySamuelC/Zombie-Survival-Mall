@@ -8,11 +8,11 @@ func get_hk_cost(level: int) -> int:
 	return base_hk_cost + hk_cost_jump * level
 
 func upgrade():
-	if len(GameManager.selected_units) < 1:
+	if GameState.selected_units.is_empty():
 		print("No unit selected.")
 		return
 	
-	var selected_unit = GameManager.selected_units[0]
+	var selected_unit = GameState.selected_units[0]
 	
 	var hk_cost = get_hk_cost(selected_unit.toughness_level)
 	
