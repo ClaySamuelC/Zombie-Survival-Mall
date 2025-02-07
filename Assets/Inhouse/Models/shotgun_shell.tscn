@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmqfdqa7yc17s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lejrt"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g6vvs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjhj4"]
+albedo_color = Color(0.8, 0.607843, 0.407843, 1)
+metallic = 0.85
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r251o"]
+top_radius = 0.6
+height = 0.1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nil35"]
+top_radius = 0.51
+bottom_radius = 0.51
+height = 0.5
+
+[node name="ShotgunShell" type="Node3D"]
+transform = Transform3D(0.0297615, 0.999505, 0.0101646, -0.999517, 0.0298495, -0.00862136, -0.00892049, -0.00990308, 0.999911, 0.00287203, 0.603546, 0.0991392)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14394, 0)
+material_override = SubResource("StandardMaterial3D_lejrt")
+mesh = SubResource("CylinderMesh_g6vvs")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00271189, 2.19503, 0)
+material_override = SubResource("StandardMaterial3D_gjhj4")
+mesh = SubResource("CylinderMesh_r251o")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0045377, 1.9802, 0)
+material_override = SubResource("StandardMaterial3D_gjhj4")
+mesh = SubResource("CylinderMesh_nil35")

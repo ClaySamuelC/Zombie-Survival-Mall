@@ -1,5 +1,7 @@
 extends Control
 
+var game
+
 func _physics_process(delta):
 	pass
 
@@ -8,7 +10,8 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_start_game_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	game = load("res://scenes/main.tscn")
+	get_tree().change_scene_to_packed(game)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
