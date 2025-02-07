@@ -8,11 +8,11 @@ func get_bullet_cost(level: int) -> int:
 	return base_bullet_cost + bullet_cost_jump * level
 
 func upgrade():
-	if len(GameManager.selected_units) < 1:
+	if GameState.selected_units.is_empty():
 		print("No unit selected.")
 		return
 	
-	var selected_unit = GameManager.selected_units[0]
+	var selected_unit = GameState.selected_units[0]
 	
 	var bullet_cost = get_bullet_cost(selected_unit.damage_level)
 	

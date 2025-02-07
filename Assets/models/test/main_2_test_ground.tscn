@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c0rgs72qesg1x"]
 
-[ext_resource type="Script" path="res://Scripts/General_Purpose/game_manager.gd" id="1_tdd2s"]
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_tdd2s"]
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="2_yhcn1"]
 [ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="3_25r6j"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="4_tb61m"]

@@ -8,6 +8,21 @@ var healing_kits: int = 10000
 var zombie_kills: int = 0
 var molotov: int = 7
 
+var selected_units: Array[Node3D] = []
+
+signal on_unit_selected(unit: Node3D)
+
+func set_selected_units(units: Array[Node3D]) -> void:
+	selected_units = units
+	if selected_units.is_empty():
+		on_unit_selected.emit(null)
+	else:
+		on_unit_selected.emit(selected_units[0])
+	
+func append_selected_units(unit: Node3D) -> void:
+	selected_units.append(unit)
+	on_unit_selected.emit(selected_units[0])
+
 # returns true if transaction succeeds, false if it fails
 func transact(bullet_cost: int = 0, hk_cost: int = 0, debris_cost: int = 0, molotov_cost: int = 0) -> bool: 
 	var success: bool = true
