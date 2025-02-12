@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://dc2ynpiltxm1o"]
+
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8t060"]
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://assets/main-environment.tres" id="1_ahusb"]
+[ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="2_wefn2"]
+[ext_resource type="PackedScene" uid="uid://buc4ku41nngmb" path="res://Scenes/zombie_spawner.tscn" id="5_4e8ho"]
+[ext_resource type="PackedScene" uid="uid://cgy55kt1iudgb" path="res://Scenes/survivor.tscn" id="5_tq0x0"]
+[ext_resource type="PackedScene" uid="uid://cs4n42634dlqe" path="res://Scenes/GUI.tscn" id="7_byi5l"]
+[ext_resource type="PackedScene" uid="uid://ce3p252asps8v" path="res://Scenes/mall_full.tscn" id="7_pyiyt"]
+[ext_resource type="AudioStream" uid="uid://dy3pkqvkut236" path="res://assets/sounds/Eighties Action.mp3" id="9_dmqxe"]
+[ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_8t060")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SelectionBox" type="ColorRect" parent="CanvasLayer/Control"]
+visible = false
+modulate = Color(1, 1, 1, 0.301961)
+self_modulate = Color(0.227451, 0.333333, 0.92549, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_ahusb")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, -48.0716, 40.5972, -0.243876)
+light_energy = 0.25
+shadow_enabled = true
+shadow_opacity = 0.75
+sky_mode = 1
+
+[node name="RTSController" type="Node3D" parent="."]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 49.4455, 20.4387, -1.88713)
+script = ExtResource("2_wefn2")
+zoom_speed = 3.0
+min_zoom = 15.0
+max_zoom = 15.0
+min_x = -60.0
+max_x = 60.0
+min_z = -60.0
+max_z = 60.0
+
+[node name="Elevation" type="Node3D" parent="RTSController"]
+transform = Transform3D(1, 0, -1.49012e-08, 0, 1, 0, 1.49012e-08, 0, 1, 0, -9, 0)
+
+[node name="MainCamera" type="Camera3D" parent="RTSController/Elevation"]
+fov = 89.4
+
+[node name="GrassMesh" parent="." instance=ExtResource("19_xf02x")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 9, 0, 0)
+
+[node name="Zombie_spawner" parent="." instance=ExtResource("5_4e8ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -18.8994)
+
+[node name="GUI" parent="." instance=ExtResource("7_byi5l")]
+
+[node name="MallFull" parent="." instance=ExtResource("7_pyiyt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 1, 24)
+
+[node name="Zombie_spawner2" parent="." instance=ExtResource("5_4e8ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -5.8994)
+
+[node name="Zombie_spawner3" parent="." instance=ExtResource("5_4e8ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, 16.1006)
+
+[node name="Survivor1" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.0281469, 13.9976)
+
+[node name="Survivor2" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.0281469, 13.9976)
+
+[node name="Survivor3" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.0281469, 13.9976)
+
+[node name="Survivor4" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.0281469, 1.9976)
+
+[node name="Survivor5" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.0281469, 1.9976)
+
+[node name="Survivor6" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.0281469, 2.9976)
+
+[node name="Survivor7" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.0281469, -9.0024)
+
+[node name="Survivor8" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.0281469, -9.0024)
+
+[node name="Survivor9" parent="." instance=ExtResource("5_tq0x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.0281469, -10.0024)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_dmqxe")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
