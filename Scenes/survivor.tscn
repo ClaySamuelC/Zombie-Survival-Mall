@@ -26,7 +26,6 @@ albedo_texture = ExtResource("3_aq61h")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmke5"]
 resource_name = "Shotgun"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8uexf"]
@@ -2657,3 +2656,5 @@ bone_idx = 20
 libraries = {
 "": SubResource("AnimationLibrary_xhbbs")
 }
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

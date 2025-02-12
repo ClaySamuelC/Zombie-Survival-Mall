@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7m1sfsy0dr1w"
-path="res://.godot/imported/BasicMotions_DummyMale-BaseColor.png-dffa04e6d089c769bcee741513e881cf.ctex"
+path="res://.godot/imported/BasicMotions_DummyMale-BaseColor.png-b0a0f505d20c0ef47c6d421b04ef3ec2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Textures/DummyMale/BasicMotions_DummyMale-BaseColor.png"
-dest_files=["res://.godot/imported/BasicMotions_DummyMale-BaseColor.png-dffa04e6d089c769bcee741513e881cf.ctex"]
+source_file="res://Assets/animations/Basic Motions FREE/Textures/DummyMale/BasicMotions_DummyMale-BaseColor.png"
+dest_files=["res://.godot/imported/BasicMotions_DummyMale-BaseColor.png-b0a0f505d20c0ef47c6d421b04ef3ec2.ctex"]
 
 [params]
 

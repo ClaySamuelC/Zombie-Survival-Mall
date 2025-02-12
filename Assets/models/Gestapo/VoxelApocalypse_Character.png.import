@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dju750vsy456l"
-path.s3tc="res://.godot/imported/VoxelApocalypse_Character.png-55b396f44cce0ef5d0b425aa63a34797.s3tc.ctex"
+path.s3tc="res://.godot/imported/VoxelApocalypse_Character.png-5d677b8fa7818a8b5a48f1b18c3c0526.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/Gestapo/VoxelApocalypse_Character.png"
-dest_files=["res://.godot/imported/VoxelApocalypse_Character.png-55b396f44cce0ef5d0b425aa63a34797.s3tc.ctex"]
+source_file="res://Assets/models/Gestapo/VoxelApocalypse_Character.png"
+dest_files=["res://.godot/imported/VoxelApocalypse_Character.png-5d677b8fa7818a8b5a48f1b18c3c0526.s3tc.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://brg64eln7l7wv"
-path="res://.godot/imported/dust.glb-84d44a0d15848a187a00c977b4fdf409.scn"
+path="res://.godot/imported/dust.glb-ae247ebfd43030b55cc06e7000d3f176.scn"
 
 [deps]
 
-source_file="res://assets/models/dust.glb"
-dest_files=["res://.godot/imported/dust.glb-84d44a0d15848a187a00c977b4fdf409.scn"]
+source_file="res://Assets/models/dust.glb"
+dest_files=["res://.godot/imported/dust.glb-ae247ebfd43030b55cc06e7000d3f176.scn"]
 
 [params]
 

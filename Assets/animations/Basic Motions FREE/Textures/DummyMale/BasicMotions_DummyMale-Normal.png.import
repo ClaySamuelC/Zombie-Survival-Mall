@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://copx212r0elys"
-path="res://.godot/imported/BasicMotions_DummyMale-Normal.png-0d298a474b1a6302f23bb2079610d442.ctex"
+path="res://.godot/imported/BasicMotions_DummyMale-Normal.png-bf209a780ae450d2ca5b54f27f0de3de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Textures/DummyMale/BasicMotions_DummyMale-Normal.png"
-dest_files=["res://.godot/imported/BasicMotions_DummyMale-Normal.png-0d298a474b1a6302f23bb2079610d442.ctex"]
+source_file="res://Assets/animations/Basic Motions FREE/Textures/DummyMale/BasicMotions_DummyMale-Normal.png"
+dest_files=["res://.godot/imported/BasicMotions_DummyMale-Normal.png-bf209a780ae450d2ca5b54f27f0de3de.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cn7f87vbx31yk"
-path="res://.godot/imported/BasicMotions_DummyModel_M.fbx-9e3479185933bc1ffef1cd8a1892c435.scn"
+path="res://.godot/imported/BasicMotions_DummyModel_M.fbx-9efcacc46ab42af9457042fd929a43c6.scn"
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Models/BasicMotions_DummyModel_M.fbx"
-dest_files=["res://.godot/imported/BasicMotions_DummyModel_M.fbx-9e3479185933bc1ffef1cd8a1892c435.scn"]
+source_file="res://Assets/animations/Basic Motions FREE/Models/BasicMotions_DummyModel_M.fbx"
+dest_files=["res://.godot/imported/BasicMotions_DummyModel_M.fbx-9efcacc46ab42af9457042fd929a43c6.scn"]
 
 [params]
 

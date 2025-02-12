@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://d1c5yr4b0bv8a"
-path="res://.godot/imported/walk backwards stop.fbx-f9d07a9ac8c052e06975e3dccac53118.res"
+path="res://.godot/imported/walk backwards stop.fbx-303b7be3653b03826b15e0c12fd8c634.res"
 
 [deps]
 
-source_file="res://assets/animations/Shooter Pack/walk backwards stop.fbx"
-dest_files=["res://.godot/imported/walk backwards stop.fbx-f9d07a9ac8c052e06975e3dccac53118.res"]
+source_file="res://Assets/animations/Shooter Pack/walk backwards stop.fbx"
+dest_files=["res://.godot/imported/walk backwards stop.fbx-303b7be3653b03826b15e0c12fd8c634.res"]
 
 [params]
 

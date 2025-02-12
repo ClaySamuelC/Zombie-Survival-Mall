@@ -7,6 +7,8 @@ extends CharacterBody3D
 @export var OBSTACLE_DETECTION_RANGE = 3
 @export var AVOIDANCE_FORCE = 3.0
 
+@onready var nav: NavigationAgent3D = $NavigationAgent3D
+
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -34,51 +36,18 @@ func _ready():
 func move_unit(target):
 	if !check_for_debris():
 		current_target = target
-		var delta = get_physics_process_delta_time()
-		# Apply gravity
-		if not is_on_floor():
-			velocity.y -= gravity * delta
 		
-		# Calculate base direction to target
-		var target_direction = (current_target.global_position - global_position)
-		target_direction.y = 0  # Keep movement on the horizontal plane
-		target_direction = target_direction.normalized()
+		var direction
 		
-		# Calculate avoidance direction
-		var avoidance = Vector3.ZERO
-		var num_collisions = 0
+		nav.target_position = current_target.global_position
 		
-		# Check all raycasts for obstacles
-		for ray in rays:
-			if ray.is_colliding():
-				var collision_point = ray.get_collision_point()
-				var collision_normal = ray.get_collision_normal()
-				var distance = global_position.distance_to(collision_point)
-				
-				# Calculate avoidance vector (stronger when closer to obstacle)
-				var avoidance_vector = collision_normal * (1.0 - distance / OBSTACLE_DETECTION_RANGE)
-				avoidance += avoidance_vector
-				num_collisions += 1
+		direction = nav.get_next_path_position() - global_position
 		
-		# Average the avoidance vector if there were collisions
-		if num_collisions > 0:
-			avoidance = (avoidance / num_collisions) * AVOIDANCE_FORCE
+		direction = direction.normalized()
 		
-		# Combine target direction with avoidance
-		var final_direction = (target_direction + avoidance).normalized()
-		
-		# Apply horizontal movement with acceleration
-		var target_velocity = final_direction * SPEED
-		velocity.x = move_toward(velocity.x, target_velocity.x, ACCELERATION * delta)
-		velocity.z = move_toward(velocity.z, target_velocity.z, ACCELERATION * delta)
-		
-		# Rotate character to face movement direction
-		if velocity.length_squared() > 0.1:
-			var target_rotation = atan2(-velocity.x, -velocity.z)
-			rotation.y = lerp_angle(rotation.y, target_rotation, ROTATION_SPEED * delta)
+		velocity = velocity.lerp(direction * SPEED, ACCELERATION * get_process_delta_time())
 		
 		# Apply movement
-		#TODO Do something about when they are surrounded they flip around in every direction
 		move_and_slide()
 		
 		# Handle floor detection and snapping

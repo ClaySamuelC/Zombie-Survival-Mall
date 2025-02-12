@@ -61,3 +61,5 @@ script = ExtResource("5_7ex2e")
 [node name="Character_Zombie" parent="." instance=ExtResource("6_las04")]
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 0, 0, 0)
 visible = false
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://bie5gnxghgkqp"
-path="res://.godot/imported/HumanM@Sprint01_ForwardRight.fbx-bad2de8436fbf3b0894b03cb6303d642.res"
+path="res://.godot/imported/HumanM@Sprint01_ForwardRight.fbx-e82b5a9d5fb12ce33dae097f0ddd19da.res"
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Animations/Male/Movement/Sprint/HumanM@Sprint01_ForwardRight.fbx"
-dest_files=["res://.godot/imported/HumanM@Sprint01_ForwardRight.fbx-bad2de8436fbf3b0894b03cb6303d642.res"]
+source_file="res://Assets/animations/Basic Motions FREE/Animations/Male/Movement/Sprint/HumanM@Sprint01_ForwardRight.fbx"
+dest_files=["res://.godot/imported/HumanM@Sprint01_ForwardRight.fbx-e82b5a9d5fb12ce33dae097f0ddd19da.res"]
 
 [params]
 

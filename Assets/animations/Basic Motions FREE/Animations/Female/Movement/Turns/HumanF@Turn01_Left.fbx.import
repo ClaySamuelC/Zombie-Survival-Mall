@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c3pd6hmf5sj6w"
-path="res://.godot/imported/HumanF@Turn01_Left.fbx-708b24f7896f6fdee5af9bbc5bcd5ef9.scn"
+path="res://.godot/imported/HumanF@Turn01_Left.fbx-b19575a657067c6492141d0e63a6a971.scn"
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Animations/Female/Movement/Turns/HumanF@Turn01_Left.fbx"
-dest_files=["res://.godot/imported/HumanF@Turn01_Left.fbx-708b24f7896f6fdee5af9bbc5bcd5ef9.scn"]
+source_file="res://Assets/animations/Basic Motions FREE/Animations/Female/Movement/Turns/HumanF@Turn01_Left.fbx"
+dest_files=["res://.godot/imported/HumanF@Turn01_Left.fbx-b19575a657067c6492141d0e63a6a971.scn"]
 
 [params]
 

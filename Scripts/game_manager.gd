@@ -6,6 +6,7 @@ extends Node3D
 @onready var camera =  get_node("/root/Main/RTSController/Elevation/MainCamera")
 @onready var selection_box = get_node("/root/Main/CanvasLayer/Control/SelectionBox")
 @onready var soldier_control = get_node("/root/Main/GUI/GUI_Control/Soldier_Control")
+@onready var gui = get_node("/root/Main/GUI/")
 
 @onready var lose_screen = load("res://Scenes/lose_screen.tscn")
 
@@ -172,7 +173,8 @@ func place_debris():
 		var query = PhysicsRayQueryParameters3D.create(from, to)
 		var result = get_parent().get_world_3d().direct_space_state.intersect_ray(query)
 		
-		if result:
+		#Stops debris from stacking/being built on walls
+		if result.position.y < .5 && result.get("collider") && !result.get("collider").is_in_group("debris"):
 			var location = result.position
 			var pre_load = load("res://Scenes/debris.tscn")
 			var debris = pre_load.instantiate()
@@ -197,6 +199,8 @@ func place_molotov():
 			add_child(molotov)
 			molotov.set_global_position(location + Vector3(0,1,0))
 			GameState.molotov -= 1
+			gui.flash_minus("molotov", 1)
+			all_modes["molotov_mode"] = false
 	else:
 		print("out of molotov")
 

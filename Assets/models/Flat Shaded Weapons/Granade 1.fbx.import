@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bb1yjxdgb0p4"
-path="res://.godot/imported/Granade 1.fbx-b40d561c4bcc1e42a6cb4463fd5bd690.scn"
+path="res://.godot/imported/Granade 1.fbx-d3ab4f085fd61207de7ebcc810194d01.scn"
 
 [deps]
 
-source_file="res://assets/models/Flat Shaded Weapons/Granade 1.fbx"
-dest_files=["res://.godot/imported/Granade 1.fbx-b40d561c4bcc1e42a6cb4463fd5bd690.scn"]
+source_file="res://Assets/models/Flat Shaded Weapons/Granade 1.fbx"
+dest_files=["res://.godot/imported/Granade 1.fbx-d3ab4f085fd61207de7ebcc810194d01.scn"]
 
 [params]
 

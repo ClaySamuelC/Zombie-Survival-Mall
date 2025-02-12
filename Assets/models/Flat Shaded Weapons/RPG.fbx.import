@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://uhsvb6o74a15"
-path="res://.godot/imported/RPG.fbx-7d5c808b54760d267086124bb46c7aef.scn"
+path="res://.godot/imported/RPG.fbx-da6910053a79bbee09ca58d561f8cd72.scn"
 
 [deps]
 
-source_file="res://assets/models/Flat Shaded Weapons/RPG.fbx"
-dest_files=["res://.godot/imported/RPG.fbx-7d5c808b54760d267086124bb46c7aef.scn"]
+source_file="res://Assets/models/Flat Shaded Weapons/RPG.fbx"
+dest_files=["res://.godot/imported/RPG.fbx-da6910053a79bbee09ca58d561f8cd72.scn"]
 
 [params]
 

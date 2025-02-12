@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://7oxd0eh23quq"
-path="res://.godot/imported/old-musket-bang-95873.mp3-88097d578799ce4e55de564873064a7c.mp3str"
+path="res://.godot/imported/old-musket-bang-95873.mp3-f7ab81ce15dcd44adcaad8066aff62b4.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/old-musket-bang-95873.mp3"
-dest_files=["res://.godot/imported/old-musket-bang-95873.mp3-88097d578799ce4e55de564873064a7c.mp3str"]
+source_file="res://Assets/sounds/old-musket-bang-95873.mp3"
+dest_files=["res://.godot/imported/old-musket-bang-95873.mp3-f7ab81ce15dcd44adcaad8066aff62b4.mp3str"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bw3dgfy6vi8d7"
-path="res://.godot/imported/HumanF@Talk01.fbx-125867ee8d7a3dac3e42dfd627cae97e.scn"
+path="res://.godot/imported/HumanF@Talk01.fbx-544ac95cc5c3fe3d7addc4e88a447b94.scn"
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Animations/Female/Social/Conversation/HumanF@Talk01.fbx"
-dest_files=["res://.godot/imported/HumanF@Talk01.fbx-125867ee8d7a3dac3e42dfd627cae97e.scn"]
+source_file="res://Assets/animations/Basic Motions FREE/Animations/Female/Social/Conversation/HumanF@Talk01.fbx"
+dest_files=["res://.godot/imported/HumanF@Talk01.fbx-544ac95cc5c3fe3d7addc4e88a447b94.scn"]
 
 [params]
 

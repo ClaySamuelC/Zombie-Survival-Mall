@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c7fgeao5oh07m"
-path="res://.godot/imported/UZI.fbx-1f17280053832cf294e36698a9ae98d8.scn"
+path="res://.godot/imported/UZI.fbx-890eb71b234bc4a47f2afcf0bddaf36f.scn"
 
 [deps]
 
-source_file="res://assets/models/Flat Shaded Weapons/UZI.fbx"
-dest_files=["res://.godot/imported/UZI.fbx-1f17280053832cf294e36698a9ae98d8.scn"]
+source_file="res://Assets/models/Flat Shaded Weapons/UZI.fbx"
+dest_files=["res://.godot/imported/UZI.fbx-890eb71b234bc4a47f2afcf0bddaf36f.scn"]
 
 [params]
 

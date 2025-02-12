@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6h6exj8tt8x4"
-path="res://.godot/imported/BasicMotions_DummyFemale-AmbientOcclusion.png-889662c9b0e1d3bdac6f5b100fba0367.ctex"
+path="res://.godot/imported/BasicMotions_DummyFemale-AmbientOcclusion.png-8fee5c30526f2edbc9be53764dcc8614.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Textures/DummyFemale/BasicMotions_DummyFemale-AmbientOcclusion.png"
-dest_files=["res://.godot/imported/BasicMotions_DummyFemale-AmbientOcclusion.png-889662c9b0e1d3bdac6f5b100fba0367.ctex"]
+source_file="res://Assets/animations/Basic Motions FREE/Textures/DummyFemale/BasicMotions_DummyFemale-AmbientOcclusion.png"
+dest_files=["res://.godot/imported/BasicMotions_DummyFemale-AmbientOcclusion.png-8fee5c30526f2edbc9be53764dcc8614.ctex"]
 
 [params]
 

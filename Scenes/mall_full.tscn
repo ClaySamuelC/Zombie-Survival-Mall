@@ -118,7 +118,6 @@ albedo_texture = ExtResource("12_10tnf")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmke5"]
 resource_name = "Shotgun"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dqaf0"]
@@ -419,7 +418,6 @@ albedo_texture = ExtResource("13_g4axh")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yrst"]
 resource_name = "UZI"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_42b8x"]
@@ -852,7 +850,6 @@ albedo_texture = ExtResource("13_g4axh")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndvod"]
 resource_name = "AK"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8vaow"]

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b80efmlvrwhxh"
-path="res://.godot/imported/Character_Zombie.fbx-76f1f171041b4055160e8cbd3bf8a40f.scn"
+path="res://.godot/imported/Character_Zombie.fbx-e0b0114ab30c16923ae6c83f1d005d45.scn"
 
 [deps]
 
-source_file="res://assets/models/Gestapo/Character_Zombie.fbx"
-dest_files=["res://.godot/imported/Character_Zombie.fbx-76f1f171041b4055160e8cbd3bf8a40f.scn"]
+source_file="res://Assets/models/Gestapo/Character_Zombie.fbx"
+dest_files=["res://.godot/imported/Character_Zombie.fbx-e0b0114ab30c16923ae6c83f1d005d45.scn"]
 
 [params]
 

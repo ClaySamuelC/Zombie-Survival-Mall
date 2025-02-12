@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhywkvg551nby"
-path="res://.godot/imported/T_Grass6_Color.png-2f85dc13ed2e79b41f1fb6e04f8b4858.ctex"
+path="res://.godot/imported/T_Grass6_Color.png-92a7796090bf07630adc8cce8eb27d53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Grass_textures/Grass6Textures/T_Grass6_Color.png"
-dest_files=["res://.godot/imported/T_Grass6_Color.png-2f85dc13ed2e79b41f1fb6e04f8b4858.ctex"]
+source_file="res://Assets/textures/Grass_textures/Grass6Textures/T_Grass6_Color.png"
+dest_files=["res://.godot/imported/T_Grass6_Color.png-92a7796090bf07630adc8cce8eb27d53.ctex"]
 
 [params]
 

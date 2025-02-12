@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://bls762f3r6sy2"
-path="res://.godot/imported/rifle aiming idle.fbx-3e91d64245418e8df99d16d8b0670578.res"
+path="res://.godot/imported/rifle aiming idle.fbx-611a726fa0959bb523044860131f7aae.res"
 
 [deps]
 
-source_file="res://assets/animations/Shooter Pack/rifle aiming idle.fbx"
-dest_files=["res://.godot/imported/rifle aiming idle.fbx-3e91d64245418e8df99d16d8b0670578.res"]
+source_file="res://Assets/animations/Shooter Pack/rifle aiming idle.fbx"
+dest_files=["res://.godot/imported/rifle aiming idle.fbx-611a726fa0959bb523044860131f7aae.res"]
 
 [params]
 
