@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cs4n42634dlqe"]
+[gd_scene load_steps=16 format=3 uid="uid://cs4n42634dlqe"]
 
 [ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_1tx4h"]
 [ext_resource type="Texture2D" uid="uid://c3q3suwv8wv8r" path="res://Assets/Thumbnails/bullet.png" id="2_nhvwv"]
@@ -13,6 +13,12 @@
 [ext_resource type="Script" path="res://Scenes/upgrade_speed.gd" id="9_kjmea"]
 [ext_resource type="Script" path="res://Scenes/upgrade_scrounge.gd" id="11_lg2xn"]
 [ext_resource type="Script" path="res://Scenes/upgrade_cost_info.gd" id="13_l8bf6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bod7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnh4i"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_1tx4h")
@@ -34,106 +40,112 @@ mouse_filter = 2
 
 [node name="ResourceGUI" type="MarginContainer" parent="GUI_Control"]
 layout_mode = 0
-offset_right = 1520.0
-offset_bottom = 115.0
+offset_left = -99.0
+offset_top = -17.0
+offset_right = 1782.0
+offset_bottom = 149.0
 mouse_filter = 2
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GUI_Control/ResourceGUI"]
+[node name="PanelContainer" type="PanelContainer" parent="GUI_Control/ResourceGUI"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5bod7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer"]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GUI_Control/ResourceGUI/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Bullets" type="HBoxContainer" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer"]
+[node name="Bullets" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Bullets"]
+[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Bullets"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("2_nhvwv")
 expand_mode = 3
 
-[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Bullets"]
+[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Bullets"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 text = "100
 "
 
-[node name="HealingKits" type="HBoxContainer" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer"]
+[node name="HealingKits" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/HealingKits"]
+[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/HealingKits"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("3_asma1")
 expand_mode = 3
 
-[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/HealingKits"]
+[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/HealingKits"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 text = "50
 "
 
-[node name="Debris" type="HBoxContainer" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer"]
+[node name="Debris" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Debris"]
+[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Debris"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("4_mvw2u")
 expand_mode = 3
 
-[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Debris"]
+[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Debris"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 text = "25"
 
-[node name="Molotovs" type="HBoxContainer" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer"]
+[node name="Molotovs" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Molotovs"]
+[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Molotovs"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("5_epgru")
 expand_mode = 3
 
-[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/Molotovs"]
+[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Molotovs"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 text = "100
 "
 
-[node name="ZombieKills" type="HBoxContainer" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer"]
+[node name="ZombieKills" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/ZombieKills"]
+[node name="Picture" type="TextureRect" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/ZombieKills"]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("5_ysnm8")
 expand_mode = 3
 
-[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/VBoxContainer/HBoxContainer/ZombieKills"]
+[node name="Text" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/ZombieKills"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
@@ -142,7 +154,7 @@ text = "100
 
 [node name="Soldier_Control" type="MarginContainer" parent="GUI_Control"]
 layout_mode = 0
-offset_left = 1520.0
+offset_left = 1673.0
 offset_top = -1.0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -150,6 +162,7 @@ offset_bottom = 1080.0
 [node name="PanelContainer" type="PanelContainer" parent="GUI_Control/Soldier_Control"]
 layout_mode = 2
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_qnh4i")
 
 [node name="MarginContainer" type="MarginContainer" parent="GUI_Control/Soldier_Control/PanelContainer"]
 layout_mode = 2
