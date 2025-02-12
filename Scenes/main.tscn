@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=10 format=3 uid="uid://dc2ynpiltxm1o"]
 
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8t060"]
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
-[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_k4af8"]
 [ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="2_wefn2"]
 [ext_resource type="PackedScene" uid="uid://buc4ku41nngmb" path="res://Scenes/zombie_spawner.tscn" id="5_4e8ho"]
 [ext_resource type="PackedScene" uid="uid://cgy55kt1iudgb" path="res://Scenes/survivor.tscn" id="5_tq0x0"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_8t060")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
