@@ -8,6 +8,10 @@ extends Node3D
 @onready var soldier_control = get_node("/root/Main/GUI/GUI_Control/Soldier_Control")
 @onready var gui = get_node("/root/Main/GUI/")
 
+@onready var lose_screen = load("res://Scenes/lose_screen.tscn")
+
+var num_soldiers: int = 0
+
 var dragging = false
 var drag_start = Vector2()
 var drag_end = Vector2()
@@ -17,6 +21,13 @@ var all_modes = {
 	"gather_mode" = false,
 	"molotov_mode" = false
 }
+
+func decrement_soldiers():
+	print("Soldier Died")
+	num_soldiers -= 1
+	
+	if num_soldiers <= 0:
+		get_tree().change_scene_to_packed(lose_screen)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("gather_mode"):
