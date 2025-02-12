@@ -2656,3 +2656,5 @@ bone_idx = 20
 libraries = {
 "": SubResource("AnimationLibrary_xhbbs")
 }
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
