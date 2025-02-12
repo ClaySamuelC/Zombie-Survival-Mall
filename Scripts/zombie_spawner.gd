@@ -1,18 +1,13 @@
 extends Node3D
 
 var spawning = false
-@export var zombie_spawn_time_in_seconds = 4
+@export var zombie_spawn_time_in_seconds = 2.4
 
-@export var zombie_spawn_time_floor = .5
+@export var zombie_spawn_time_floor = .7
 
 var speed_up_spawns = false
 @export var spawn_reduction_percent = .9
-@export var spawn_rate_update_duration = 15
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+@export var spawn_rate_update_duration = 10
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

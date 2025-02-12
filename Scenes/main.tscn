@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=13 format=3 uid="uid://dc2ynpiltxm1o"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8t060"]
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ce3p252asps8v" path="res://Scenes/mall_full.tscn" id="7_pyiyt"]
 [ext_resource type="AudioStream" uid="uid://dy3pkqvkut236" path="res://Assets/sounds/Eighties Action.mp3" id="9_dmqxe"]
 [ext_resource type="PackedScene" uid="uid://duso1m1x8hi4q" path="res://Scenes/zombie.tscn" id="10_vvdlt"]
+[ext_resource type="PackedScene" uid="uid://cldnuit4p1qi6" path="res://Scenes/mass_zombie_spawn_in.tscn" id="11_wpt7r"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ukr0h"]
@@ -76,7 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -18.8994)
 [node name="GUI" parent="." instance=ExtResource("7_byi5l")]
 
 [node name="Zombie_spawner2" parent="." instance=ExtResource("5_4e8ho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -5.8994)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, 3.88466)
 
 [node name="Zombie_spawner3" parent="." instance=ExtResource("5_4e8ho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, 16.1006)
@@ -122,3 +123,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 1, 24)
 
 [node name="Zombie" parent="." instance=ExtResource("10_vvdlt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 1)
+
+[node name="MassZombieSpawnIn" parent="." instance=ExtResource("11_wpt7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.8607, 0, -23.6459)
+
+[node name="Zombie_spawner4" parent="." instance=ExtResource("5_4e8ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -9.65007)
+
+[node name="Zombie_spawner5" parent="." instance=ExtResource("5_4e8ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, 2.41484)

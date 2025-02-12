@@ -2086,7 +2086,7 @@ shape = SubResource("CapsuleShape3D_ngv3g")
 script = ExtResource("2_ronuj")
 
 [node name="Shotgun Soviet" type="Node3D" parent="CollisionShape3D"]
-transform = Transform3D(-0.0178154, -0.0117896, 1.34598, 0.0267162, 1.34583, 0.0121417, -1.34577, 0.0268743, -0.0175761, 0.358486, 0.41212, 0.459549)
+transform = Transform3D(-0.0178155, -0.0117896, 1.34598, 0.0267162, 1.34583, 0.0121417, -1.34577, 0.0268743, -0.0175761, 0.358486, 0.116669, 0.459549)
 
 [node name="Cube_032" type="MeshInstance3D" parent="CollisionShape3D/Shotgun Soviet"]
 transform = Transform3D(1.33344, 1.89922e-14, 1.16573e-07, 0, 1.33344, -2.17245e-07, -1.16573e-07, 2.17245e-07, 1.33344, 4.21862e-16, 0, 0)
@@ -2143,6 +2143,7 @@ mesh = SubResource("ArrayMesh_f6h0j")
 skeleton = NodePath("")
 
 [node name="Pills_Here" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, -0.295451, 0)
 material_override = SubResource("StandardMaterial3D_ma7tm")
 mesh = SubResource("CapsuleMesh_lg7qx")
 skeleton = NodePath("../..")
