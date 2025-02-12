@@ -161,7 +161,8 @@ func place_debris():
 		var query = PhysicsRayQueryParameters3D.create(from, to)
 		var result = get_parent().get_world_3d().direct_space_state.intersect_ray(query)
 		
-		if result:
+		#Stops debris from stacking/being built on walls
+		if result.position.y < .5 && result.get("collider") && !result.get("collider").is_in_group("debris"):
 			var location = result.position
 			var pre_load = load("res://Scenes/debris.tscn")
 			var debris = pre_load.instantiate()
