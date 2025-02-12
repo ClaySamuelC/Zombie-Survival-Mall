@@ -14,8 +14,8 @@ extends CanvasLayer
 @onready var molotov_minus: RichTextLabel = $GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Molotovs/MarginContainer/MolotovMinus
 
 
-
-
+func _ready() -> void:
+	GameState.update_ui.connect(flash_minus)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -26,6 +26,9 @@ func _process(delta):
 	molotovs_label.text = str(GameState.molotov)
 
 func flash_minus(resource : String, amount : int):
+	print("I'm flashing")
+	print(resource)
+	print(amount)
 	if resource == "bullet":
 		bullet_minus.text = "[color=yellow]			-{a}[/color]".format({"a":amount})
 		bullet_minus.visible = true

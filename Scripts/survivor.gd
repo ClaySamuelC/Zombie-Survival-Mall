@@ -41,14 +41,10 @@ var toughness_level : int = 0
 var damage_level : int = 0
 var speed_level : int = 0
 var scrounge_level : int = 0
-
+var weight = 0.1
 
 func _ready():
 	add_to_group("survivor")
-
-var weight = 0.1
-
-	create_ray_casts()
 	$"..".num_soldiers += 1
 	soldier_died.connect($"..".decrement_soldiers)
 
