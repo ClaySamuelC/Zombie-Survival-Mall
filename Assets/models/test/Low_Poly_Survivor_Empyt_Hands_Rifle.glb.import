@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d1fb2nekq21nf"
-path="res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-c89cf2b5eedae5b92ae20ca918a2bc87.scn"
+path="res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-d8cbfc03314e831b9377f1ccb50ec8cf.scn"
 
 [deps]
 
-source_file="res://Assets/models/test/Low_Poly_Survivor_Empyt_Hands_Rifle.glb"
-dest_files=["res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-c89cf2b5eedae5b92ae20ca918a2bc87.scn"]
+source_file="res://assets/models/test/Low_Poly_Survivor_Empyt_Hands_Rifle.glb"
+dest_files=["res://.godot/imported/Low_Poly_Survivor_Empyt_Hands_Rifle.glb-d8cbfc03314e831b9377f1ccb50ec8cf.scn"]
 
 [params]
 

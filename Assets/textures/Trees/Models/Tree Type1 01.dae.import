@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3y0oab1xfepi"
-path="res://.godot/imported/Tree Type1 01.dae-fa252f187c7383685eca8d8230ba6694.scn"
+path="res://.godot/imported/Tree Type1 01.dae-1a5aa56ae8659311739ed3bb1f7f9b0b.scn"
 
 [deps]
 
-source_file="res://Assets/textures/Trees/Models/Tree Type1 01.dae"
-dest_files=["res://.godot/imported/Tree Type1 01.dae-fa252f187c7383685eca8d8230ba6694.scn"]
+source_file="res://assets/textures/Trees/Models/Tree Type1 01.dae"
+dest_files=["res://.godot/imported/Tree Type1 01.dae-1a5aa56ae8659311739ed3bb1f7f9b0b.scn"]
 
 [params]
 

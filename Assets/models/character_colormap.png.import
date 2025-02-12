@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oj4ygw4h4fgb"
-path.s3tc="res://.godot/imported/character_colormap.png-6701695893ae5696c86243e41399b439.s3tc.ctex"
+path.s3tc="res://.godot/imported/character_colormap.png-f47a93a3eb37ddda9137edb26cbf8634.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/models/character_colormap.png"
-dest_files=["res://.godot/imported/character_colormap.png-6701695893ae5696c86243e41399b439.s3tc.ctex"]
+source_file="res://assets/models/character_colormap.png"
+dest_files=["res://.godot/imported/character_colormap.png-f47a93a3eb37ddda9137edb26cbf8634.s3tc.ctex"]
 
 [params]
 

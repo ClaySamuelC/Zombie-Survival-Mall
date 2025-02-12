@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drrv3ohfx3lqq"
-path="res://.godot/imported/BasicMotions_DummyFemale-BaseColor.png-bb4410d91c0d3a9145a73cd727399253.ctex"
+path="res://.godot/imported/BasicMotions_DummyFemale-BaseColor.png-a07d210d9019501ca10a479702f6bf8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/animations/Basic Motions FREE/Textures/DummyFemale/BasicMotions_DummyFemale-BaseColor.png"
-dest_files=["res://.godot/imported/BasicMotions_DummyFemale-BaseColor.png-bb4410d91c0d3a9145a73cd727399253.ctex"]
+source_file="res://assets/animations/Basic Motions FREE/Textures/DummyFemale/BasicMotions_DummyFemale-BaseColor.png"
+dest_files=["res://.godot/imported/BasicMotions_DummyFemale-BaseColor.png-a07d210d9019501ca10a479702f6bf8d.ctex"]
 
 [params]
 

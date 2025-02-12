@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ue0l01uehkjs"
-path="res://.godot/imported/faster-musket-bang.ogg-c4e816dafb3ab4b4772772bb123b60fb.oggvorbisstr"
+path="res://.godot/imported/faster-musket-bang.ogg-67c2e34d28e058806a94d726b98e1c39.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/sounds/faster-musket-bang.ogg"
-dest_files=["res://.godot/imported/faster-musket-bang.ogg-c4e816dafb3ab4b4772772bb123b60fb.oggvorbisstr"]
+source_file="res://assets/sounds/faster-musket-bang.ogg"
+dest_files=["res://.godot/imported/faster-musket-bang.ogg-67c2e34d28e058806a94d726b98e1c39.oggvorbisstr"]
 
 [params]
 

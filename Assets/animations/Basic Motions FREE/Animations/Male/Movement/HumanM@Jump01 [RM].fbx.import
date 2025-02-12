@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://csw2grfi0om36"
-path="res://.godot/imported/HumanM@Jump01 [RM].fbx-091227fa6f07b514616a86bc6d7aad95.res"
+path="res://.godot/imported/HumanM@Jump01 [RM].fbx-e617e2d9199ead38bdf6225d51b50541.res"
 
 [deps]
 
-source_file="res://Assets/animations/Basic Motions FREE/Animations/Male/Movement/HumanM@Jump01 [RM].fbx"
-dest_files=["res://.godot/imported/HumanM@Jump01 [RM].fbx-091227fa6f07b514616a86bc6d7aad95.res"]
+source_file="res://assets/animations/Basic Motions FREE/Animations/Male/Movement/HumanM@Jump01 [RM].fbx"
+dest_files=["res://.godot/imported/HumanM@Jump01 [RM].fbx-e617e2d9199ead38bdf6225d51b50541.res"]
 
 [params]
 

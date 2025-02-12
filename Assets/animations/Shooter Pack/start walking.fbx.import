@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://c1ex6xqpda3u0"
-path="res://.godot/imported/start walking.fbx-a3c82f3494b487bb68d494f4a188dc05.res"
+path="res://.godot/imported/start walking.fbx-6cfbeb480201ff0334b4479cd7afd0c2.res"
 
 [deps]
 
-source_file="res://Assets/animations/Shooter Pack/start walking.fbx"
-dest_files=["res://.godot/imported/start walking.fbx-a3c82f3494b487bb68d494f4a188dc05.res"]
+source_file="res://assets/animations/Shooter Pack/start walking.fbx"
+dest_files=["res://.godot/imported/start walking.fbx-6cfbeb480201ff0334b4479cd7afd0c2.res"]
 
 [params]
 
