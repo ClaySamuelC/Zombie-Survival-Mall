@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfiwejp8u4og6"
-path="res://.godot/imported/HumanM@Run01_Right [RM].fbx-694c3736dc308f24f5980aec2ba6c9db.scn"
+path="res://.godot/imported/HumanM@Run01_Right [RM].fbx-a4eca15af9818e310d32598bdedbc2f2.scn"
 
 [deps]
 
-source_file="res://Assets/animations/Basic Motions FREE/Animations/Male/Movement/Run/RootMotion/HumanM@Run01_Right [RM].fbx"
-dest_files=["res://.godot/imported/HumanM@Run01_Right [RM].fbx-694c3736dc308f24f5980aec2ba6c9db.scn"]
+source_file="res://assets/animations/Basic Motions FREE/Animations/Male/Movement/Run/RootMotion/HumanM@Run01_Right [RM].fbx"
+dest_files=["res://.godot/imported/HumanM@Run01_Right [RM].fbx-a4eca15af9818e310d32598bdedbc2f2.scn"]
 
 [params]
 

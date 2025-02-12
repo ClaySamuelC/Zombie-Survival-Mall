@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cagldwaf5y4dw"]
 
 [ext_resource type="Script" path="res://Scripts/stat_box.gd" id="1_43nhv"]
-[ext_resource type="Texture2D" uid="uid://c1qu8pob3cutq" path="res://Assets/Thumbnails/upgrade.png" id="2_5speh"]
+[ext_resource type="Texture2D" uid="uid://c1qu8pob3cutq" path="res://assets/Thumbnails/upgrade.png" id="2_5speh"]
 
 [node name="Stat_Box" type="HBoxContainer"]
 script = ExtResource("1_43nhv")

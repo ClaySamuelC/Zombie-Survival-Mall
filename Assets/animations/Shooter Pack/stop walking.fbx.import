@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://cfypwnp1nwvxq"
-path="res://.godot/imported/stop walking.fbx-66cc1ae1779ec8d690d909b4eb6614a1.res"
+path="res://.godot/imported/stop walking.fbx-85971770d45ad4a9e49a813a731c06e9.res"
 
 [deps]
 
-source_file="res://Assets/animations/Shooter Pack/stop walking.fbx"
-dest_files=["res://.godot/imported/stop walking.fbx-66cc1ae1779ec8d690d909b4eb6614a1.res"]
+source_file="res://assets/animations/Shooter Pack/stop walking.fbx"
+dest_files=["res://.godot/imported/stop walking.fbx-85971770d45ad4a9e49a813a731c06e9.res"]
 
 [params]
 

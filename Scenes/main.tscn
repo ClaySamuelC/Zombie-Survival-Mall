@@ -1,16 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=10 format=3 uid="uid://dc2ynpiltxm1o"]
 
-[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
-[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_k4af8"]
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8t060"]
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://assets/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" path="res://Scripts/rts_controller.gd" id="2_wefn2"]
 [ext_resource type="PackedScene" uid="uid://buc4ku41nngmb" path="res://Scenes/zombie_spawner.tscn" id="5_4e8ho"]
 [ext_resource type="PackedScene" uid="uid://cgy55kt1iudgb" path="res://Scenes/survivor.tscn" id="5_tq0x0"]
 [ext_resource type="PackedScene" uid="uid://cs4n42634dlqe" path="res://Scenes/GUI.tscn" id="7_byi5l"]
 [ext_resource type="PackedScene" uid="uid://ce3p252asps8v" path="res://Scenes/mall_full.tscn" id="7_pyiyt"]
-[ext_resource type="AudioStream" uid="uid://dy3pkqvkut236" path="res://Assets/sounds/Eighties Action.mp3" id="9_dmqxe"]
+[ext_resource type="AudioStream" uid="uid://dy3pkqvkut236" path="res://assets/sounds/Eighties Action.mp3" id="9_dmqxe"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_8t060")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -38,8 +39,8 @@ environment = ExtResource("1_ahusb")
 [node name="World" type="Node3D" parent="."]
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 28.592, 82.7403, -0.243876)
-light_energy = 0.0
+transform = Transform3D(-0.422618, -0.694272, 0.582564, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, -48.0716, 40.5972, -0.243876)
+light_energy = 0.25
 shadow_enabled = true
 shadow_opacity = 0.75
 sky_mode = 1
@@ -79,31 +80,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, -5.8994)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.1763, 0.46964, 16.1006)
 
 [node name="Survivor1" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.6, 13.9976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.0281469, 13.9976)
 
 [node name="Survivor2" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.6, 13.9976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.0281469, 13.9976)
 
 [node name="Survivor3" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.6, 13.9976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.0281469, 13.9976)
 
 [node name="Survivor4" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.6, 1.9976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.0281469, 1.9976)
 
 [node name="Survivor5" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.6, 1.9976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.0281469, 1.9976)
 
 [node name="Survivor6" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.6, 2.9976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.0281469, 2.9976)
 
 [node name="Survivor7" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.6, -9.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6724, 0.0281469, -9.0024)
 
 [node name="Survivor8" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.6, -9.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6724, 0.0281469, -9.0024)
 
 [node name="Survivor9" parent="." instance=ExtResource("5_tq0x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.6, -10.0024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6724, 0.0281469, -10.0024)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_dmqxe")

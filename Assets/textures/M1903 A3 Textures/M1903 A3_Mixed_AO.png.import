@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd4kqj7wps88"
-path.s3tc="res://.godot/imported/M1903 A3_Mixed_AO.png-ee63052f82cea39c1f4c6e478731dda1.s3tc.ctex"
+path.s3tc="res://.godot/imported/M1903 A3_Mixed_AO.png-a87ff9df67cc62d1589d1731c0a03000.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/M1903 A3 Textures/M1903 A3_Mixed_AO.png"
-dest_files=["res://.godot/imported/M1903 A3_Mixed_AO.png-ee63052f82cea39c1f4c6e478731dda1.s3tc.ctex"]
+source_file="res://assets/textures/M1903 A3 Textures/M1903 A3_Mixed_AO.png"
+dest_files=["res://.godot/imported/M1903 A3_Mixed_AO.png-a87ff9df67cc62d1589d1731c0a03000.s3tc.ctex"]
 
 [params]
 

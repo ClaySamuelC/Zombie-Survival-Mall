@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://5027j2jjiu6c"
-path="res://.godot/imported/walking.fbx-6ddc62d4c3b6ff76071411b6e9d62cb3.res"
+path="res://.godot/imported/walking.fbx-aa60b1901c0006a1472848b14235f925.res"
 
 [deps]
 
-source_file="res://Assets/animations/Shooter Pack/walking.fbx"
-dest_files=["res://.godot/imported/walking.fbx-6ddc62d4c3b6ff76071411b6e9d62cb3.res"]
+source_file="res://assets/animations/Shooter Pack/walking.fbx"
+dest_files=["res://.godot/imported/walking.fbx-aa60b1901c0006a1472848b14235f925.res"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://c6atocnvsa5nr"
-path="res://.godot/imported/rifle run.fbx-38163c315d8042723d22536f2cc57f63.res"
+path="res://.godot/imported/rifle run.fbx-0e86aef6b837c7cccc0eb652ac020c1a.res"
 
 [deps]
 
-source_file="res://Assets/animations/Shooter Pack/rifle run.fbx"
-dest_files=["res://.godot/imported/rifle run.fbx-38163c315d8042723d22536f2cc57f63.res"]
+source_file="res://assets/animations/Shooter Pack/rifle run.fbx"
+dest_files=["res://.godot/imported/rifle run.fbx-0e86aef6b837c7cccc0eb652ac020c1a.res"]
 
 [params]
 

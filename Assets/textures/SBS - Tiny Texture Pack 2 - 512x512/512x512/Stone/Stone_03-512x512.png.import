@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4amy0fdi8w77"
-path.s3tc="res://.godot/imported/Stone_03-512x512.png-c8ab9541c24a47fa1f07b4cde2311762.s3tc.ctex"
+path.s3tc="res://.godot/imported/Stone_03-512x512.png-45e3766908132d3a9b571970c1110785.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_03-512x512.png"
-dest_files=["res://.godot/imported/Stone_03-512x512.png-c8ab9541c24a47fa1f07b4cde2311762.s3tc.ctex"]
+source_file="res://assets/textures/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_03-512x512.png"
+dest_files=["res://.godot/imported/Stone_03-512x512.png-45e3766908132d3a9b571970c1110785.s3tc.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://dc7td1ndamj7h"
-path="res://.godot/imported/HumanM@Run01_Right.fbx-b5b898a46591e9d46d8d318794773144.res"
+path="res://.godot/imported/HumanM@Run01_Right.fbx-3b564982a250d5b7c8c41a22bfd57dfe.res"
 
 [deps]
 
-source_file="res://Assets/animations/Basic Motions FREE/Animations/Male/Movement/Run/HumanM@Run01_Right.fbx"
-dest_files=["res://.godot/imported/HumanM@Run01_Right.fbx-b5b898a46591e9d46d8d318794773144.res"]
+source_file="res://assets/animations/Basic Motions FREE/Animations/Male/Movement/Run/HumanM@Run01_Right.fbx"
+dest_files=["res://.godot/imported/HumanM@Run01_Right.fbx-3b564982a250d5b7c8c41a22bfd57dfe.res"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kl1hrjcclb5r"
-path.s3tc="res://.godot/imported/platform-grass-large-round_colormap.png-e8287ec1a2e4ce46e392c4d0ce65383b.s3tc.ctex"
+path.s3tc="res://.godot/imported/platform-grass-large-round_colormap.png-8d40f0cd9495fa056c152dc97da4e700.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/models/platform-grass-large-round_colormap.png"
-dest_files=["res://.godot/imported/platform-grass-large-round_colormap.png-e8287ec1a2e4ce46e392c4d0ce65383b.s3tc.ctex"]
+source_file="res://assets/models/platform-grass-large-round_colormap.png"
+dest_files=["res://.godot/imported/platform-grass-large-round_colormap.png-8d40f0cd9495fa056c152dc97da4e700.s3tc.ctex"]
 
 [params]
 

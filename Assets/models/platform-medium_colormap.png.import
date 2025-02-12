@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtctlexsv7886"
-path.s3tc="res://.godot/imported/platform-medium_colormap.png-c835b29e5847422558e1eaac03bb3961.s3tc.ctex"
+path.s3tc="res://.godot/imported/platform-medium_colormap.png-0260b285e4686ff70ed7e8626534e1eb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/models/platform-medium_colormap.png"
-dest_files=["res://.godot/imported/platform-medium_colormap.png-c835b29e5847422558e1eaac03bb3961.s3tc.ctex"]
+source_file="res://assets/models/platform-medium_colormap.png"
+dest_files=["res://.godot/imported/platform-medium_colormap.png-0260b285e4686ff70ed7e8626534e1eb.s3tc.ctex"]
 
 [params]
 

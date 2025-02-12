@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dui4otwtokr2o"
-path="res://.godot/imported/Female Survivor 2 .glb-74e5e7afaa635b16d0014f81db74ae7a.scn"
+path="res://.godot/imported/Female Survivor 2 .glb-e9f79e9cf842ee8f378e36c4ff9c2f50.scn"
 
 [deps]
 
-source_file="res://Assets/animations/Retro_Survivors/Female Survivor 2 .glb"
-dest_files=["res://.godot/imported/Female Survivor 2 .glb-74e5e7afaa635b16d0014f81db74ae7a.scn"]
+source_file="res://assets/animations/Retro_Survivors/Female Survivor 2 .glb"
+dest_files=["res://.godot/imported/Female Survivor 2 .glb-e9f79e9cf842ee8f378e36c4ff9c2f50.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://ddmgma81eyh4i"
-path="res://.godot/imported/jump forward.fbx-d33c8598e2b50990ac6de5a2f8a484c6.res"
+path="res://.godot/imported/jump forward.fbx-b4aeef8cecf635005df35c9190222c74.res"
 
 [deps]
 
-source_file="res://Assets/animations/Shooter Pack/jump forward.fbx"
-dest_files=["res://.godot/imported/jump forward.fbx-d33c8598e2b50990ac6de5a2f8a484c6.res"]
+source_file="res://assets/animations/Shooter Pack/jump forward.fbx"
+dest_files=["res://.godot/imported/jump forward.fbx-b4aeef8cecf635005df35c9190222c74.res"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx5c4qptp338a"
-path.s3tc="res://.godot/imported/Colorsheet Tree Cold.png-42fe0c9ff74a4dd4f279a730d73979e9.s3tc.ctex"
+path.s3tc="res://.godot/imported/Colorsheet Tree Cold.png-90defb59d47f06aa567e5de3e2e95006.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Trees/Textures/Colorsheet Tree Cold.png"
-dest_files=["res://.godot/imported/Colorsheet Tree Cold.png-42fe0c9ff74a4dd4f279a730d73979e9.s3tc.ctex"]
+source_file="res://assets/textures/Trees/Textures/Colorsheet Tree Cold.png"
+dest_files=["res://.godot/imported/Colorsheet Tree Cold.png-90defb59d47f06aa567e5de3e2e95006.s3tc.ctex"]
 
 [params]
 
