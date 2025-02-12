@@ -6,7 +6,6 @@ extends CharacterBody3D
 @export var OBSTACLE_DETECTION_RANGE = 1.8
 @export var AVOIDANCE_FORCE = 2.0
 
-@onready var animation_player = $Low_Poly_Survivor_Empyt_Hands_Rifle/AnimationPlayer
 @onready var selected_indicator = $Selected_Indicator
 @onready var gather_indicator = $Gather_Indicator
 @onready var gui = get_node("/root/Main/GUI/")
@@ -52,10 +51,9 @@ func _ready():
 func _process(delta):
 	heal()
 	if moving == true:
-		animation_player.play("Walk_Forward")
 		move_unit_to_destination()
 	else:
-		animation_player.play("Idle")
+		pass
 	pass
 
 # Function to set new target
@@ -89,6 +87,7 @@ func get_closest_target():
 	return closest_enemy
 
 func move_unit_to_destination():
+
 	var delta = get_physics_process_delta_time()
 	if distance_to_target_vector(destination) > 1:
 		moving = true

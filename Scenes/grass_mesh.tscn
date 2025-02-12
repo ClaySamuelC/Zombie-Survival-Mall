@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://m2u6ydppmv7y"]
+[gd_scene load_steps=7 format=3 uid="uid://ba6iotjpme4ll"]
 
 [ext_resource type="Texture2D" uid="uid://cpl80oq000ico" path="res://Assets/textures/Grass_textures/Grass8Textures/T_Grass8_Color.png" id="1_t31kn"]
 [ext_resource type="Texture2D" uid="uid://b7lph81oqs0dl" path="res://Assets/textures/Grass_textures/Grass8Textures/T_Grass8_Height.png" id="2_88k07"]

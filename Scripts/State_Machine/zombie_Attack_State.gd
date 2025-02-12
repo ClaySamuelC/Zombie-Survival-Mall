@@ -21,7 +21,6 @@ func Update(_delta: float):
 	if script_user.current_target:
 		if script_user.global_position.distance_to(script_user.current_target.global_position) < script_user.attack_range:
 			if tick >= tick_timer:
-					#script_user.animation_player.play("attack")
 					script_user.current_target.take_damage(script_user.current_damage)
 					tick = 0
 		else:

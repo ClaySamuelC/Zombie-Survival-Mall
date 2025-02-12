@@ -26,9 +26,6 @@ var current_damage = 30
 
 var destination = Vector3(0, 0, 0)
 
-@onready var animation_player = $AnimationPlayer
-
-
 func _ready():
 	add_to_group("zombie")
 	create_ray_casts()
