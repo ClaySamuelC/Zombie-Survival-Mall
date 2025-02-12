@@ -1,13 +1,13 @@
 extends Node3D
 
 var spawning = false
-var zombie_spawn_time_in_seconds = 4
+@export var zombie_spawn_time_in_seconds = 4
 
-var zombie_spawn_time_floor = .8
+@export var zombie_spawn_time_floor = .5
 
 var speed_up_spawns = false
-var spawn_reduction_rate = .2
-var spawn_check_rate = 4
+@export var spawn_reduction_percent = .9
+@export var spawn_rate_update_duration = 15
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,11 +16,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	spawn_skelly()
+	spawn_zombie()
 	handle_spawn_timer()
 	pass
 
-func spawn_skelly():
+func spawn_zombie():
 	if !spawning:
 		spawning = true
 		var zombie = load("res://Scenes/zombie.tscn")
@@ -29,11 +29,14 @@ func spawn_skelly():
 		object.set_global_position(self.global_position)
 		
 		await get_tree().create_timer(zombie_spawn_time_in_seconds).timeout
+		
 		spawning = false
+
 func handle_spawn_timer():
 	if !speed_up_spawns && zombie_spawn_time_in_seconds >= zombie_spawn_time_floor:
 		speed_up_spawns = true
-		zombie_spawn_time_in_seconds = zombie_spawn_time_in_seconds - spawn_reduction_rate
-		#print("zombie_spawn_time_in_seconds="+str(zombie_spawn_time_in_seconds))
-		await get_tree().create_timer(spawn_check_rate).timeout
+		zombie_spawn_time_in_seconds = zombie_spawn_time_in_seconds * spawn_reduction_percent
+		
+		await get_tree().create_timer(spawn_rate_update_duration).timeout
+		
 		speed_up_spawns = false

@@ -41,14 +41,10 @@ var toughness_level : int = 0
 var damage_level : int = 0
 var speed_level : int = 0
 var scrounge_level : int = 0
-
+var weight = 0.1
 
 func _ready():
 	add_to_group("survivor")
-
-var weight = 0.1
-
-	create_ray_casts()
 	$"..".num_soldiers += 1
 	soldier_died.connect($"..".decrement_soldiers)
 
@@ -94,7 +90,7 @@ func get_closest_target():
 
 func move_unit_to_destination():
 	var delta = get_physics_process_delta_time()
-	if distance_to_target_vector(destination) > 1.4:
+	if distance_to_target_vector(destination) > 1.5:
 		moving = true
 	else:
 		moving = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dc2ynpiltxm1o"]
+[gd_scene load_steps=12 format=3 uid="uid://dc2ynpiltxm1o"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_8t060"]
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://Assets/main-environment.tres" id="1_ahusb"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cs4n42634dlqe" path="res://Scenes/GUI.tscn" id="7_byi5l"]
 [ext_resource type="PackedScene" uid="uid://ce3p252asps8v" path="res://Scenes/mall_full.tscn" id="7_pyiyt"]
 [ext_resource type="AudioStream" uid="uid://dy3pkqvkut236" path="res://Assets/sounds/Eighties Action.mp3" id="9_dmqxe"]
+[ext_resource type="PackedScene" uid="uid://duso1m1x8hi4q" path="res://Scenes/zombie.tscn" id="10_vvdlt"]
 [ext_resource type="PackedScene" uid="uid://m2u6ydppmv7y" path="res://Scenes/grass_mesh.tscn" id="19_xf02x"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ukr0h"]
@@ -118,3 +119,6 @@ navigation_mesh = SubResource("NavigationMesh_ukr0h")
 
 [node name="MallFull" parent="NavigationRegion3D" instance=ExtResource("7_pyiyt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 1, 24)
+
+[node name="Zombie" parent="." instance=ExtResource("10_vvdlt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 1)

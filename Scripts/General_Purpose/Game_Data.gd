@@ -10,12 +10,11 @@ var debris: int = starting_debris
 var healing_kits: int = starting_hk
 var zombie_kills: int = 0
 
-@onready var gui = get_node("/root/Main/GUI/")
-=======
 var molotov: int = starting_molotovs
 
 var selected_units: Array[Node3D] = []
 
+signal update_ui(resource : String, amount : int)
 signal on_unit_selected(unit: Node3D)
 
 func reset() -> void:
@@ -62,21 +61,21 @@ func transact(bullet_cost: int = 0, hk_cost: int = 0, debris_cost: int = 0, molo
 	if bullet_cost > 0:
 		print("Spending " + str(bullet_cost) + " bullets")
 		bullets -= bullet_cost
-		gui.flash_minus("bullet",bullet_cost)
+		update_ui.emit("bullet",bullet_cost)
 		
 	if hk_cost > 0:
 		print("Spending " + str(hk_cost) + " healing kits")
 		healing_kits -= hk_cost
-		gui.flash_minus("heal_kit",hk_cost)
+		update_ui.emit("heal_kit",hk_cost)
 
 	if debris_cost > 0:
 		print("Spending " + str(debris_cost) + " debris")
 		debris -= debris_cost
-		gui.flash_minus("debris",debris_cost)
+		update_ui.emit("debris",debris_cost)
 		
 	if molotov_cost > 0:
 		print("Spending " + str(molotov_cost) + " molotovs")
 		molotov -= molotov_cost
-		gui.flash_minus("molotov",molotov_cost)
+		update_ui.emit("molotov",molotov_cost)
 	
 	return true
