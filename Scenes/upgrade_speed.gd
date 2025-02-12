@@ -31,4 +31,7 @@ func upgrade():
 	print("Survivor speed level: " + str(selected_unit.speed_level + 1))
 	
 	selected_unit.speed_level += 1
+	selected_unit.attack_tick_timer -= randi_range(1,3)
+	if selected_unit.attack_tick_timer < selected_unit.attack_tick_timer_min:
+		selected_unit.attack_tick_timer = selected_unit.attack_tick_timer_min
 	selected_unit.SPEED += speed_upgrade

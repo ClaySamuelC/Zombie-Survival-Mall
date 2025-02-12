@@ -34,15 +34,11 @@ func _ready() -> void:
 	zoom_level = camera.position.z
 
 func _process(delta: float) -> void:
-	if not is_panning:
 		handle_keyboard_movement(delta)
 		if allow_rotation:
 			handle_rotation(delta)
 		if allow_zoom:
 			handle_zoom(delta)
-	else:
-		if allow_pan:
-			handle_panning(delta)
 
 # handling inputs
 func _unhandled_input(event: InputEvent) -> void:
@@ -51,13 +47,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		last_mouse_position = get_viewport().get_mouse_position()
 	elif event.is_action_released("camera_rotate"):
 		is_rotating = false
-
+		
 	if event.is_action_pressed("camera_pan"):
 		is_panning = true
 		last_mouse_position = get_viewport().get_mouse_position()
 	elif event.is_action_released("camera_pan"):
 		is_panning = false
-
+		
 	if event.is_action_pressed("zoom_in"):
 		zoom_level -= zoom_speed
 	elif event.is_action_pressed("zoom_out"):
@@ -74,7 +70,7 @@ func handle_keyboard_movement(delta: float) -> void:
 		direction.x -= 1
 	if Input.is_action_pressed("camera_right"):
 		direction.x += 1
-
+	
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
 		translate_object_local(direction * movement_speed * delta)
@@ -89,10 +85,10 @@ func handle_rotation(delta: float) -> void:
 	if is_rotating:
 		var mouse_displacement = get_viewport().get_mouse_position() - last_mouse_position
 		last_mouse_position = get_viewport().get_mouse_position()
-
+		
 		# Horizontal rotation
 		rotation.y -= deg_to_rad(mouse_displacement.x * rotation_speed * delta)
-
+		
 		# Elevation
 		var elevation_angle = rad_to_deg(elevation_node.rotation.x)
 		elevation_angle = clamp(
@@ -103,20 +99,6 @@ func handle_rotation(delta: float) -> void:
 		elevation_node.rotation.x = deg_to_rad(elevation_angle)
 
 # Zoom
-func handle_zoom(delta: float) -> void:
+func handle_zoom(_delta: float) -> void:
 	zoom_level = clamp(zoom_level, min_zoom, max_zoom)
 	camera.position.z = lerp(camera.position.z, zoom_level, 0.1)
-
-# Panning
-func handle_panning(delta: float) -> void:
-	if is_panning:
-		var current_mouse_pos = get_viewport().get_mouse_position()
-		var displacement = current_mouse_pos - last_mouse_position
-		last_mouse_position = current_mouse_pos
-
-		translate_object_local(Vector3(-displacement.x, 0, -displacement.y) * 0.1)
-		# Clamp global position within boundaries
-		var global_pos = global_transform.origin
-		global_pos.x = clamp(global_pos.x, min_x, max_x)
-		global_pos.z = clamp(global_pos.z, min_z, max_z)
-		global_transform.origin = global_pos

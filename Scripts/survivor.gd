@@ -20,6 +20,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var zombie_list
 var current_target
 
+var attack_tick_timer = randi_range(60,75)
+var attack_tick_timer_min = randi_range(10,18)
+var attack_tick = 0 
+
 @export var attack_range = 20
 @export var current_damage = 100
 @export var health = 100
@@ -28,7 +32,8 @@ var current_target
 var destination = Vector3(0, 0, 0)
 var is_selected = false
 var moving = false
-var gather_tick_timer = 90
+
+var gather_tick_timer = 75
 var gather_tick = 0 
 var gather_mode = false
 var in_gather_zone = false
@@ -40,6 +45,7 @@ var toughness_level : int = 0
 var damage_level : int = 0
 var speed_level : int = 0
 var scrounge_level : int = 0
+
 var weight = 0.1
 
 func _ready():
@@ -48,7 +54,11 @@ func _ready():
 	soldier_died.connect($"..".decrement_soldiers)
 
 
-func _process(delta):
+func _process(_delta):
+	if is_selected:
+		selected_indicator.visible = true
+	else:
+		selected_indicator.visible = false
 	heal()
 	if moving == true:
 		move_unit_to_destination()
@@ -87,8 +97,6 @@ func get_closest_target():
 	return closest_enemy
 
 func move_unit_to_destination():
-
-	var delta = get_physics_process_delta_time()
 	if distance_to_target_vector(destination) > 1:
 		moving = true
 	else:

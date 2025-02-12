@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dernx2mpsk1r5"]
 
-[ext_resource type="Script" path="res://Scripts/debris.gd" id="1_m5xks"]
+[ext_resource type="Script" path="res://scripts/debris.gd" id="1_m5xks"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vch6m"]
 

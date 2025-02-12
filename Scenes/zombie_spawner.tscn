@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://buc4ku41nngmb"]
 
-[ext_resource type="Script" path="res://Scripts/zombie_spawner.gd" id="1_mft4d"]
+[ext_resource type="Script" path="res://scripts/zombie_spawner.gd" id="1_mft4d"]
 
 [node name="Zombie_spawner" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00515425, 2.38419e-07, -0.00281549)

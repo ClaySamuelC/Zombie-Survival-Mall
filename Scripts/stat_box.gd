@@ -11,10 +11,6 @@ signal on_upgrade
 func _ready():
 	$Label.text = title + ":"
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func _on_upgrade_pressed():
 	upgrade_handler.upgrade()
 	on_upgrade.emit()

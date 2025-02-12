@@ -3,14 +3,14 @@ extends Node3D
 var spawning = false
 @export var zombie_spawn_time_in_seconds = 2.4
 
-@export var zombie_spawn_time_floor = .7
+@export var zombie_spawn_time_floor = .1
 
 var speed_up_spawns = false
 @export var spawn_reduction_percent = .9
 @export var spawn_rate_update_duration = 10
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	spawn_zombie()
 	handle_spawn_timer()
 	pass

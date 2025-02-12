@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0l3n5e56g6gd"]
 
-[ext_resource type="Script" path="res://Scripts/molotov_aoe.gd" id="1_nmyfl"]
+[ext_resource type="Script" path="res://scripts/molotov_aoe.gd" id="1_nmyfl"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dr6bb"]
 radius = 2.90449

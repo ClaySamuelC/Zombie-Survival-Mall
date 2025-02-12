@@ -17,8 +17,8 @@ config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-Audio="*res://Scripts/General_Purpose/audio.gd"
-GameState="*res://Scripts/General_Purpose/Game_Data.gd"
+Audio="*res://scripts/General_Purpose/audio.gd"
+GameState="*res://scripts/General_Purpose/Game_Data.gd"
 
 [display]
 

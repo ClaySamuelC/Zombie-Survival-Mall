@@ -18,7 +18,7 @@ func _ready() -> void:
 	GameState.update_ui.connect(flash_minus)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	bullets_label.text = str(GameState.bullets)
 	debris_label.text = str(GameState.debris)
 	healing_kits_label.text = str(GameState.healing_kits)
