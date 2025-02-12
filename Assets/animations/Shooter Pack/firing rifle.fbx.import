@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://da1hc60majy4j"
-path="res://.godot/imported/firing rifle.fbx-a3a5b8203ff1d80ee230d35a91e98773.res"
+path="res://.godot/imported/firing rifle.fbx-1be663397616f94649e9c572e1d55667.res"
 
 [deps]
 
-source_file="res://assets/animations/Shooter Pack/firing rifle.fbx"
-dest_files=["res://.godot/imported/firing rifle.fbx-a3a5b8203ff1d80ee230d35a91e98773.res"]
+source_file="res://Assets/animations/Shooter Pack/firing rifle.fbx"
+dest_files=["res://.godot/imported/firing rifle.fbx-1be663397616f94649e9c572e1d55667.res"]
 
 [params]
 

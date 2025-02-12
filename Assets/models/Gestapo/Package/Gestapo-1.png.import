@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wi8ui5l81haa"
-path="res://.godot/imported/Gestapo-1.png-efd461ce438fb17a38db8114b41b2f6a.ctex"
+path="res://.godot/imported/Gestapo-1.png-e01b3db88b1a525bf7a723a6f20f3e0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/models/Gestapo/Package/Gestapo-1.png"
-dest_files=["res://.godot/imported/Gestapo-1.png-efd461ce438fb17a38db8114b41b2f6a.ctex"]
+source_file="res://Assets/models/Gestapo/Package/Gestapo-1.png"
+dest_files=["res://.godot/imported/Gestapo-1.png-e01b3db88b1a525bf7a723a6f20f3e0f.ctex"]
 
 [params]
 

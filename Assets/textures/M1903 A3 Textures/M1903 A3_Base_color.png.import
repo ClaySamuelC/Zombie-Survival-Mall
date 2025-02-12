@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gmedmc6alk45"
-path.s3tc="res://.godot/imported/M1903 A3_Base_color.png-baeb6805333b5be98c9368b7e21c53ec.s3tc.ctex"
+path.s3tc="res://.godot/imported/M1903 A3_Base_color.png-7d9a7f4c64e062495df5dade6f6da74c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/M1903 A3 Textures/M1903 A3_Base_color.png"
-dest_files=["res://.godot/imported/M1903 A3_Base_color.png-baeb6805333b5be98c9368b7e21c53ec.s3tc.ctex"]
+source_file="res://Assets/textures/M1903 A3 Textures/M1903 A3_Base_color.png"
+dest_files=["res://.godot/imported/M1903 A3_Base_color.png-7d9a7f4c64e062495df5dade6f6da74c.s3tc.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://6qxqr1cumsvn"
-path="res://.godot/imported/run backwards.fbx-e9885e5e3515d1644bb3626ea4bb9f40.res"
+path="res://.godot/imported/run backwards.fbx-cba076f2e8ac9464a34b533ff9f37ef5.res"
 
 [deps]
 
-source_file="res://assets/animations/Shooter Pack/run backwards.fbx"
-dest_files=["res://.godot/imported/run backwards.fbx-e9885e5e3515d1644bb3626ea4bb9f40.res"]
+source_file="res://Assets/animations/Shooter Pack/run backwards.fbx"
+dest_files=["res://.godot/imported/run backwards.fbx-cba076f2e8ac9464a34b533ff9f37ef5.res"]
 
 [params]
 

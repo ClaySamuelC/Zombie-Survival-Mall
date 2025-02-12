@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://bg0t2snq2p5hs"
-path="res://.godot/imported/walking to dying.fbx-fe4859eaa88812a6b64a29cc9edffa37.res"
+path="res://.godot/imported/walking to dying.fbx-ab50ffaa6607d50107d536952995d28e.res"
 
 [deps]
 
-source_file="res://assets/animations/Shooter Pack/walking to dying.fbx"
-dest_files=["res://.godot/imported/walking to dying.fbx-fe4859eaa88812a6b64a29cc9edffa37.res"]
+source_file="res://Assets/animations/Shooter Pack/walking to dying.fbx"
+dest_files=["res://.godot/imported/walking to dying.fbx-ab50ffaa6607d50107d536952995d28e.res"]
 
 [params]
 

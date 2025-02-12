@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dlff3n2xetnm"
-path="res://.godot/imported/HumanF@Run01_ForwardLeft [RM].fbx-998ab003b570d70cfb4011b377795bb8.scn"
+path="res://.godot/imported/HumanF@Run01_ForwardLeft [RM].fbx-87457f7e89a1c6c465da2e5f7c1b7f09.scn"
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Animations/Female/Movement/Run/RootMotion/HumanF@Run01_ForwardLeft [RM].fbx"
-dest_files=["res://.godot/imported/HumanF@Run01_ForwardLeft [RM].fbx-998ab003b570d70cfb4011b377795bb8.scn"]
+source_file="res://Assets/animations/Basic Motions FREE/Animations/Female/Movement/Run/RootMotion/HumanF@Run01_ForwardLeft [RM].fbx"
+dest_files=["res://.godot/imported/HumanF@Run01_ForwardLeft [RM].fbx-87457f7e89a1c6c465da2e5f7c1b7f09.scn"]
 
 [params]
 

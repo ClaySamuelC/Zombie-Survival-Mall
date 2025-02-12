@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bt8yyql8p7bgk"
-path="res://.godot/imported/Male Survivor 2 .glb-820ba9c82fd2a89f176cc412d7633a42.scn"
+path="res://.godot/imported/Male Survivor 2 .glb-b249fcc71d15e5304940a084185adcad.scn"
 
 [deps]
 
-source_file="res://assets/animations/Retro_Survivors/Male Survivor 2 .glb"
-dest_files=["res://.godot/imported/Male Survivor 2 .glb-820ba9c82fd2a89f176cc412d7633a42.scn"]
+source_file="res://Assets/animations/Retro_Survivors/Male Survivor 2 .glb"
+dest_files=["res://.godot/imported/Male Survivor 2 .glb-b249fcc71d15e5304940a084185adcad.scn"]
 
 [params]
 

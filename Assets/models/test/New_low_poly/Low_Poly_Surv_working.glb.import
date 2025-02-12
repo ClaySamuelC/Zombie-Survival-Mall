@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c1uyq65rrucq2"
-path="res://.godot/imported/Low_Poly_Surv_working.glb-ff53cfac0cef3cf8cbee91e41adbc285.scn"
+path="res://.godot/imported/Low_Poly_Surv_working.glb-fb55ac6f1951ec5d05b1d2e24b1e4e97.scn"
 
 [deps]
 
-source_file="res://assets/models/test/New_low_poly/Low_Poly_Surv_working.glb"
-dest_files=["res://.godot/imported/Low_Poly_Surv_working.glb-ff53cfac0cef3cf8cbee91e41adbc285.scn"]
+source_file="res://Assets/models/test/New_low_poly/Low_Poly_Surv_working.glb"
+dest_files=["res://.godot/imported/Low_Poly_Surv_working.glb-fb55ac6f1951ec5d05b1d2e24b1e4e97.scn"]
 
 [params]
 

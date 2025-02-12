@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpp2gwbxvarug"
-path="res://.godot/imported/T_Grass1_Height.png-3a31f856c0cc192a3ae8d732d90166bf.ctex"
+path="res://.godot/imported/T_Grass1_Height.png-dc879a78a7537aed3788b98ee75cb1ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Grass_textures/Grass1Textures/T_Grass1_Height.png"
-dest_files=["res://.godot/imported/T_Grass1_Height.png-3a31f856c0cc192a3ae8d732d90166bf.ctex"]
+source_file="res://Assets/textures/Grass_textures/Grass1Textures/T_Grass1_Height.png"
+dest_files=["res://.godot/imported/T_Grass1_Height.png-dc879a78a7537aed3788b98ee75cb1ed.ctex"]
 
 [params]
 

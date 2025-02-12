@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d00ne8obb728h"
-path.s3tc="res://.godot/imported/Female Survivor 1 _F Surv 1 512x512.png-fee22a4071181bdf34893c64c2a54408.s3tc.ctex"
+path.s3tc="res://.godot/imported/Female Survivor 1 _F Surv 1 512x512.png-5be168c5c60e2b83e4070984d9dd9a0d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/animations/Retro_Survivors/Female Survivor 1 _F Surv 1 512x512.png"
-dest_files=["res://.godot/imported/Female Survivor 1 _F Surv 1 512x512.png-fee22a4071181bdf34893c64c2a54408.s3tc.ctex"]
+source_file="res://Assets/animations/Retro_Survivors/Female Survivor 1 _F Surv 1 512x512.png"
+dest_files=["res://.godot/imported/Female Survivor 1 _F Surv 1 512x512.png-5be168c5c60e2b83e4070984d9dd9a0d.s3tc.ctex"]
 
 [params]
 

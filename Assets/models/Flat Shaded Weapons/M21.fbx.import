@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://hu2ko1hy5wji"
-path="res://.godot/imported/M21.fbx-a73457706f4d605a7ce5457be20abc04.scn"
+path="res://.godot/imported/M21.fbx-c0a39029f853e55817322a3ee41477dc.scn"
 
 [deps]
 
-source_file="res://assets/models/Flat Shaded Weapons/M21.fbx"
-dest_files=["res://.godot/imported/M21.fbx-a73457706f4d605a7ce5457be20abc04.scn"]
+source_file="res://Assets/models/Flat Shaded Weapons/M21.fbx"
+dest_files=["res://.godot/imported/M21.fbx-c0a39029f853e55817322a3ee41477dc.scn"]
 
 [params]
 

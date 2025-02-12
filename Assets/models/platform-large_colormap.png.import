@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5rp658yax3xw"
-path="res://.godot/imported/platform-large_colormap.png-2a62ebd05846a7fb0629b4f552cdc48e.ctex"
+path="res://.godot/imported/platform-large_colormap.png-e32e1a75e726714995b6ef93ee946112.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,8 +11,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/models/platform-large_colormap.png"
-dest_files=["res://.godot/imported/platform-large_colormap.png-2a62ebd05846a7fb0629b4f552cdc48e.ctex"]
+source_file="res://Assets/models/platform-large_colormap.png"
+dest_files=["res://.godot/imported/platform-large_colormap.png-e32e1a75e726714995b6ef93ee946112.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://cxwpika1hp8gq"
-path="res://.godot/imported/jump backward.fbx-9e9f03b52b142c16cfa7a9a45bad1ff3.res"
+path="res://.godot/imported/jump backward.fbx-a3ea665d5df661ef564f4c7268ed13fe.res"
 
 [deps]
 
-source_file="res://assets/animations/Shooter Pack/jump backward.fbx"
-dest_files=["res://.godot/imported/jump backward.fbx-9e9f03b52b142c16cfa7a9a45bad1ff3.res"]
+source_file="res://Assets/animations/Shooter Pack/jump backward.fbx"
+dest_files=["res://.godot/imported/jump backward.fbx-a3ea665d5df661ef564f4c7268ed13fe.res"]
 
 [params]
 

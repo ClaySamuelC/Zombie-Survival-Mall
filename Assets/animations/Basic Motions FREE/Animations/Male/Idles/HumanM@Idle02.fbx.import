@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bnlfwwbp4n88t"
-path="res://.godot/imported/HumanM@Idle02.fbx-93498dfc327eae62eb57c4354256da60.scn"
+path="res://.godot/imported/HumanM@Idle02.fbx-3ad6034660b5cc1b6fb21450566262f9.scn"
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Animations/Male/Idles/HumanM@Idle02.fbx"
-dest_files=["res://.godot/imported/HumanM@Idle02.fbx-93498dfc327eae62eb57c4354256da60.scn"]
+source_file="res://Assets/animations/Basic Motions FREE/Animations/Male/Idles/HumanM@Idle02.fbx"
+dest_files=["res://.godot/imported/HumanM@Idle02.fbx-3ad6034660b5cc1b6fb21450566262f9.scn"]
 
 [params]
 

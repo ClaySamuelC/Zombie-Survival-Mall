@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3rf4slm1tbr2"
-path="res://.godot/imported/HumanF@Jump01.fbx-95319d10b61b7e82a882df23f4b936d4.scn"
+path="res://.godot/imported/HumanF@Jump01.fbx-bda497c8e1127bc0d3ced6fd05c24477.scn"
 
 [deps]
 
-source_file="res://assets/animations/Basic Motions FREE/Animations/Female/Movement/HumanF@Jump01.fbx"
-dest_files=["res://.godot/imported/HumanF@Jump01.fbx-95319d10b61b7e82a882df23f4b936d4.scn"]
+source_file="res://Assets/animations/Basic Motions FREE/Animations/Female/Movement/HumanF@Jump01.fbx"
+dest_files=["res://.godot/imported/HumanF@Jump01.fbx-bda497c8e1127bc0d3ced6fd05c24477.scn"]
 
 [params]
 
