@@ -89,7 +89,7 @@ func get_closest_target():
 
 func move_unit_to_destination():
 	var delta = get_physics_process_delta_time()
-	if distance_to_target_vector(destination) > 1.4:
+	if distance_to_target_vector(destination) > 1.5:
 		moving = true
 	else:
 		moving = false

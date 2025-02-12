@@ -2,7 +2,9 @@ extends State
 var script_user
 
 var tick = 0
-var tick_timer = 80
+var tick_timer = randi_range(60,75)
+var windup = randi_range(0,15)
+var windup_timer = 0
 
 func _ready():
 	script_user = get_parent().get_script_user()
@@ -22,9 +24,10 @@ func Update(_delta: float):
 	if !script_user.current_target:
 		script_user.current_target = script_user.get_closest_target()
 	if script_user.current_target:
+		windup_timer += 1
 		var new_transform = script_user.transform.looking_at(script_user.current_target.global_position, Vector3.UP)
 		script_user.transform = script_user.transform.interpolate_with(new_transform, script_user.SPEED * _delta)
-		if script_user.global_position.distance_to(script_user.current_target.global_position) < script_user.attack_range and GameState.bullets > 0:
+		if script_user.global_position.distance_to(script_user.current_target.global_position) < script_user.attack_range and GameState.bullets > 0 and windup_timer > windup:
 			if tick >= tick_timer:
 					#script_user.animation_player.play("Shoot")
 					script_user.current_target.take_damage(script_user.current_damage)
@@ -32,6 +35,7 @@ func Update(_delta: float):
 					Audio.play_sound(load("res://Sounds/Shotgun_gunshot.ogg"), script_user.global_position,-randi_range(-15,-25),250)
 					GameState.bullets -= 1
 					tick = 0
+					windup_timer = 0
 
 	else:
 		transitioned.emit(self,"Survivor_Idle_state")
