@@ -181,6 +181,7 @@ func place_debris():
 			add_child(debris)
 			debris.set_global_position(location + Vector3(0,1,0))
 			GameState.debris -= 1
+			all_modes["debris_mode"] = false
 	else:
 		print("out of debris")
 
