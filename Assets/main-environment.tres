@@ -23,6 +23,7 @@ ssao_enabled = true
 ssao_radius = 0.45
 ssao_intensity = 1.0
 ssao_power = 15.0
+ssao_sharpness = 0.4
 glow_levels/2 = 0.6
 glow_levels/3 = 0.6
 glow_levels/5 = 0.0
