@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://muk63ywt5r05"
-path="res://.godot/imported/strafe (2).fbx-96180993cc309fd43df918ba25e5d724.res"
+path="res://.godot/imported/strafe (2).fbx-8408125e3407d1826e065a6ed4c5a457.res"
 
 [deps]
 
-source_file="res://Assets/animations/Shooter Pack/strafe (2).fbx"
-dest_files=["res://.godot/imported/strafe (2).fbx-96180993cc309fd43df918ba25e5d724.res"]
+source_file="res://assets/animations/Shooter Pack/strafe (2).fbx"
+dest_files=["res://.godot/imported/strafe (2).fbx-8408125e3407d1826e065a6ed4c5a457.res"]
 
 [params]
 

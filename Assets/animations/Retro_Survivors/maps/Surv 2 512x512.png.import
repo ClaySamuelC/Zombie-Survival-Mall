@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chgd3a8emuljm"
-path="res://.godot/imported/Surv 2 512x512.png-e7e002cce7337250de73cfdd25ff6785.ctex"
+path="res://.godot/imported/Surv 2 512x512.png-d5cf51db0a81dc04b0638fadb4e96389.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/animations/Retro_Survivors/maps/Surv 2 512x512.png"
-dest_files=["res://.godot/imported/Surv 2 512x512.png-e7e002cce7337250de73cfdd25ff6785.ctex"]
+source_file="res://assets/animations/Retro_Survivors/maps/Surv 2 512x512.png"
+dest_files=["res://.godot/imported/Surv 2 512x512.png-d5cf51db0a81dc04b0638fadb4e96389.ctex"]
 
 [params]
 

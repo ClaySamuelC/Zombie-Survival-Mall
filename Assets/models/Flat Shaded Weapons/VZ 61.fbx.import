@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cb3moufq083jj"
-path="res://.godot/imported/VZ 61.fbx-943aebef67eb8eb77175f56fde2f8120.scn"
+path="res://.godot/imported/VZ 61.fbx-d7dfc6489aecaa515c9535c3002457f1.scn"
 
 [deps]
 
-source_file="res://Assets/models/Flat Shaded Weapons/VZ 61.fbx"
-dest_files=["res://.godot/imported/VZ 61.fbx-943aebef67eb8eb77175f56fde2f8120.scn"]
+source_file="res://assets/models/Flat Shaded Weapons/VZ 61.fbx"
+dest_files=["res://.godot/imported/VZ 61.fbx-d7dfc6489aecaa515c9535c3002457f1.scn"]
 
 [params]
 

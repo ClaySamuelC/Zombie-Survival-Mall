@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://biyd6x403gvny"
-path="res://.godot/imported/platform-falling.glb-29125b9e13381205637f1dcdc68dde7b.scn"
+path="res://.godot/imported/platform-falling.glb-e239cfc0d9512a2bf211be3da36bff36.scn"
 
 [deps]
 
-source_file="res://Assets/models/platform-falling.glb"
-dest_files=["res://.godot/imported/platform-falling.glb-29125b9e13381205637f1dcdc68dde7b.scn"]
+source_file="res://assets/models/platform-falling.glb"
+dest_files=["res://.godot/imported/platform-falling.glb-e239cfc0d9512a2bf211be3da36bff36.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://cdc0yq2tkxv86"
-path="res://.godot/imported/HumanM@Turn01_Left [RM].fbx-0d32c23dc081750dcad2692cb1ad413a.res"
+path="res://.godot/imported/HumanM@Turn01_Left [RM].fbx-45124fd4368dabce36b0f2232d5391f9.res"
 
 [deps]
 
-source_file="res://Assets/animations/Basic Motions FREE/Animations/Male/Movement/Turns/HumanM@Turn01_Left [RM].fbx"
-dest_files=["res://.godot/imported/HumanM@Turn01_Left [RM].fbx-0d32c23dc081750dcad2692cb1ad413a.res"]
+source_file="res://assets/animations/Basic Motions FREE/Animations/Male/Movement/Turns/HumanM@Turn01_Left [RM].fbx"
+dest_files=["res://.godot/imported/HumanM@Turn01_Left [RM].fbx-45124fd4368dabce36b0f2232d5391f9.res"]
 
 [params]
 

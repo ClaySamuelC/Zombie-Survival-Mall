@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://cckmnj35i7fxg"
-path="res://.godot/imported/start walking backwards.fbx-6ef1e166f4097a31eb03337a53ab4089.res"
+path="res://.godot/imported/start walking backwards.fbx-4d48cd0256ab54a8a86724dbfe7d1788.res"
 
 [deps]
 
-source_file="res://Assets/animations/Shooter Pack/start walking backwards.fbx"
-dest_files=["res://.godot/imported/start walking backwards.fbx-6ef1e166f4097a31eb03337a53ab4089.res"]
+source_file="res://assets/animations/Shooter Pack/start walking backwards.fbx"
+dest_files=["res://.godot/imported/start walking backwards.fbx-4d48cd0256ab54a8a86724dbfe7d1788.res"]
 
 [params]
 

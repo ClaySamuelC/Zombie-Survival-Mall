@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c45xatkcjx7hi"
-path="res://.godot/imported/BasicMotions_DummyMale-AmbientOcclusion.png-315b86fa31b096cf07527039751cd894.ctex"
+path="res://.godot/imported/BasicMotions_DummyMale-AmbientOcclusion.png-8af2dd5a028a3689c8545f8da86e8c4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/animations/Basic Motions FREE/Textures/DummyMale/BasicMotions_DummyMale-AmbientOcclusion.png"
-dest_files=["res://.godot/imported/BasicMotions_DummyMale-AmbientOcclusion.png-315b86fa31b096cf07527039751cd894.ctex"]
+source_file="res://assets/animations/Basic Motions FREE/Textures/DummyMale/BasicMotions_DummyMale-AmbientOcclusion.png"
+dest_files=["res://.godot/imported/BasicMotions_DummyMale-AmbientOcclusion.png-8af2dd5a028a3689c8545f8da86e8c4c.ctex"]
 
 [params]
 

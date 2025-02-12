@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dy3pkqvkut236"
-path="res://.godot/imported/Eighties Action.mp3-e656c465aa7a73b54882d31b6fc82b33.mp3str"
+path="res://.godot/imported/Eighties Action.mp3-b6cdec72bcafe9e9237f318b8c3e0a19.mp3str"
 
 [deps]
 
-source_file="res://Assets/sounds/Eighties Action.mp3"
-dest_files=["res://.godot/imported/Eighties Action.mp3-e656c465aa7a73b54882d31b6fc82b33.mp3str"]
+source_file="res://assets/sounds/Eighties Action.mp3"
+dest_files=["res://.godot/imported/Eighties Action.mp3-b6cdec72bcafe9e9237f318b8c3e0a19.mp3str"]
 
 [params]
 

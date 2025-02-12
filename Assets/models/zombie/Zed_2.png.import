@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tgbsw1bamrcm"
-path.s3tc="res://.godot/imported/Zed_2.png-6cd6e5c1a963409d21d3b06336bfb186.s3tc.ctex"
+path.s3tc="res://.godot/imported/Zed_2.png-cba363aa6698f69a44b607054a3178f6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/models/zombie/Zed_2.png"
-dest_files=["res://.godot/imported/Zed_2.png-6cd6e5c1a963409d21d3b06336bfb186.s3tc.ctex"]
+source_file="res://assets/models/zombie/Zed_2.png"
+dest_files=["res://.godot/imported/Zed_2.png-cba363aa6698f69a44b607054a3178f6.s3tc.ctex"]
 
 [params]
 

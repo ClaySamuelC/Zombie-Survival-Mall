@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b8fck1rjwyp3y"
-path="res://.godot/imported/TT Handgun.fbx-f1e72ead6c3d7102e5fa3a959754a1a0.scn"
+path="res://.godot/imported/TT Handgun.fbx-deb79bd0cf05fe5a55ae51fddbba943d.scn"
 
 [deps]
 
-source_file="res://Assets/models/Flat Shaded Weapons/TT Handgun.fbx"
-dest_files=["res://.godot/imported/TT Handgun.fbx-f1e72ead6c3d7102e5fa3a959754a1a0.scn"]
+source_file="res://assets/models/Flat Shaded Weapons/TT Handgun.fbx"
+dest_files=["res://.godot/imported/TT Handgun.fbx-deb79bd0cf05fe5a55ae51fddbba943d.scn"]
 
 [params]
 
