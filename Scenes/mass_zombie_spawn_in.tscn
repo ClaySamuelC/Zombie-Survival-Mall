@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cldnuit4p1qi6"]
+[gd_scene load_steps=2 format=3 uid="uid://cldnuit4p1qi6"]
 
 [ext_resource type="Script" path="res://Scripts/mass_zombie_spawn_in.gd" id="1_6knge"]
-[ext_resource type="PackedScene" uid="uid://cdr1y1mtmnxug" path="res://Assets/models/Gestapo/Character_Hero.fbx" id="2_b275f"]
 
 [node name="MassZombieSpawnIn" type="Node3D"]
 script = ExtResource("1_6knge")
-
-[node name="Character_Hero" parent="." instance=ExtResource("2_b275f")]
