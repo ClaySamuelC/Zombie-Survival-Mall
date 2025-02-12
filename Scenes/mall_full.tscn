@@ -1337,27 +1337,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, -0.2, 23)
 material_override = SubResource("StandardMaterial3D_4tl6c")
 mesh = SubResource("BoxMesh_0p3d1")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelf2"]
+
 [node name="Shelf3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46, -0.2, 28.5)
 material_override = SubResource("StandardMaterial3D_4tl6c")
 mesh = SubResource("BoxMesh_0p3d1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelf3"]
 
 [node name="Shelf4" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -53.9, -0.2, 28.5)
 material_override = SubResource("StandardMaterial3D_4tl6c")
 mesh = SubResource("BoxMesh_0p3d1")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelf4"]
+
 [node name="Shelf5" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -70.9, -0.2, 35.2)
 mesh = SubResource("BoxMesh_0p3d1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelf5"]
 
 [node name="Shelf6" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.4, -0.2, 31.2)
 mesh = SubResource("BoxMesh_e6wxm")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelf6"]
+
 [node name="Shelf7" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -80.9, -0.2, 36.3)
 mesh = SubResource("BoxMesh_ydnqf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelf7"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 0, 31)
@@ -1554,21 +1566,21 @@ shape = SubResource("BoxShape3D_0kesu")
 script = ExtResource("8_4qurk")
 
 [node name="Bench" parent="." instance=ExtResource("9_d786b")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 2, -35.9797, 0.14, -24.4)
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 2, -36.9663, 0.14, -24.4)
 mesh = SubResource("BoxMesh_ses3y")
 
 [node name="Bench2" parent="Bench" instance=ExtResource("9_d786b")]
-transform = Transform3D(-4.37114e-08, 0, 1.25, 0, 1, 0, -0.8, 0, -4.37114e-08, -6.875, 0, -5)
+transform = Transform3D(-4.37114e-08, 0, 1.25, 0, 1, 0, -0.8, 0, -4.37114e-08, -6.72348, 0, -4.90822)
 mesh = SubResource("BoxMesh_k1fgn")
 skeleton = NodePath("../..")
 
 [node name="Bench3" parent="Bench" instance=ExtResource("9_d786b")]
-transform = Transform3D(-4.37114e-08, 0, -1.25, 0, 1, 0, 0.8, 0, -4.37114e-08, -6.875, 0, 5)
+transform = Transform3D(-4.37114e-08, 0, -1.25, 0, 1, 0, 0.8, 0, -4.37114e-08, -5.34957, 0, 5)
 mesh = SubResource("BoxMesh_3jpws")
 skeleton = NodePath("../..")
 
 [node name="Bench4" parent="Bench" instance=ExtResource("9_d786b")]
-transform = Transform3D(-1, 0, -1.88745e-07, 0, 1, 0, 1.20796e-07, 0, -1, -13.75, 0, 0)
+transform = Transform3D(-1, 0, -1.88745e-07, 0, 1, 0, 1.20796e-07, 0, -1, -12.4063, 0, -1.62314e-07)
 mesh = SubResource("BoxMesh_18mjh")
 skeleton = NodePath("../..")
 
