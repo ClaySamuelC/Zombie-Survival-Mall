@@ -13,6 +13,8 @@ extends CharacterBody3D
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
 
 
+signal soldier_died
+
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -44,8 +46,11 @@ var scrounge_level : int = 0
 func _ready():
 	add_to_group("survivor")
 
-
 var weight = 0.1
+
+	create_ray_casts()
+	$"..".num_soldiers += 1
+	soldier_died.connect($"..".decrement_soldiers)
 
 
 func _process(delta):
@@ -119,7 +124,8 @@ func move_unit_to_destination():
 
 func take_damage(damage):
 	health -= damage
-	if health<= 0:
+	if health <= 0:
+		soldier_died.emit()
 		queue_free()
 
 func go_to_gather_state():

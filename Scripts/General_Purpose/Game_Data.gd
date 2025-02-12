@@ -1,17 +1,32 @@
 extends Node
 
-# Author: ClaySamuelC
+@export var starting_bullets = 250
+@export var starting_debris = 250
+@export var starting_hk = 250
+@export var starting_molotovs = 7
 
-var bullets: int = 10000
-var debris: int = 10000
-var healing_kits: int = 10000
+var bullets: int = starting_bullets
+var debris: int = starting_debris
+var healing_kits: int = starting_hk
 var zombie_kills: int = 0
-var molotov: int = 7
+
 @onready var gui = get_node("/root/Main/GUI/")
+=======
+var molotov: int = starting_molotovs
 
 var selected_units: Array[Node3D] = []
 
 signal on_unit_selected(unit: Node3D)
+
+func reset() -> void:
+	bullets = starting_bullets
+	debris = starting_debris
+	healing_kits = starting_hk
+	molotov = starting_molotovs
+	
+	set_selected_units([])
+	
+	zombie_kills = 0
 
 func set_selected_units(units: Array[Node3D]) -> void:
 	selected_units = units
