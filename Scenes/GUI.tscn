@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cs4n42634dlqe"]
+[gd_scene load_steps=17 format=3 uid="uid://cs4n42634dlqe"]
 
 [ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_1tx4h"]
 [ext_resource type="Texture2D" uid="uid://c3q3suwv8wv8r" path="res://Assets/Thumbnails/bullet.png" id="2_nhvwv"]
@@ -16,6 +16,9 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bod7"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_r6fl6"]
+variation_embolden = 1.03
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnh4i"]
 bg_color = Color(0, 0, 0, 1)
@@ -91,6 +94,16 @@ mouse_filter = 2
 text = "100
 "
 
+[node name="BulletMinus" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Bullets/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_r6fl6")
+bbcode_enabled = true
+text = "	 		  [color=yellow]-1[/color]
+"
+
 [node name="HealingKits" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
@@ -113,6 +126,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 text = "50
+"
+
+[node name="HealKitMinus" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/HealingKits/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_r6fl6")
+bbcode_enabled = true
+text = "	 		  [color=yellow]-1[/color]
 "
 
 [node name="Debris" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
@@ -139,6 +162,16 @@ size_flags_vertical = 3
 mouse_filter = 2
 text = "25"
 
+[node name="DebrisMinus" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Debris/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_r6fl6")
+bbcode_enabled = true
+text = "	 		  [color=yellow]-1[/color]
+"
+
 [node name="Molotovs" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
@@ -161,6 +194,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 text = "100
+"
+
+[node name="MolotovMinus" type="RichTextLabel" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer/Molotovs/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_r6fl6")
+bbcode_enabled = true
+text = "	 		  [color=yellow]-1[/color]
 "
 
 [node name="ZombieKills" type="HBoxContainer" parent="GUI_Control/ResourceGUI/PanelContainer/VBoxContainer/HBoxContainer"]

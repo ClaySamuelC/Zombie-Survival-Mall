@@ -9,6 +9,8 @@ extends CharacterBody3D
 @onready var animation_player = $Low_Poly_Survivor_Empyt_Hands_Rifle/AnimationPlayer
 @onready var selected_indicator = $Selected_Indicator
 @onready var gather_indicator = $Gather_Indicator
+@onready var gui = get_node("/root/Main/GUI/")
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -170,3 +172,4 @@ func heal():
 		if GameState.healing_kits > 0:
 			health = MAX_HEALTH
 			GameState.healing_kits -= 1
+			gui.flash_minus("heal_kit",1)
